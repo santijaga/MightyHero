@@ -9,7 +9,11 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"PaperZD"
+				"PaperZD",
+				"Paper2D",
+				"UMG",
+				"Engine",
+				"CoreUObject"
 			]
 		}
 	],

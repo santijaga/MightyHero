@@ -13,5 +13,5 @@ UCLASS()
 class MIGHTYHERO_API ACharacterBase : public APaperZDCharacter
 {
 	GENERATED_BODY()
-	
+
 };
