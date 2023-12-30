@@ -18,6 +18,8 @@ private:
 	UFUNCTION(BlueprintCallable, Category = Camera)
 	void InitCameras();
 
+	class ACharacterBase* CharacterRef;
+
 protected:
 	UFUNCTION(BlueprintCallable)
 	virtual	void BeginPlay() override;

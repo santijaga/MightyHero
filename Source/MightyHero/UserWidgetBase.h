@@ -20,4 +20,13 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void RemoveWidget();
+
+	UFUNCTION(BlueprintCallable, Category = Data)
+	bool LoadSoundStatus();
+
+	UFUNCTION(BlueprintCallable, Category = Sound)
+	void EnableSound();
+
+	UFUNCTION(BlueprintCallable, Category = Sound)
+	void DisableSound();
 };

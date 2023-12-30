@@ -5,10 +5,13 @@
 #include "Camera/CameraActor.h"
 #include "EngineUtils.h"
 #include "MainWidgetBase.h"
+#include "CharacterBase.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
     Super::BeginPlay();
+
+    CharacterRef = Cast<ACharacterBase>(GetWorld()->GetFirstPlayerController()->GetPawn());
 }
 
 void AMightyHeroGameModeBase::InitUI()
@@ -19,6 +22,11 @@ void AMightyHeroGameModeBase::InitUI()
 void AMightyHeroGameModeBase::StartGameplay()
 {
     HideMainWidget();
+
+    if (CharacterRef)
+    {
+        CharacterRef->StartGameplay();
+    }
 }
 
 void AMightyHeroGameModeBase::HideMainWidget()

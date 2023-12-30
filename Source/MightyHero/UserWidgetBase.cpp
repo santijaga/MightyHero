@@ -1,4 +1,5 @@
 #include "UserWidgetBase.h"
+#include "GameDataController.h"
 
 void UUserWidgetBase::ShowWidget()
 {
@@ -8,4 +9,30 @@ void UUserWidgetBase::ShowWidget()
 void UUserWidgetBase::RemoveWidget()
 {
 	this->RemoveFromParent();
+}
+
+bool UUserWidgetBase::LoadSoundStatus()
+{
+	if (UGameDataController* DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+	{
+		return DataController->LoadSoundSetting();
+	}
+
+	return true;
+}
+
+void UUserWidgetBase::EnableSound()
+{
+	if (UGameDataController* DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+	{
+		DataController->SaveSoundSetting(true);
+	}
+}
+
+void UUserWidgetBase::DisableSound()
+{
+	if (UGameDataController* DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+	{
+		DataController->SaveSoundSetting(false);
+	}
 }
