@@ -2,16 +2,25 @@
 
 
 #include "MightyHeroGameModeBase.h"
-#include "Camera/CameraActor.h"
+#include "MightyHeroPlayerController.h"
+#include "TrackCameraActorBase.h"
 #include "EngineUtils.h"
-#include "MainWidgetBase.h"
 #include "CharacterBase.h"
+#include "MainWidgetBase.h"
+#include "GameplayWidgetBase.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
     Super::BeginPlay();
 
-    CharacterRef = Cast<ACharacterBase>(GetWorld()->GetFirstPlayerController()->GetPawn());
+    PlayerController = Cast<AMightyHeroPlayerController>(GetWorld()->GetFirstPlayerController());
+
+    if (PlayerController)
+    {
+        CharacterRef = Cast<ACharacterBase>(PlayerController->GetPawn());
+    }
+
+    InitUI();
 }
 
 void AMightyHeroGameModeBase::InitUI()
@@ -22,11 +31,14 @@ void AMightyHeroGameModeBase::InitUI()
 void AMightyHeroGameModeBase::StartGameplay()
 {
     HideMainWidget();
+    ShowGameplayWidget();
 
     if (CharacterRef)
     {
         CharacterRef->StartGameplay();
     }
+
+    bIsGameOver = false;
 }
 
 void AMightyHeroGameModeBase::HideMainWidget()
@@ -39,9 +51,9 @@ void AMightyHeroGameModeBase::HideMainWidget()
 
 void AMightyHeroGameModeBase::InitCameras()
 {
-    for (TActorIterator<ACameraActor> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+    for (TActorIterator<ATrackCameraActorBase> ActorItr(GetWorld()); ActorItr; ++ActorItr)
     {
-        ACameraActor* Camera = *ActorItr;
+        ATrackCameraActorBase* Camera = *ActorItr;
 
         if (Camera->ActorHasTag(FName("Camera")))
         {
@@ -55,9 +67,9 @@ void AMightyHeroGameModeBase::InitCameras()
 
 void AMightyHeroGameModeBase::ShowMainWidget()
 {
-    if (MainWidgetClass)
+    if (PlayerController)
     {
-        if (APlayerController* PlayerController = GetWorld()->GetFirstPlayerController())
+        if (MainWidgetClass)
         {
             MainWidget = Cast<UMainWidgetBase>(CreateWidget<UUserWidget>(PlayerController, MainWidgetClass));
             if (MainWidget)
@@ -65,5 +77,33 @@ void AMightyHeroGameModeBase::ShowMainWidget()
                 MainWidget->ShowWidget();
             }
         }
+    }
+}
+
+bool AMightyHeroGameModeBase::IsGameOver()
+{
+    return bIsGameOver;
+}
+
+void AMightyHeroGameModeBase::ShowGameplayWidget()
+{
+    if (PlayerController)
+    {
+        if (GameplayWidgetClass)
+        {
+            GameplayWidget = Cast<UGameplayWidgetBase>(CreateWidget<UUserWidget>(PlayerController, GameplayWidgetClass));
+            if (GameplayWidget)
+            {
+                GameplayWidget->ShowWidget();
+            }
+        }
+    }
+}
+
+void AMightyHeroGameModeBase::HideGameplayWidget()
+{
+    if (GameplayWidget)
+    {
+        GameplayWidget->RemoveWidget();
     }
 }

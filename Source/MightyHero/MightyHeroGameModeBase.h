@@ -19,6 +19,9 @@ private:
 	void InitCameras();
 
 	class ACharacterBase* CharacterRef;
+	class AMightyHeroPlayerController* PlayerController;
+
+	bool bIsGameOver = true;
 
 protected:
 	UFUNCTION(BlueprintCallable)
@@ -26,7 +29,7 @@ protected:
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
-	ACameraActor* MainCamera;
+	class ATrackCameraActorBase* MainCamera;
 
 	UPROPERTY(BlueprintReadWrite, Category = UI)
 	class UMainWidgetBase* MainWidget;
@@ -45,4 +48,19 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void HideMainWidget();
+
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	bool IsGameOver();
+
+	UPROPERTY(BlueprintReadWrite, Category = UI)
+	class UGameplayWidgetBase* GameplayWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	TSubclassOf<UGameplayWidgetBase> GameplayWidgetClass;
+
+	UFUNCTION(BlueprintCallable, Category = UI)
+	void ShowGameplayWidget();
+
+	UFUNCTION(BlueprintCallable, Category = UI)
+	void HideGameplayWidget();
 };
