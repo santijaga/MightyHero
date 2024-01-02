@@ -1,5 +1,3 @@
-
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -13,5 +11,5 @@ UCLASS()
 class MIGHTYHERO_API ABackgroundActor : public APaperSpriteActor
 {
 	GENERATED_BODY()
-	
+
 };

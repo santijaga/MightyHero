@@ -5,11 +5,11 @@ void ACharacterBase::StartGameplay()
 {
 	if (MovementComponent)
 	{
-		MovementComponent->GravityScale = 2.f;
+		MovementComponent->GravityScale = 1.f;
 	}
 
-	ForwardSpeed = 500.f;
-	JumpVelocity = 700.f;
+	ForwardSpeed = 300.f;
+	JumpVelocity = 500.f;
 
 	bIsMovementAllowed = true;
 }
