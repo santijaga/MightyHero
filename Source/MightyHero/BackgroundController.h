@@ -39,7 +39,7 @@ private:
 	void SpawnNextSegment();
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Background)
 	TSubclassOf<class ABackgroundActor> BackgroundActorClass;
 
 private:

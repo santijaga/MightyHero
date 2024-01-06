@@ -1,17 +1,16 @@
 #include "CharacterBase.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "MeteorActor.h"
+#include "MightyHeroPlayerState.h"
+#include "Components/CapsuleComponent.h"
 
-void ACharacterBase::StartGameplay()
+void ACharacterBase::BeginPlay()
 {
-	if (MovementComponent)
-	{
-		MovementComponent->GravityScale = 1.f;
-	}
+	Super::BeginPlay();
 
-	ForwardSpeed = 300.f;
-	JumpVelocity = 500.f;
+	MovementComponent = GetCharacterMovement();
 
-	bIsMovementAllowed = true;
+	OnActorBeginOverlap.AddDynamic(this, &ACharacterBase::OnOverlapBegin);
 }
 
 void ACharacterBase::Tick(float DeltaTime)
@@ -38,11 +37,17 @@ void ACharacterBase::Tick(float DeltaTime)
 	}
 }
 
-void ACharacterBase::BeginPlay()
+void ACharacterBase::StartGameplay()
 {
-	Super::BeginPlay();
+	if (MovementComponent)
+	{
+		MovementComponent->GravityScale = DefaultGravityScale;
+	}
 
-	MovementComponent = GetCharacterMovement();
+	ForwardSpeed = DefaultForwardSpeed;
+	JumpVelocity = DefaultJumpVelocity;
+
+	bIsMovementAllowed = true;
 }
 
 void ACharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -63,4 +68,37 @@ void ACharacterBase::CharacterJump()
 void ACharacterBase::TouchPressed(ETouchIndex::Type FingerIndex, FVector Location)
 {
 	CharacterJump();
+}
+
+void ACharacterBase::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
+{
+	AMeteorActor* MeteorActor = Cast<AMeteorActor>(OtherActor);
+	if (MeteorActor)
+	{
+		GetPlayerState<AMightyHeroPlayerState>()->AddScore();
+		MeteorActor->Destruction();
+	}
+}
+
+void ACharacterBase::EarthDestroed()
+{
+	Stop();
+}
+
+void ACharacterBase::Fall()
+{
+	Stop();
+}
+
+void ACharacterBase::Stop()
+{
+	bIsMovementAllowed = false;
+	
+	if (MovementComponent)
+	{
+		MovementComponent->GravityScale = 0;
+		MovementComponent->Velocity = FVector(0, 0, 0);
+		ForwardSpeed = 0;
+		JumpVelocity = 0;
+	}
 }

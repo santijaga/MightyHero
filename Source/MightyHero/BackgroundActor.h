@@ -1,14 +1,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PaperSpriteActor.h"
+#include "PaperFlipbookActor.h"
 #include "BackgroundActor.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class MIGHTYHERO_API ABackgroundActor : public APaperSpriteActor
+class MIGHTYHERO_API ABackgroundActor : public APaperFlipbookActor
 {
 	GENERATED_BODY()
 

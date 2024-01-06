@@ -26,6 +26,7 @@ private:
 protected:
 	UFUNCTION(BlueprintCallable)
 	virtual	void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
@@ -63,4 +64,25 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void HideGameplayWidget();
+
+	double LowerBound = -500.0;
+	double BackBound = -900.0;
+
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void GameOver();
+
+private:
+	bool bIsCharacterFall = false;
+
+	UFUNCTION(BlueprintCallable, Category = Tracking)
+	void TrackCharacterLocation();
+
+	void CheckForGameOver();
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
+	TSubclassOf<class AMeteorController> MeteorControllerClass;
+
+private:
+	AMeteorController* MeteorController;
 };

@@ -19,6 +19,9 @@ private:
 	float JumpVelocity = .0f;
 	bool bWasJump = false;
 
+	float DefaultForwardSpeed = 300.f;
+	float DefaultJumpVelocity = 500.f;
+	float DefaultGravityScale = 1.0f;
 	bool bIsMovementAllowed = false;
 
 	class UCharacterMovementComponent* MovementComponent;
@@ -36,4 +39,22 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void CharacterJump();
+
+private:
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor);
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void EarthDestroed();
+
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void Fall();
+
+private:
+	UFUNCTION(Category = Movement)
+	void Stop();
+
+public:
+
 };

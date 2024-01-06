@@ -8,6 +8,7 @@
 #include "CharacterBase.h"
 #include "MainWidgetBase.h"
 #include "GameplayWidgetBase.h"
+#include "MeteorController.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
@@ -21,6 +22,25 @@ void AMightyHeroGameModeBase::BeginPlay()
     }
 
     InitUI();
+
+    UWorld* World = GetWorld();
+    if (World)
+    {
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.Owner = this;
+        MeteorController = World->SpawnActor<AMeteorController>(MeteorControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
+    }
+}
+
+void AMightyHeroGameModeBase::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    if (!bIsGameOver)
+    {
+        TrackCharacterLocation();
+        CheckForGameOver();
+    }
 }
 
 void AMightyHeroGameModeBase::InitUI()
@@ -39,6 +59,16 @@ void AMightyHeroGameModeBase::StartGameplay()
     }
 
     bIsGameOver = false;
+    bIsCharacterFall = false;
+}
+
+void AMightyHeroGameModeBase::GameOver()
+{
+    UE_LOG(LogTemp, Warning, TEXT("Game is over"));
+
+    bIsGameOver = true;
+    MeteorController->DestroyAllMeteors();
+    
 }
 
 void AMightyHeroGameModeBase::HideMainWidget()
@@ -105,5 +135,30 @@ void AMightyHeroGameModeBase::HideGameplayWidget()
     if (GameplayWidget)
     {
         GameplayWidget->RemoveWidget();
+    }
+}
+
+void AMightyHeroGameModeBase::TrackCharacterLocation()
+{
+    UE_LOG(LogTemp, Warning, TEXT("Tracking character location:"))
+    if (CharacterRef)
+    {
+        FVector CurrentCharacterLocation = CharacterRef->GetActorLocation();
+
+        UE_LOG(LogTemp, Warning, TEXT("Character Z location: %f"), CurrentCharacterLocation.Z);
+
+        if (CurrentCharacterLocation.Z < LowerBound)
+        {
+            CharacterRef->Fall();
+            bIsCharacterFall = true;
+        }
+    }
+}
+
+void AMightyHeroGameModeBase::CheckForGameOver()
+{
+    if (bIsCharacterFall)
+    {
+        GameOver();
     }
 }

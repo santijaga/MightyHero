@@ -16,9 +16,11 @@ class MIGHTYHERO_API AMightyHeroPlayerState : public APlayerState
 
 private:
 	int32 Scores = 0;
+	bool bIsGameover = true;
 
 protected:
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 	
 public:
 	UFUNCTION(BlueprintCallable, Category = State)
