@@ -6,6 +6,8 @@
 #include "GameFramework/GameModeBase.h"
 #include "MightyHeroGameModeBase.generated.h"
 
+class UGameDataController;
+
 /**
  * 
  */
@@ -65,8 +67,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void HideGameplayWidget();
 
-	double LowerBound = -500.0;
-	double BackBound = -900.0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	double LowerBound = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	double BackBound = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	double UpperBound = 0;
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void GameOver();
@@ -75,7 +83,7 @@ private:
 	bool bIsCharacterFall = false;
 
 	UFUNCTION(BlueprintCallable, Category = Tracking)
-	void TrackCharacterLocation();
+	FVector TrackCharacterLocation();
 
 	void CheckForGameOver();
 
@@ -85,4 +93,38 @@ public:
 
 private:
 	AMeteorController* MeteorController;
+
+	UFUNCTION()
+	bool CheckForMeteorsOutOfBounds();
+
+public:
+	UFUNCTION()
+	void ResetGame();
+
+	UPROPERTY(BlueprintReadWrite, Category = UI)
+	class UGameOverWidgetBase* GameOverWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	TSubclassOf<UGameOverWidgetBase> GameOverWidgetClass;
+
+	UFUNCTION(BlueprintCallable, Category = UI)
+	void ShowGameOverWidget();
+
+	UFUNCTION(BlueprintCallable, Category = UI)
+	void HideGameOverWidget();
+
+private:
+	UPROPERTY()
+	AActor* MainPlayerStart;
+
+	UFUNCTION()
+	void ResetCharacter();
+
+	UGameDataController* DataController;
+
+	UFUNCTION()
+	void SaveHighScore();
+
+	UFUNCTION()
+	void ResetScores();
 };

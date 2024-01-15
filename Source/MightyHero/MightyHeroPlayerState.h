@@ -28,4 +28,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = State)
 	int32 GetScores();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+	void ResetScores();
 };

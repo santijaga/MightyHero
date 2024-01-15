@@ -43,4 +43,11 @@ private:
 public:
 	UFUNCTION(Category = Gameplay)
 	void DestroyAllMeteors();
+
+	UFUNCTION(BlueprintCallable, Category = Tracking)
+	bool HasAnyMeteorsOutOfBounds(double XBound, double ZBound);
+
+public:
+	UFUNCTION()
+	void ResetController();
 };

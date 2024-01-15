@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "MightyHeroGameModeBase.h"
@@ -9,6 +9,10 @@
 #include "MainWidgetBase.h"
 #include "GameplayWidgetBase.h"
 #include "MeteorController.h"
+#include "GameOverWidgetBase.h"
+#include "Kismet/GameplayStatics.h"
+#include "GameDataController.h"
+#include "MightyHeroPlayerState.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
@@ -30,6 +34,14 @@ void AMightyHeroGameModeBase::BeginPlay()
         SpawnParameters.Owner = this;
         MeteorController = World->SpawnActor<AMeteorController>(MeteorControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
     }
+
+    if (PlayerController)
+    {
+        FString PlayerStartTag = "MainStart";
+        MainPlayerStart = FindPlayerStart(PlayerController, PlayerStartTag);
+    }
+
+    DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
 }
 
 void AMightyHeroGameModeBase::Tick(float DeltaTime)
@@ -38,7 +50,6 @@ void AMightyHeroGameModeBase::Tick(float DeltaTime)
 
     if (!bIsGameOver)
     {
-        TrackCharacterLocation();
         CheckForGameOver();
     }
 }
@@ -58,6 +69,11 @@ void AMightyHeroGameModeBase::StartGameplay()
         CharacterRef->StartGameplay();
     }
 
+    if (MeteorController)
+    {
+        MeteorController->ResetController();
+    }
+
     bIsGameOver = false;
     bIsCharacterFall = false;
 }
@@ -68,7 +84,9 @@ void AMightyHeroGameModeBase::GameOver()
 
     bIsGameOver = true;
     MeteorController->DestroyAllMeteors();
-    
+    HideGameplayWidget();
+    ShowGameOverWidget();
+    SaveHighScore();
 }
 
 void AMightyHeroGameModeBase::HideMainWidget()
@@ -138,27 +156,106 @@ void AMightyHeroGameModeBase::HideGameplayWidget()
     }
 }
 
-void AMightyHeroGameModeBase::TrackCharacterLocation()
+FVector AMightyHeroGameModeBase::TrackCharacterLocation()
 {
-    UE_LOG(LogTemp, Warning, TEXT("Tracking character location:"))
     if (CharacterRef)
     {
         FVector CurrentCharacterLocation = CharacterRef->GetActorLocation();
 
-        UE_LOG(LogTemp, Warning, TEXT("Character Z location: %f"), CurrentCharacterLocation.Z);
-
-        if (CurrentCharacterLocation.Z < LowerBound)
-        {
-            CharacterRef->Fall();
-            bIsCharacterFall = true;
-        }
+        return CurrentCharacterLocation;
     }
+
+    return FVector(0, 0, 0);
 }
 
 void AMightyHeroGameModeBase::CheckForGameOver()
 {
-    if (bIsCharacterFall)
+    FVector CurrentCharacterLocation = TrackCharacterLocation();
+
+    if (CharacterRef && CurrentCharacterLocation.Z < LowerBound || CurrentCharacterLocation.Z > UpperBound)
     {
+        CharacterRef->Fall();
+        bIsCharacterFall = true;
+    }
+
+    if (bIsCharacterFall || CheckForMeteorsOutOfBounds())
+    {
+        CharacterRef->EarthDestroyed();
         GameOver();
+    }
+}
+
+bool AMightyHeroGameModeBase::CheckForMeteorsOutOfBounds()
+{
+    bool isAnyMeteorsOutOfBounds = false;
+
+    if (MeteorController)
+    {
+        double XBound = MainCamera->GetActorLocation().X + BackBound;
+        isAnyMeteorsOutOfBounds = MeteorController->HasAnyMeteorsOutOfBounds(XBound, LowerBound);
+    }
+
+    return isAnyMeteorsOutOfBounds;
+}
+
+void AMightyHeroGameModeBase::ResetGame()
+{
+    HideGameOverWidget();
+    ShowMainWidget();
+    ResetCharacter();
+    ResetScores();
+}
+
+void AMightyHeroGameModeBase::ShowGameOverWidget()
+{
+    if (PlayerController)
+    {
+        if (GameOverWidgetClass)
+        {
+            GameOverWidget = Cast<UGameOverWidgetBase>(CreateWidget<UUserWidget>(PlayerController, GameOverWidgetClass));
+            if (GameOverWidget)
+            {
+                GameOverWidget->ShowWidget();
+            }
+        }
+    }
+}
+
+void AMightyHeroGameModeBase::HideGameOverWidget()
+{
+    if (GameOverWidget)
+    {
+        GameOverWidget->RemoveWidget();
+    }
+}
+
+void AMightyHeroGameModeBase::ResetCharacter()
+{
+    if (CharacterRef)
+    {
+        CharacterRef->SetActorLocation(MainPlayerStart->GetActorLocation());
+        CharacterRef->ResetCharacter();
+    }
+}
+
+void AMightyHeroGameModeBase::SaveHighScore()
+{
+    if (CharacterRef)
+    {
+        int32 Scores = CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->GetScores();
+        int32 HighScores = DataController->LoadHighScore();
+
+        if (Scores > HighScores)
+        {
+            DataController->SaveHighScore(Scores);
+        }
+    }
+}
+
+void AMightyHeroGameModeBase::ResetScores()
+{
+    if (CharacterRef)
+    {
+        CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->ResetScores();
     }
 }

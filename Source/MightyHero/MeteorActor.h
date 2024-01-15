@@ -4,6 +4,8 @@
 #include "PaperFlipbookActor.h"
 #include "MeteorActor.generated.h"
 
+class UPaperFlipbook;
+
 /**
  * 
  */
@@ -27,4 +29,14 @@ private:
 public:
 	UFUNCTION(BlueprintCallable, Category=Interaction)
 	void Destruction();
+
+	UPROPERTY(Category = Sprite, EditAnywhere, meta = (DisplayThumbnail = "true"))
+	TObjectPtr<UPaperFlipbook> DestructionFlipbook;
+
+private:
+	UFUNCTION()
+	void OnFlipbookFinishedPlaying();
+
+private:
+	bool bIsDestroyed = false;
 };

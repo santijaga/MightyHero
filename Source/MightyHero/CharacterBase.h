@@ -6,6 +6,15 @@
 #include "PaperZDCharacter.h"
 #include "CharacterBase.generated.h"
 
+UENUM(BlueprintType)
+enum class ECharacterStates : uint8 {
+	SE_Idle = 0 UMETA(DisplayName="Idle"),
+	SE_Fall = 1 UMETA(DisplayName = "Fall"),
+	SE_Rise = 2 UMETA(DisplayName = "Rise"),
+	SE_Impact = 3 UMETA(DisplayName = "Impact"),
+	SE_Sad = 4 UMETA(DisplayName = "Sad"),
+};
+
 /**
  * 
  */
@@ -19,9 +28,17 @@ private:
 	float JumpVelocity = .0f;
 	bool bWasJump = false;
 
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	float DefaultForwardSpeed = 300.f;
-	float DefaultJumpVelocity = 500.f;
-	float DefaultGravityScale = 1.0f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
+	float DefaultJumpVelocity = 400.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
+	float DefaultGravityScale = 1.5f;
+	
+private:
 	bool bIsMovementAllowed = false;
 
 	class UCharacterMovementComponent* MovementComponent;
@@ -46,7 +63,7 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void EarthDestroed();
+	void EarthDestroyed();
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void Fall();
@@ -56,5 +73,16 @@ private:
 	void Stop();
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
+	ECharacterStates StatesEnum;
 
+	UFUNCTION(BlueprintCallable, Category = State)
+	void OnImpactEnded();
+
+private:
+	bool IsFreelyMoving();
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void ResetCharacter();
 };

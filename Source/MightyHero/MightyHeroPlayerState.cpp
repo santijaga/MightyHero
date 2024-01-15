@@ -2,14 +2,11 @@
 
 AMightyHeroPlayerState::AMightyHeroPlayerState()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Player State Constructed"));
 }
 
 void AMightyHeroPlayerState::BeginPlay()
 {
 	Super::BeginPlay();
-
-	UE_LOG(LogTemp, Warning, TEXT("[Player State] Begin Play runs."));
 }
 
 void AMightyHeroPlayerState::Tick(float DeltaTime)
@@ -25,4 +22,9 @@ void AMightyHeroPlayerState::AddScore()
 int32 AMightyHeroPlayerState::GetScores()
 {
 	return Scores;
+}
+
+void AMightyHeroPlayerState::ResetScores()
+{
+	Scores = 0;
 }

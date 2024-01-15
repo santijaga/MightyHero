@@ -13,9 +13,12 @@ void AMeteorActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	FVector NewLocation = GetActorLocation();
-	NewLocation.Z -= FallVelocity * DeltaTime;
-	SetActorLocation(NewLocation);
+	if (!bIsDestroyed)
+	{
+		FVector NewLocation = GetActorLocation();
+		NewLocation.Z -= FallVelocity * DeltaTime;
+		SetActorLocation(NewLocation);
+	}
 }
 
 void AMeteorActor::SetFallVelocity(double NewVelocity)
@@ -24,6 +27,20 @@ void AMeteorActor::SetFallVelocity(double NewVelocity)
 }
 
 void AMeteorActor::Destruction()
+{
+	bIsDestroyed = true;
+
+	UPaperFlipbookComponent* RenderComponentRef = GetRenderComponent();
+	RenderComponentRef->SetFlipbook(DestructionFlipbook);
+	RenderComponentRef->SetLooping(false);
+
+	if (!RenderComponentRef->OnFinishedPlaying.IsAlreadyBound(this, &AMeteorActor::OnFlipbookFinishedPlaying))
+	{
+		RenderComponentRef->OnFinishedPlaying.AddDynamic(this, &AMeteorActor::OnFlipbookFinishedPlaying);
+	}
+}
+
+void AMeteorActor::OnFlipbookFinishedPlaying()
 {
 	this->Destroy();
 }

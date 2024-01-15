@@ -21,11 +21,6 @@ void AMeteorController::BeginPlay()
 	Super::BeginPlay();
 
 	CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
-
-	FirstSpawnDistance = 1000.f;
-	SpawnStepDistance = 1600.f;
-	NextSpawnDistance = FirstSpawnDistance;
-
 	World = GetWorld();
 }
 
@@ -72,4 +67,32 @@ void AMeteorController::DestroyAllMeteors()
 		Meteor->Destruction();
 	}
 }
+
+void AMeteorController::ResetController()
+{
+	FirstSpawnDistance = 1000.f;
+	SpawnStepDistance = 1600.f;
+	NextSpawnDistance = FirstSpawnDistance;
+}
+
+bool AMeteorController::HasAnyMeteorsOutOfBounds(double XBound, double ZBound)
+{
+	bool isAnyMeteorsOutOfBounds = false;
+
+	for (TActorIterator<AMeteorActor> ActorItr(World); ActorItr; ++ActorItr)
+	{
+		AMeteorActor* Meteor = *ActorItr;
+		FVector MeteorLocation = Meteor->GetActorLocation();
+
+		if (MeteorLocation.X < XBound || MeteorLocation.Z < ZBound)
+		{
+			isAnyMeteorsOutOfBounds = true;
+			break;
+		}
+	}
+
+	return isAnyMeteorsOutOfBounds;
+}
+
+
 
