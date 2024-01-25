@@ -6,9 +6,12 @@
 
 void UGameOverWidgetBase::BackToMainMenu()
 {
-	if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+	if (bCanContinue)
 	{
-		CurrentGameMode->ResetGame();
+		if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+		{
+			CurrentGameMode->ResetGame();
+		}
 	}
 }
 
@@ -54,4 +57,9 @@ void UGameOverWidgetBase::LoadData()
 	HighScores = LoadHighScores();
 
 	wasHighScore = CurrentScores > HighScores;
+}
+
+void UGameOverWidgetBase::EnableContinue()
+{
+	bCanContinue = true;
 }

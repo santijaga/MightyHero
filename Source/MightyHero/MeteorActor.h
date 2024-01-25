@@ -21,7 +21,7 @@ protected:
 
 public:
 	UFUNCTION(BlueprintCallable, Category=Motion)
-	void SetFallVelocity(double NewVelocity);
+	void SetFallVelocity(float NewVelocity);
 
 private:
 	double FallVelocity;

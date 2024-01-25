@@ -4,8 +4,10 @@
 #include "MeteorController.h"
 #include "Kismet/GameplayStatics.h"
 #include "MeteorActor.h"
+#include "SatelliteActor.h"
 #include "CharacterBase.h"
 #include "EngineUtils.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values
 AMeteorController::AMeteorController()
@@ -33,7 +35,14 @@ void AMeteorController::Tick(float DeltaTime)
 	{
 		if (CharacterRef->GetActorLocation().X > NextSpawnDistance)
 		{
-			SpawnMeteor();
+			if (ShouldSpawnSatellite())
+			{
+				SpawnSatellite();
+			}
+			else
+			{
+				SpawnMeteor();
+			}
 		}
 	}
 }
@@ -51,11 +60,13 @@ void AMeteorController::SpawnMeteor()
 		SpawnLocation.Z = ZThreshold;
 
 		FRotator Rotation = GetActorRotation();
+		FVector Scale = FVector(CurrentScale);
+		FTransform SpawnTransform = FTransform(Rotation, SpawnLocation, Scale);
+		AMeteorActor* Meteor = World->SpawnActor<AMeteorActor>(MeteorActorClass, SpawnTransform, SpawnParams);
 
-		AMeteorActor* Meteor = World->SpawnActor<AMeteorActor>(MeteorActorClass, SpawnLocation, Rotation, SpawnParams);
-		Meteor->SetFallVelocity(100);
+		Meteor->SetFallVelocity(FMath::RandRange(minFallVelocity, maxFallVelocity));
 
-		NextSpawnDistance += SpawnStepDistance;
+		NextSpawnDistance += CurrentSpawnStepDistance;
 	}
 }
 
@@ -66,13 +77,85 @@ void AMeteorController::DestroyAllMeteors()
 		AMeteorActor* Meteor = *ActorItr;
 		Meteor->Destruction();
 	}
+
+	for (TActorIterator<ASatelliteActor> ActorItr(World); ActorItr; ++ActorItr)
+	{
+		ASatelliteActor* Satellite = *ActorItr;
+		Satellite->Destruction();
+	}
 }
 
 void AMeteorController::ResetController()
 {
-	FirstSpawnDistance = 1000.f;
-	SpawnStepDistance = 1600.f;
+	difficultyLevel = 0;
+	CurrentSpawnStepDistance = SpawnStepDistance;
+	CurrentScale = DefaultScale;
 	NextSpawnDistance = FirstSpawnDistance;
+	currentSatelliteSpawnChance = defaultSatelliteSpawnChance;
+}
+
+bool AMeteorController::ShouldSpawnSatellite()
+{
+	if (difficultyLevel >= satelliteSpawnDifficultyLevel)
+	{
+		int32 rollResult = FMath::RandRange(1, 100);
+		if (rollResult < currentSatelliteSpawnChance)
+		{
+			currentSatelliteSpawnChance = defaultSatelliteSpawnChance;
+			return true;
+		}
+		else
+		{
+			currentSatelliteSpawnChance += satelliteSpawnChanceIncreaceStep;
+			return false;
+		}
+	}
+
+	return false;
+}
+
+void AMeteorController::SpawnSatellite()
+{
+	if (World && SatelliteActorClass)
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+
+		FVector SpawnLocation = GetActorLocation();
+
+		SpawnLocation.X = NextSpawnDistance + SpawnThreshold;
+		SpawnLocation.Z = FMath::RandRange(satelliteSpawnMinHeight, satelliteSpawnMaxHeight);
+
+		FRotator Rotation = GetActorRotation();
+		ASatelliteActor* satelliteActor = World->SpawnActor<ASatelliteActor>(SatelliteActorClass, SpawnLocation, Rotation, SpawnParams);
+
+		NextSpawnDistance += CurrentSpawnStepDistance;
+	}
+}
+
+void AMeteorController::IncreaseDifficulty()
+{
+	difficultyLevel++;
+
+	if (minFallVelocityPerLevel.IsValidIndex(difficultyLevel))
+	{
+		minFallVelocity = minFallVelocityPerLevel[difficultyLevel];
+	}
+
+	if (maxFallVelocityPerLevel.IsValidIndex(difficultyLevel))
+	{
+		maxFallVelocity = maxFallVelocityPerLevel[difficultyLevel];
+	}
+
+	if (scalePerLevel.IsValidIndex(difficultyLevel))
+	{
+		CurrentScale = scalePerLevel[difficultyLevel];
+	}
+
+	if (spawnStepDistancePerLevel.IsValidIndex(difficultyLevel))
+	{
+		CurrentSpawnStepDistance = spawnStepDistancePerLevel[difficultyLevel];
+	}
 }
 
 bool AMeteorController::HasAnyMeteorsOutOfBounds(double XBound, double ZBound)

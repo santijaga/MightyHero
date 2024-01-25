@@ -38,4 +38,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Data)
 	void LoadData();
+
+private:
+	UPROPERTY()
+	bool bCanContinue = false;
+
+public:
+	UFUNCTION(Category = State)
+	void EnableContinue();
 };

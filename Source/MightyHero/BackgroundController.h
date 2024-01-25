@@ -44,4 +44,15 @@ public:
 
 private:
 	TArray<ABackgroundActor*> Segments;
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void ResetBackground();
+
+private:
+	UFUNCTION()
+	void DestroyAllSegments();
+
+	UFUNCTION()
+	void InitStartSegments();
 };

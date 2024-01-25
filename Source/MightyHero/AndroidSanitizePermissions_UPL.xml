@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<androidManifestUpdates>
+		<removePermission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		<addPermission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+		<loopElements tag="meta-data">
+			<setStringFromAttribute  result="NameTagValue" tag="$" name="android:name"/>
+			<setBoolIsEqual result="UseExternalFilesDirElement" arg1="$S(NameTagValue)" arg2="com.epicgames.ue4.GameActivity.bUseExternalFilesDir"/>
+			<if condition="UseExternalFilesDirElement">
+				<true>
+					<removeElement tag="$"/>
+				</true>
+			</if>
+		</loopElements>
+
+		<addElements tag="application">
+			<meta-data android:name="com.epicgames.ue4.GameActivity.bUseExternalFilesDir" android:value="true" />
+		</addElements>
+		<addPermission android:name="com.google.android.gms.permission.AD_ID" />
+		<addElements>
+			<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+		</addElements>
+	</androidManifestUpdates>
+</root>

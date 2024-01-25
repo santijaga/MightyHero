@@ -1,8 +1,12 @@
 #include "CharacterBase.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "MeteorActor.h"
+#include "SatelliteActor.h"
 #include "MightyHeroPlayerState.h"
 #include "Components/CapsuleComponent.h"
+#include "MightyHeroGameModeBase.h"
+#include "SoundController.h"
+
 
 void ACharacterBase::BeginPlay()
 {
@@ -74,6 +78,10 @@ void ACharacterBase::CharacterJump()
 	if (MovementComponent && bIsMovementAllowed)
 	{
 		bWasJump = true;
+		if (ASoundController* SoundController = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetSoundController())
+		{
+			SoundController->PlayJump();
+		}
 	}
 }
 
@@ -94,6 +102,20 @@ void ACharacterBase::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
 		{
 			MeteorActor->Destruction();
 		}
+	}
+
+	ASatelliteActor* SatelliteActor = Cast<ASatelliteActor>(OtherActor);
+	if (SatelliteActor)
+	{
+		Stop();
+		StatesEnum = ECharacterStates::SE_Sad;
+
+		if (!SatelliteActor->IsPendingKill())
+		{
+			SatelliteActor->Destruction();
+		}
+
+		bCrashedInSatellite = true;
 	}
 }
 
@@ -134,4 +156,22 @@ bool ACharacterBase::IsFreelyMoving()
 void ACharacterBase::ResetCharacter()
 {
 	StatesEnum = ECharacterStates::SE_Idle;
+	bCrashedInSatellite = false;
+	difficultyLevel = 1;
+}
+
+void ACharacterBase::IncreaseDifficulty()
+{
+	difficultyLevel++;
+
+	if (JumpVelocityPerLevel.IsValidIndex(difficultyLevel))
+	{
+		JumpVelocity = JumpVelocityPerLevel[difficultyLevel];
+	}
+
+	if (GravityScalePerLevel.IsValidIndex(difficultyLevel))
+	{
+		MovementComponent->GravityScale = GravityScalePerLevel[difficultyLevel];
+	}
+
 }

@@ -7,6 +7,8 @@
 #include "MightyHeroGameModeBase.generated.h"
 
 class UGameDataController;
+class ABackgroundController;
+class ASoundController;
 
 /**
  * 
@@ -127,4 +129,38 @@ private:
 
 	UFUNCTION()
 	void ResetScores();
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
+	TSubclassOf<ABackgroundController> BackgroundControllerClass;
+
+private:
+	ABackgroundController* BackgroundController;
+
+	UFUNCTION()
+	void ResetBackground();
+
+private:
+	UFUNCTION()
+	void IncreaseDifficulty();
+
+	UPROPERTY()
+	int32 nextIncreaseScores = 0;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
+	int32 difficultyStep = 5;
+
+private:
+	FTimerHandle EnableContinueTimerHandle;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
+	TSubclassOf<ASoundController> SoundControllerClass;
+
+private:
+	ASoundController* SoundController;
+
+public:
+	ASoundController* GetSoundController();
 };

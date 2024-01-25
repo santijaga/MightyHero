@@ -85,4 +85,22 @@ private:
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void ResetCharacter();
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void IncreaseDifficulty();
+
+private:
+	UPROPERTY()
+	float difficultyLevel = 0;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
+	TArray<float> JumpVelocityPerLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
+	TArray<float> GravityScalePerLevel;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = State)
+	bool bCrashedInSatellite = false;
 };

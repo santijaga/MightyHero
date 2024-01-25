@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.YourCompany.MightyHero;
+package com.SilverStarlingStudio.MightyHero;
 
 import com.android.vending.expansion.zipfile.ZipResourceFile;
 import com.android.vending.expansion.zipfile.ZipResourceFile.ZipEntryRO;

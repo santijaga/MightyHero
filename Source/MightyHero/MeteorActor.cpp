@@ -1,5 +1,8 @@
 #include "MeteorActor.h"
 #include "PaperFlipbookComponent.h"
+#include "Components/BoxComponent.h"
+#include "MightyHeroGameModeBase.h"
+#include "SoundController.h"
 
 AMeteorActor::AMeteorActor()
 {
@@ -21,7 +24,7 @@ void AMeteorActor::Tick(float DeltaTime)
 	}
 }
 
-void AMeteorActor::SetFallVelocity(double NewVelocity)
+void AMeteorActor::SetFallVelocity(float NewVelocity)
 {
 	FallVelocity = NewVelocity;
 }
@@ -34,6 +37,18 @@ void AMeteorActor::Destruction()
 	RenderComponentRef->SetFlipbook(DestructionFlipbook);
 	RenderComponentRef->SetLooping(false);
 
+	UBoxComponent* BoxComponent = FindComponentByClass<UBoxComponent>();
+
+	if (BoxComponent)
+	{
+		BoxComponent->DestroyComponent();
+	}
+
+	if (ASoundController* SoundController = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetSoundController())
+	{
+		SoundController->PlayDestruction();
+	}
+	
 	if (!RenderComponentRef->OnFinishedPlaying.IsAlreadyBound(this, &AMeteorActor::OnFlipbookFinishedPlaying))
 	{
 		RenderComponentRef->OnFinishedPlaying.AddDynamic(this, &AMeteorActor::OnFlipbookFinishedPlaying);

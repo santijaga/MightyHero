@@ -13,6 +13,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "GameDataController.h"
 #include "MightyHeroPlayerState.h"
+#include "BackgroundController.h"
+#include "SoundController.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
@@ -42,6 +44,25 @@ void AMightyHeroGameModeBase::BeginPlay()
     }
 
     DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
+
+    if (World)
+    {
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.Owner = this;
+        BackgroundController = World->SpawnActor<ABackgroundController>(BackgroundControllerClass, FVector(0, -100.f, 0), FRotator(0, 0, 0), SpawnParameters);
+    }
+
+    if (World && SoundControllerClass)
+    {
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.Owner = this;
+        SoundController = World->SpawnActor<ASoundController>(SoundControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
+
+        if (SoundController)
+        {
+            SoundController->SetSound(DataController->LoadSoundSetting());
+        }
+    }
 }
 
 void AMightyHeroGameModeBase::Tick(float DeltaTime)
@@ -51,6 +72,7 @@ void AMightyHeroGameModeBase::Tick(float DeltaTime)
     if (!bIsGameOver)
     {
         CheckForGameOver();
+        IncreaseDifficulty();
     }
 }
 
@@ -74,6 +96,7 @@ void AMightyHeroGameModeBase::StartGameplay()
         MeteorController->ResetController();
     }
 
+    nextIncreaseScores = difficultyStep;
     bIsGameOver = false;
     bIsCharacterFall = false;
 }
@@ -172,15 +195,26 @@ void AMightyHeroGameModeBase::CheckForGameOver()
 {
     FVector CurrentCharacterLocation = TrackCharacterLocation();
 
+    bool bCharacterCrashedInSatellite = false;
+    if (CharacterRef && CharacterRef->bCrashedInSatellite)
+    {
+        bCharacterCrashedInSatellite = true;
+    }
+
     if (CharacterRef && CurrentCharacterLocation.Z < LowerBound || CurrentCharacterLocation.Z > UpperBound)
     {
         CharacterRef->Fall();
         bIsCharacterFall = true;
     }
 
-    if (bIsCharacterFall || CheckForMeteorsOutOfBounds())
-    {
+    bool bOutOfBounds = CheckForMeteorsOutOfBounds();
+
+    if (bOutOfBounds) {
         CharacterRef->EarthDestroyed();
+    }
+
+    if (bIsCharacterFall || bOutOfBounds || bCharacterCrashedInSatellite)
+    {
         GameOver();
     }
 }
@@ -204,6 +238,8 @@ void AMightyHeroGameModeBase::ResetGame()
     ShowMainWidget();
     ResetCharacter();
     ResetScores();
+    ResetBackground();
+    nextIncreaseScores = difficultyStep;
 }
 
 void AMightyHeroGameModeBase::ShowGameOverWidget()
@@ -216,6 +252,10 @@ void AMightyHeroGameModeBase::ShowGameOverWidget()
             if (GameOverWidget)
             {
                 GameOverWidget->ShowWidget();
+                GetWorld()->GetTimerManager().SetTimer(EnableContinueTimerHandle, [this]()
+                {
+                    GameOverWidget->EnableContinue();
+                }, 2.0f, false);
             }
         }
     }
@@ -258,4 +298,36 @@ void AMightyHeroGameModeBase::ResetScores()
     {
         CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->ResetScores();
     }
+}
+
+void AMightyHeroGameModeBase::ResetBackground()
+{
+    if (BackgroundController)
+    {
+        BackgroundController->ResetBackground();
+    }
+}
+
+void AMightyHeroGameModeBase::IncreaseDifficulty()
+{
+    if (DataController)
+    {
+        if (CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->GetScores() > nextIncreaseScores)
+        {
+            MeteorController->IncreaseDifficulty();
+            CharacterRef->IncreaseDifficulty();
+
+            nextIncreaseScores += difficultyStep;
+        }
+    }
+}
+
+ASoundController* AMightyHeroGameModeBase::GetSoundController()
+{
+    if (SoundController)
+    {
+        return SoundController;
+    }
+    
+    return nullptr;
 }

@@ -22,10 +22,7 @@ void ABackgroundController::BeginPlay()
 	
 	CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
 
-	for (int i = 0; i < 3; i++)
-	{
-		SpawnNextSegment();
-	}
+	InitStartSegments();
 }
 
 // Called every frame
@@ -74,5 +71,31 @@ void ABackgroundController::SpawnNextSegment()
 
 		Threshold += BackgroundSegmentLength;
 		DistanceLimit = Threshold - BackgroundSegmentLength - BackgroundSegmentLength / 2;
+	}
+}
+
+void ABackgroundController::ResetBackground()
+{
+	DestroyAllSegments();
+	InitStartSegments();
+}
+
+void ABackgroundController::DestroyAllSegments()
+{
+	for (ABackgroundActor* Segment : Segments)
+	{
+		Segment->Destroy();
+	}
+
+	Segments.Empty();
+}
+
+void ABackgroundController::InitStartSegments()
+{
+	Threshold = 0;
+	DistanceLimit = 0;
+	for (int i = 0; i < 3; i++)
+	{
+		SpawnNextSegment();
 	}
 }

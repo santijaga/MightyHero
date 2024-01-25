@@ -1,4 +1,4 @@
-package com.YourCompany.MightyHero;
+package com.SilverStarlingStudio.MightyHero;
 
 public class OBBData
 {

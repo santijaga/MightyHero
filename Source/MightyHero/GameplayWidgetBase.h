@@ -15,4 +15,16 @@ class MIGHTYHERO_API UGameplayWidgetBase : public UUserWidgetBase
 public:
 	UFUNCTION(BlueprintCallable, Category = Text)
 	int32 GetScores();
+
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void TogglePause();
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = State)
+	bool isResuming = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State)
+	int32 secondsToResume = 0;
+
+	UFUNCTION(BlueprintCallable, Category = Gameplay)
+	void ResumeGame();
 };

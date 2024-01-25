@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.YourCompany.MightyHero;
+package com.SilverStarlingStudio.MightyHero;
 
 import com.google.android.vending.expansion.downloader.impl.DownloaderService;
 
@@ -61,6 +61,6 @@ public class OBBDownloaderService extends DownloaderService {
      */
     @Override
     public String getAlarmReceiverClassName() {
-        return com.YourCompany.MightyHero.AlarmReceiver.class.getName();
+        return com.SilverStarlingStudio.MightyHero.AlarmReceiver.class.getName();
     }
 }

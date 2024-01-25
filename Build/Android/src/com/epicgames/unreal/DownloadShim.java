@@ -1,10 +1,10 @@
 package com.epicgames.unreal;
 
-import com.YourCompany.MightyHero.OBBDownloaderService;
-import com.YourCompany.MightyHero.DownloaderActivity;
+import com.SilverStarlingStudio.MightyHero.OBBDownloaderService;
+import com.SilverStarlingStudio.MightyHero.DownloaderActivity;
 import android.app.Activity;
 import com.google.android.vending.expansion.downloader.Helpers;
-import com.YourCompany.MightyHero.OBBData;
+import com.SilverStarlingStudio.MightyHero.OBBData;
 
 
 public class DownloadShim

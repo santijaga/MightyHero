@@ -15,3 +15,25 @@ int32 UGameplayWidgetBase::GetScores()
 
 	return 0;
 }
+
+void UGameplayWidgetBase::TogglePause()
+{
+	if (UGameplayStatics::IsGamePaused(GetWorld()))
+	{
+		if (!isResuming)
+		{
+			secondsToResume = 3;
+			isResuming = true;
+		}
+	}
+	else
+	{
+		UGameplayStatics::SetGamePaused(GetWorld(), true);
+	}
+}
+
+void UGameplayWidgetBase::ResumeGame()
+{
+	isResuming = false;
+	UGameplayStatics::SetGamePaused(GetWorld(), false);
+}
