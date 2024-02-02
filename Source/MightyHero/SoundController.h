@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "SoundController.generated.h"
 
+class USoundCue;
+
 UCLASS()
 class MIGHTYHERO_API ASoundController : public AActor
 {
@@ -24,16 +26,22 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Music")
-	class USoundCue* BGMCue;
+	USoundCue* BGMCue;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX")
-	class USoundCue* JumpCue;
+	USoundCue* JumpCue;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX")
-	class USoundCue* ExplosionCue;
+	USoundCue* ExplosionCue;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX")
-	class USoundCue* DestructionCue;
+	USoundCue* DestructionCue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX")
+	USoundCue* ShortCollectCue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX")
+	USoundCue* LongCollectCue;
 
 private:
 	bool bIsSoundOn = true;
@@ -60,4 +68,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Sound")
 	void PlayDestruction();
+
+	UFUNCTION(BlueprintCallable, Category = "SFX")
+	void PlayShortCollectCue();
+
+	UFUNCTION(BlueprintCallable, Category = "SFX")
+	void PlayLongCollectCue();
 };

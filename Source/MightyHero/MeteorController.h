@@ -52,7 +52,7 @@ private:
 
 public:
 	UFUNCTION(Category = Gameplay)
-	void DestroyAllMeteors();
+	void DestroyAllMeteors(bool BlowerImpact);
 
 	UFUNCTION(BlueprintCallable, Category = Tracking)
 	bool HasAnyMeteorsOutOfBounds(double XBound, double ZBound);

@@ -101,6 +101,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	TArray<float> GravityScalePerLevel;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
+	TArray<float> ForwardSpeedPerLevel;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = State)
 	bool bCrashedInSatellite = false;
 };

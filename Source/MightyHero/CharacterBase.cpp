@@ -6,7 +6,11 @@
 #include "Components/CapsuleComponent.h"
 #include "MightyHeroGameModeBase.h"
 #include "SoundController.h"
-
+#include "Blower.h"
+#include "MeteorController.h"
+#include "CollectableBase.h"
+#include "CollectablesController.h"
+#include "AuraCollectable.h"
 
 void ACharacterBase::BeginPlay()
 {
@@ -98,7 +102,7 @@ void ACharacterBase::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
 		GetPlayerState<AMightyHeroPlayerState>()->AddScore();
 		StatesEnum = ECharacterStates::SE_Impact;
 
-		if (!MeteorActor->IsPendingKill())
+		if (IsValid(MeteorActor))
 		{
 			MeteorActor->Destruction();
 		}
@@ -110,12 +114,21 @@ void ACharacterBase::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
 		Stop();
 		StatesEnum = ECharacterStates::SE_Sad;
 
-		if (!SatelliteActor->IsPendingKill())
+		if (IsValid(SatelliteActor))
 		{
 			SatelliteActor->Destruction();
 		}
 
 		bCrashedInSatellite = true;
+	}
+
+
+	if (ACollectableBase* Collectable = Cast<ACollectableBase>(OtherActor))
+	{
+		if (ACollectablesController* CollectablesController = Cast<ACollectablesController>(Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetCollectablesController()))
+		{
+			CollectablesController->CollectableBehaviour(Collectable);
+		}
 	}
 }
 
@@ -164,6 +177,8 @@ void ACharacterBase::IncreaseDifficulty()
 {
 	difficultyLevel++;
 
+	UE_LOG(LogTemp, Warning, TEXT("%f Level"), difficultyLevel);
+
 	if (JumpVelocityPerLevel.IsValidIndex(difficultyLevel))
 	{
 		JumpVelocity = JumpVelocityPerLevel[difficultyLevel];
@@ -174,4 +189,8 @@ void ACharacterBase::IncreaseDifficulty()
 		MovementComponent->GravityScale = GravityScalePerLevel[difficultyLevel];
 	}
 
+	if (ForwardSpeedPerLevel.IsValidIndex(difficultyLevel))
+	{
+		ForwardSpeed = ForwardSpeedPerLevel[difficultyLevel];
+	}
 }

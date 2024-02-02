@@ -15,6 +15,7 @@
 #include "MightyHeroPlayerState.h"
 #include "BackgroundController.h"
 #include "SoundController.h"
+#include "CollectablesController.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
@@ -63,6 +64,13 @@ void AMightyHeroGameModeBase::BeginPlay()
             SoundController->SetSound(DataController->LoadSoundSetting());
         }
     }
+
+    if (World)
+    {
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.Owner = this;
+        CollectablesController = World->SpawnActor<ACollectablesController>(CollectablesControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
+    }
 }
 
 void AMightyHeroGameModeBase::Tick(float DeltaTime)
@@ -71,6 +79,7 @@ void AMightyHeroGameModeBase::Tick(float DeltaTime)
 
     if (!bIsGameOver)
     {
+        CheckForCollectablesOutOfBounds();
         CheckForGameOver();
         IncreaseDifficulty();
     }
@@ -96,6 +105,12 @@ void AMightyHeroGameModeBase::StartGameplay()
         MeteorController->ResetController();
     }
 
+    if (CollectablesController)
+    {
+        CollectablesController->ResetController();
+        CollectablesController->StartGameplay();
+    }
+
     nextIncreaseScores = difficultyStep;
     bIsGameOver = false;
     bIsCharacterFall = false;
@@ -106,7 +121,8 @@ void AMightyHeroGameModeBase::GameOver()
     UE_LOG(LogTemp, Warning, TEXT("Game is over"));
 
     bIsGameOver = true;
-    MeteorController->DestroyAllMeteors();
+    MeteorController->DestroyAllMeteors(false);
+    CollectablesController->StopGameplay();
     HideGameplayWidget();
     ShowGameOverWidget();
     SaveHighScore();
@@ -232,6 +248,15 @@ bool AMightyHeroGameModeBase::CheckForMeteorsOutOfBounds()
     return isAnyMeteorsOutOfBounds;
 }
 
+void AMightyHeroGameModeBase::CheckForCollectablesOutOfBounds()
+{
+    if (CollectablesController)
+    {
+        double XBound = MainCamera->GetActorLocation().X + BackBound;
+        CollectablesController->DestroyAnyCollectablesOutOfBounds(XBound, LowerBound);
+    }
+}
+
 void AMightyHeroGameModeBase::ResetGame()
 {
     HideGameOverWidget();
@@ -315,6 +340,14 @@ void AMightyHeroGameModeBase::IncreaseDifficulty()
         if (CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->GetScores() > nextIncreaseScores)
         {
             MeteorController->IncreaseDifficulty();
+            if (CollectablesController)
+            {
+                CollectablesController->IncreaseDifficulty();
+            }
+            else
+            {
+                UE_LOG(LogTemp, Error, TEXT("Collectables Controller not connected!"));
+            }
             CharacterRef->IncreaseDifficulty();
 
             nextIncreaseScores += difficultyStep;
@@ -329,5 +362,25 @@ ASoundController* AMightyHeroGameModeBase::GetSoundController()
         return SoundController;
     }
     
+    return nullptr;
+}
+
+ACollectablesController* AMightyHeroGameModeBase::GetCollectablesController()
+{
+    if (CollectablesController)
+    {
+        return CollectablesController;
+    }
+
+    return nullptr;
+}
+
+AMeteorController* AMightyHeroGameModeBase::GetMeteorController()
+{
+    if (MeteorController)
+    {
+        return MeteorController;
+    }
+
     return nullptr;
 }

@@ -8,6 +8,7 @@
 #include "CharacterBase.h"
 #include "EngineUtils.h"
 #include "Math/UnrealMathUtility.h"
+#include "MightyHeroPlayerState.h"
 
 // Sets default values
 AMeteorController::AMeteorController()
@@ -24,6 +25,8 @@ void AMeteorController::BeginPlay()
 
 	CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
 	World = GetWorld();
+
+	currentSatelliteSpawnChance = defaultSatelliteSpawnChance;
 }
 
 // Called every frame
@@ -70,18 +73,27 @@ void AMeteorController::SpawnMeteor()
 	}
 }
 
-void AMeteorController::DestroyAllMeteors()
+void AMeteorController::DestroyAllMeteors(bool BlowerImpact)
 {
 	for (TActorIterator<AMeteorActor> ActorItr(World); ActorItr; ++ActorItr)
 	{
 		AMeteorActor* Meteor = *ActorItr;
+
+		if (BlowerImpact)
+		{
+			CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->AddScore();
+		}
+
 		Meteor->Destruction();
 	}
 
-	for (TActorIterator<ASatelliteActor> ActorItr(World); ActorItr; ++ActorItr)
+	if (!BlowerImpact)
 	{
-		ASatelliteActor* Satellite = *ActorItr;
-		Satellite->Destruction();
+		for (TActorIterator<ASatelliteActor> ActorItr(World); ActorItr; ++ActorItr)
+		{
+			ASatelliteActor* Satellite = *ActorItr;
+			Satellite->Destruction();
+		}
 	}
 }
 

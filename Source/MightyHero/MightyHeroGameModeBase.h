@@ -99,6 +99,9 @@ private:
 	UFUNCTION()
 	bool CheckForMeteorsOutOfBounds();
 
+	UFUNCTION()
+	void CheckForCollectablesOutOfBounds();
+
 public:
 	UFUNCTION()
 	void ResetGame();
@@ -162,5 +165,19 @@ private:
 	ASoundController* SoundController;
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
+	TSubclassOf<class ACollectablesController> CollectablesControllerClass;
+
+private:
+	ACollectablesController* CollectablesController;
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Access)
+	AMeteorController* GetMeteorController();
+
+	UFUNCTION(BlueprintCallable, Category = Access)
 	ASoundController* GetSoundController();
+
+	UFUNCTION(BlueprintCallable, Category = Access)
+	ACollectablesController* GetCollectablesController();
 };

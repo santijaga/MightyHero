@@ -77,6 +77,23 @@ void ASoundController::PlayDestruction()
 	}
 }
 
+void ASoundController::PlayShortCollectCue()
+{
+	if (bIsSoundOn && ShortCollectCue != nullptr)
+	{
+		UGameplayStatics::PlaySound2D(this, ShortCollectCue);
+	}
+}
+
+void ASoundController::PlayLongCollectCue()
+{
+	if (bIsSoundOn && LongCollectCue != nullptr)
+	{
+		UGameplayStatics::PlaySound2D(this, LongCollectCue);
+	}
+}
+
+
 void ASoundController::PlayBGM()
 {
 	if (BGMAudioComponent != nullptr && !BGMAudioComponent->IsPlaying() && bIsSoundOn)
