@@ -27,6 +27,8 @@ void AMeteorController::BeginPlay()
 	World = GetWorld();
 
 	currentSatelliteSpawnChance = defaultSatelliteSpawnChance;
+	DefaultMinFallVelocity = minFallVelocity;
+	DefaultMaxFallVelocity = maxFallVelocity;
 }
 
 // Called every frame
@@ -104,6 +106,8 @@ void AMeteorController::ResetController()
 	CurrentScale = DefaultScale;
 	NextSpawnDistance = FirstSpawnDistance;
 	currentSatelliteSpawnChance = defaultSatelliteSpawnChance;
+	minFallVelocity = DefaultMinFallVelocity;
+	maxFallVelocity = DefaultMaxFallVelocity;
 }
 
 bool AMeteorController::ShouldSpawnSatellite()

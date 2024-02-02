@@ -72,6 +72,12 @@ private:
 	UPROPERTY()
 	int32 difficultyLevel = 1;
 
+	UPROPERTY()
+	float DefaultMinFallVelocity = 0;
+
+	UPROPERTY()
+	float DefaultMaxFallVelocity = 0;
+
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void IncreaseDifficulty();
