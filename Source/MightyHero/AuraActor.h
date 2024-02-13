@@ -35,8 +35,6 @@ public:
 	TObjectPtr<class UPaperFlipbook> ExpireFlipbook;
 
 private:
-	class ACharacterBase* CharacterRef;
-
 	UFUNCTION()
 	void TrackCharacter();
 

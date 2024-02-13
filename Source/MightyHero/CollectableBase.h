@@ -31,7 +31,7 @@ public:
 	TObjectPtr<UPaperFlipbook> CollectedFlipbook;
 
 	UFUNCTION(BlueprintCallable, Category = Interaction)
-	void Collect();
+	virtual void Collect();
 
 private:
 	UPROPERTY()

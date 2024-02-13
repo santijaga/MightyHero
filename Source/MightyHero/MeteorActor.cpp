@@ -3,6 +3,7 @@
 #include "Components/BoxComponent.h"
 #include "MightyHeroGameModeBase.h"
 #include "SoundController.h"
+#include "CoinsController.h"
 
 AMeteorActor::AMeteorActor()
 {
@@ -53,6 +54,24 @@ void AMeteorActor::Destruction()
 	{
 		RenderComponentRef->OnFinishedPlaying.AddDynamic(this, &AMeteorActor::OnFlipbookFinishedPlaying);
 	}
+}
+
+void AMeteorActor::Destruction(bool bShouldSpawnCoin)
+{
+	if (bShouldSpawnCoin)
+	{
+		int32 CurrentChanceToSpawnCoin = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetCurrentDifficulty();
+
+		if (CurrentChanceToSpawnCoin > MinLevelForGuaranteedSpawn || FMath::RandRange(0, 10) < CurrentChanceToSpawnCoin)
+		{
+			if (ACoinsController* CoinsController = Cast<ACoinsController>(Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetCoinsController()))
+			{
+				CoinsController->SpawnCoin(GetActorLocation());
+			}
+		}
+	}
+
+	this->Destruction();
 }
 
 void AMeteorActor::OnFlipbookFinishedPlaying()

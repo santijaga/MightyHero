@@ -47,14 +47,9 @@ void AAuraActor::Deactivate(bool ShouldScheduleNextCollectable)
 
 void AAuraActor::TrackCharacter()
 {
-	if (!CharacterRef)
+	if (UGameplayStatics::GetPlayerPawn(this, 0))
 	{
-		CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
-	}
-
-	if (CharacterRef)
-	{
-		SetActorLocation(CharacterRef->GetActorLocation());
+		SetActorLocation(UGameplayStatics::GetPlayerPawn(this, 0)->GetActorLocation());
 	}
 }
 
@@ -63,18 +58,13 @@ void AAuraActor::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
 	AMeteorActor* MeteorActor = Cast<AMeteorActor>(OtherActor);
 	if (MeteorActor)
 	{
-		if (!CharacterRef)
+		if (UGameplayStatics::GetPlayerPawn(this, 0))
 		{
-			CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
-		}
-		
-		if (CharacterRef)
-		{
-			CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->AddScore();
+			UGameplayStatics::GetPlayerPawn(this, 0)->GetPlayerState<AMightyHeroPlayerState>()->AddScore();
 
 			if (IsValid(MeteorActor))
 			{
-				MeteorActor->Destruction();
+				MeteorActor->Destruction(true);
 			}
 		}
 	}

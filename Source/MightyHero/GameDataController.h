@@ -4,6 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "GameDataController.generated.h"
 
+class ACharacterBase;
+
 /**
  * 
  */
@@ -17,4 +19,8 @@ public:
 	int32 LoadHighScore();
 	void SaveSoundSetting(bool bNewSoundValue);
 	bool LoadSoundSetting();
+	void SaveActivePawnClass(UClass* SelectedActorClass);
+	UClass* LoadActivePawnClass();
+	void SaveCoins(int32 Coins);
+	int32 LoadCoins();
 };

@@ -64,7 +64,7 @@ public:
 	void PlayExplosion();
 
 	UFUNCTION(BlueprintCallable, Category = "Sound")
-	void PlayJump();
+	void PlayJump(USoundCue* InJumpCue);
 
 	UFUNCTION(BlueprintCallable, Category = "Sound")
 	void PlayDestruction();

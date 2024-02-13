@@ -36,9 +36,6 @@ public:
 
 private:
 	UPROPERTY()
-	ACharacterBase* CharacterRef;
-
-	UPROPERTY()
 	UWorld* World;
 
 	UPROPERTY()
@@ -82,7 +79,7 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void IncreaseDifficulty();
+	void IncreaseDifficulty(int32 NewDifficulty);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	float SpawnStepDistance = 500.f;
@@ -170,4 +167,6 @@ private:
 	UFUNCTION()
 	void AuraBehaviour(AAuraCollectable* ActiveAura);
 
+	UFUNCTION()
+	void PlayLongCollectSound();
 };

@@ -20,8 +20,6 @@ void ABackgroundController::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
-
 	InitStartSegments();
 }
 
@@ -38,9 +36,9 @@ void ABackgroundController::Tick(float DeltaTime)
 
 double ABackgroundController::GetCharacterHorizontalLocation()
 {
-	if (CharacterRef)
+	if (UGameplayStatics::GetPlayerPawn(this, 0))
 	{
-		return CharacterRef->GetActorLocation().X;
+		return UGameplayStatics::GetPlayerPawn(this, 0)->GetActorLocation().X;
 	}
 
 	return 0;

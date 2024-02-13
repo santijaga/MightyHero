@@ -16,17 +16,14 @@
 #include "BackgroundController.h"
 #include "SoundController.h"
 #include "CollectablesController.h"
+#include "CollectionWidget.h"
+#include "CoinsController.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
     Super::BeginPlay();
 
     PlayerController = Cast<AMightyHeroPlayerController>(GetWorld()->GetFirstPlayerController());
-
-    if (PlayerController)
-    {
-        CharacterRef = Cast<ACharacterBase>(PlayerController->GetPawn());
-    }
 
     InitUI();
 
@@ -71,6 +68,31 @@ void AMightyHeroGameModeBase::BeginPlay()
         SpawnParameters.Owner = this;
         CollectablesController = World->SpawnActor<ACollectablesController>(CollectablesControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
     }
+
+    if (DataController)
+    {
+        if (UClass* ActivePawnClass = DataController->LoadActivePawnClass())
+        {
+            if (UGameplayStatics::GetPlayerPawn(this, 0)->GetClass() != ActivePawnClass)
+            {
+                RefreshPawn();
+            }
+        }
+    }
+
+    if (World)
+    {
+        if (CoinsControllerClass)
+        {
+            FActorSpawnParameters SpawnParameters;
+            SpawnParameters.Owner = this;
+            CoinsController = World->SpawnActor<ACoinsController>(CoinsControllerClass, FVector(0), FRotator(0), SpawnParameters);
+        }
+        else
+        {
+            UE_LOG(LogTemp, Error, TEXT("[AMightyHeroGameModeBase] Coins Controller not setup!"));
+        }
+    }
 }
 
 void AMightyHeroGameModeBase::Tick(float DeltaTime)
@@ -95,9 +117,9 @@ void AMightyHeroGameModeBase::StartGameplay()
     HideMainWidget();
     ShowGameplayWidget();
 
-    if (CharacterRef)
+    if (UGameplayStatics::GetPlayerPawn(this, 0))
     {
-        CharacterRef->StartGameplay();
+        Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0))->StartGameplay();
     }
 
     if (MeteorController)
@@ -111,6 +133,7 @@ void AMightyHeroGameModeBase::StartGameplay()
         CollectablesController->StartGameplay();
     }
 
+    DifficultyLevel = 0;
     nextIncreaseScores = difficultyStep;
     bIsGameOver = false;
     bIsCharacterFall = false;
@@ -126,6 +149,7 @@ void AMightyHeroGameModeBase::GameOver()
     HideGameplayWidget();
     ShowGameOverWidget();
     SaveHighScore();
+    SaveCoins();
 }
 
 void AMightyHeroGameModeBase::HideMainWidget()
@@ -197,9 +221,9 @@ void AMightyHeroGameModeBase::HideGameplayWidget()
 
 FVector AMightyHeroGameModeBase::TrackCharacterLocation()
 {
-    if (CharacterRef)
+    if (UGameplayStatics::GetPlayerPawn(this, 0))
     {
-        FVector CurrentCharacterLocation = CharacterRef->GetActorLocation();
+        FVector CurrentCharacterLocation = UGameplayStatics::GetPlayerPawn(this, 0)->GetActorLocation();
 
         return CurrentCharacterLocation;
     }
@@ -210,11 +234,15 @@ FVector AMightyHeroGameModeBase::TrackCharacterLocation()
 void AMightyHeroGameModeBase::CheckForGameOver()
 {
     FVector CurrentCharacterLocation = TrackCharacterLocation();
+    ACharacterBase* CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
 
     bool bCharacterCrashedInSatellite = false;
-    if (CharacterRef && CharacterRef->bCrashedInSatellite)
+    if (CharacterRef)
     {
-        bCharacterCrashedInSatellite = true;
+        if (CharacterRef->bCrashedInSatellite)
+        {
+            bCharacterCrashedInSatellite = true;
+        }
     }
 
     if (CharacterRef && CurrentCharacterLocation.Z < LowerBound || CurrentCharacterLocation.Z > UpperBound)
@@ -264,6 +292,7 @@ void AMightyHeroGameModeBase::ResetGame()
     ResetCharacter();
     ResetScores();
     ResetBackground();
+    ResetCoins();
     nextIncreaseScores = difficultyStep;
 }
 
@@ -296,7 +325,7 @@ void AMightyHeroGameModeBase::HideGameOverWidget()
 
 void AMightyHeroGameModeBase::ResetCharacter()
 {
-    if (CharacterRef)
+    if (ACharacterBase* CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0)))
     {
         CharacterRef->SetActorLocation(MainPlayerStart->GetActorLocation());
         CharacterRef->ResetCharacter();
@@ -305,9 +334,9 @@ void AMightyHeroGameModeBase::ResetCharacter()
 
 void AMightyHeroGameModeBase::SaveHighScore()
 {
-    if (CharacterRef)
+    if (UGameplayStatics::GetPlayerPawn(this, 0))
     {
-        int32 Scores = CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->GetScores();
+        int32 Scores = UGameplayStatics::GetPlayerPawn(this, 0)->GetPlayerState<AMightyHeroPlayerState>()->GetScores();
         int32 HighScores = DataController->LoadHighScore();
 
         if (Scores > HighScores)
@@ -317,11 +346,30 @@ void AMightyHeroGameModeBase::SaveHighScore()
     }
 }
 
+void AMightyHeroGameModeBase::SaveCoins()
+{
+    if (UGameplayStatics::GetPlayerPawn(this, 0))
+    {
+        int32 CollectedCoins = UGameplayStatics::GetPlayerPawn(this, 0)->GetPlayerState<AMightyHeroPlayerState>()->GetCoins();
+        int32 OwnedCoins = DataController->LoadCoins();
+
+        DataController->SaveCoins(CollectedCoins + OwnedCoins);
+    }
+}
+
 void AMightyHeroGameModeBase::ResetScores()
 {
-    if (CharacterRef)
+    if (UGameplayStatics::GetPlayerPawn(this, 0))
     {
-        CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->ResetScores();
+        UGameplayStatics::GetPlayerPawn(this, 0)->GetPlayerState<AMightyHeroPlayerState>()->ResetScores();
+    }
+}
+
+void AMightyHeroGameModeBase::ResetCoins()
+{
+    if (UGameplayStatics::GetPlayerPawn(this, 0))
+    {
+        UGameplayStatics::GetPlayerPawn(this, 0)->GetPlayerState<AMightyHeroPlayerState>()->ResetCoins();
     }
 }
 
@@ -337,18 +385,19 @@ void AMightyHeroGameModeBase::IncreaseDifficulty()
 {
     if (DataController)
     {
-        if (CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->GetScores() > nextIncreaseScores)
+        if (UGameplayStatics::GetPlayerPawn(this, 0)->GetPlayerState<AMightyHeroPlayerState>()->GetScores() > nextIncreaseScores)
         {
-            MeteorController->IncreaseDifficulty();
+            DifficultyLevel++;
+            MeteorController->IncreaseDifficulty(DifficultyLevel);
             if (CollectablesController)
             {
-                CollectablesController->IncreaseDifficulty();
+                CollectablesController->IncreaseDifficulty(DifficultyLevel);
             }
             else
             {
                 UE_LOG(LogTemp, Error, TEXT("Collectables Controller not connected!"));
             }
-            CharacterRef->IncreaseDifficulty();
+            Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0))->IncreaseDifficulty(DifficultyLevel);
 
             nextIncreaseScores += difficultyStep;
         }
@@ -373,6 +422,85 @@ ACollectablesController* AMightyHeroGameModeBase::GetCollectablesController()
     }
 
     return nullptr;
+}
+
+void AMightyHeroGameModeBase::OpenCollection()
+{
+    if (PlayerController)
+    {
+        if (CollectionWidgetClass)
+        {
+            CollectionWidget = Cast<UCollectionWidget>(CreateWidget<UUserWidget>(PlayerController, CollectionWidgetClass));
+            if (CollectionWidget)
+            {
+                CollectionWidget->ShowWidget();
+                RefreshCollection();
+            }
+        }
+    }
+}
+
+void AMightyHeroGameModeBase::RefreshPawn()
+{
+    if (GetWorld())
+    {
+        if (DataController)
+        {
+            if (UClass* ClassToSpawn = DataController->LoadActivePawnClass())
+            {
+                if (UGameplayStatics::GetPlayerPawn(this, 0))
+                {
+                    FTransform SpawnTransform = UGameplayStatics::GetPlayerPawn(this, 0)->GetActorTransform();
+                    
+                    FActorSpawnParameters SpawnParams;
+                    SpawnParams.Owner = this;
+
+                    if (ACharacterBase* SpawnedActor = GetWorld()->SpawnActor<ACharacterBase>(ClassToSpawn, SpawnTransform, SpawnParams))
+                    {
+                        if (PlayerController)
+                        {
+                            AActor* PreviousPawn = UGameplayStatics::GetPlayerPawn(this, 0);
+
+                            PlayerController->UnPossess();
+
+                            PreviousPawn->Destroy();
+
+                            PlayerController->Possess(SpawnedActor);
+
+                            ResetCharacter();
+
+                            MainCamera->ResetCamera();
+
+                            PlayerController->SetViewTargetWithBlend(MainCamera, 0.0f);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+void AMightyHeroGameModeBase::RefreshCollection()
+{
+    if (CollectionWidget)
+    {
+        CollectionWidget->RefreshAllCards();
+    }
+}
+
+ACoinsController* AMightyHeroGameModeBase::GetCoinsController()
+{
+    if (CoinsController)
+    {
+        return CoinsController;
+    }
+
+    return nullptr;
+}
+
+int32 AMightyHeroGameModeBase::GetCurrentDifficulty()
+{
+    return DifficultyLevel;
 }
 
 AMeteorController* AMightyHeroGameModeBase::GetMeteorController()

@@ -61,11 +61,11 @@ void ASoundController::PlayExplosion()
 	}
 }
 
-void ASoundController::PlayJump()
+void ASoundController::PlayJump(USoundCue* InJumpCue)
 {
-	if (JumpCue != nullptr && bIsSoundOn)
+	if (InJumpCue != nullptr && bIsSoundOn)
 	{
-		UGameplayStatics::PlaySound2D(this, JumpCue);
+		UGameplayStatics::PlaySound2D(this, InJumpCue);
 	}
 }
 

@@ -11,6 +11,7 @@
 #include "CollectableBase.h"
 #include "CollectablesController.h"
 #include "AuraCollectable.h"
+#include "Coin.h"
 
 void ACharacterBase::BeginPlay()
 {
@@ -84,7 +85,7 @@ void ACharacterBase::CharacterJump()
 		bWasJump = true;
 		if (ASoundController* SoundController = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetSoundController())
 		{
-			SoundController->PlayJump();
+			SoundController->PlayJump(JumpCue);
 		}
 	}
 }
@@ -104,7 +105,9 @@ void ACharacterBase::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
 
 		if (IsValid(MeteorActor))
 		{
-			MeteorActor->Destruction();
+			FVector MeteorActorLocation = MeteorActor->GetActorLocation();
+
+			MeteorActor->Destruction(true);
 		}
 	}
 
@@ -129,6 +132,12 @@ void ACharacterBase::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
 		{
 			CollectablesController->CollectableBehaviour(Collectable);
 		}
+	}
+
+	if (ACoin* Coin = Cast<ACoin>(OtherActor))
+	{
+		GetPlayerState<AMightyHeroPlayerState>()->AddCoin();
+		Coin->Collect();
 	}
 }
 
@@ -173,9 +182,9 @@ void ACharacterBase::ResetCharacter()
 	difficultyLevel = 1;
 }
 
-void ACharacterBase::IncreaseDifficulty()
+void ACharacterBase::IncreaseDifficulty(int32 NewDifficulty)
 {
-	difficultyLevel++;
+	difficultyLevel = NewDifficulty;
 
 	UE_LOG(LogTemp, Warning, TEXT("%f Level"), difficultyLevel);
 

@@ -10,6 +10,7 @@
 #include "MeteorController.h"
 #include "AuraCollectable.h"
 #include "AuraActor.h"
+#include "SoundController.h"
 
 // Sets default values
 ACollectablesController::ACollectablesController()
@@ -24,7 +25,6 @@ void ACollectablesController::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
 	World = GetWorld();
 
 	CurrentBlowerSpawnChance = DefaultBlowerSpawnChance;
@@ -35,9 +35,9 @@ void ACollectablesController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (CharacterRef)
+	if (UGameplayStatics::GetPlayerPawn(this, 0))
 	{
-		if (CharacterRef->GetActorLocation().X > NextSpawnDistance)
+		if (UGameplayStatics::GetPlayerPawn(this, 0)->GetActorLocation().X > NextSpawnDistance)
 		{
 			if (ShouldSpawnBlower())
 			{
@@ -153,9 +153,9 @@ bool ACollectablesController::ShouldSpawnBlower()
 	return false;
 }
 
-void ACollectablesController::IncreaseDifficulty()
+void ACollectablesController::IncreaseDifficulty(int32 NewDifficulty)
 {
-	difficultyLevel++;
+	difficultyLevel = NewDifficulty;
 
 	if (SpawnStepDistancePerLevel.IsValidIndex(difficultyLevel))
 	{
@@ -182,7 +182,7 @@ void ACollectablesController::SpawnRandomAbilitiesCollectable()
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 
-		FVector CharacterLocation = CharacterRef->GetActorLocation();
+		FVector CharacterLocation = UGameplayStatics::GetPlayerPawn(this, 0)->GetActorLocation();
 
 		FVector SpawnLocation = FVector(CharacterLocation.X + AbilitiesCollectablesSpawnIndent, 0, 0);
 		SpawnLocation.Z = FMath::RandRange(AbilitiesCollectablesSpawnMinHeight, AbilitiesCollectablesMaxHeight);
@@ -263,6 +263,24 @@ void ACollectablesController::AuraBehaviour(AAuraCollectable* ActiveAura)
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("Aura Actor Class not set."));
+	}
+}
+
+void ACollectablesController::PlayLongCollectSound()
+{
+	if (UWorld* GameWorld = GetWorld())
+	{
+		if (AMightyHeroGameModeBase* GameMode = Cast<AMightyHeroGameModeBase>(GameWorld->GetAuthGameMode()))
+		{
+			if (ASoundController* SoundController = GameMode->GetSoundController())
+			{
+				SoundController->PlayLongCollectCue();
+			}
+			else
+			{
+				UE_LOG(LogTemp, Error, TEXT("Sound Component Reference missing!"));
+			}
+		}
 	}
 }
 

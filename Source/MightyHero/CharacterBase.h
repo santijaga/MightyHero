@@ -37,6 +37,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	float DefaultGravityScale = 1.5f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX")
+	USoundCue* JumpCue;
 	
 private:
 	bool bIsMovementAllowed = false;
@@ -88,7 +91,7 @@ public:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void IncreaseDifficulty();
+	void IncreaseDifficulty(int32 NewDifficulty);
 
 private:
 	UPROPERTY()

@@ -9,6 +9,7 @@
 class UGameDataController;
 class ABackgroundController;
 class ASoundController;
+class ACoinsController;
 
 /**
  * 
@@ -22,7 +23,6 @@ private:
 	UFUNCTION(BlueprintCallable, Category = Camera)
 	void InitCameras();
 
-	class ACharacterBase* CharacterRef;
 	class AMightyHeroPlayerController* PlayerController;
 
 	bool bIsGameOver = true;
@@ -131,7 +131,13 @@ private:
 	void SaveHighScore();
 
 	UFUNCTION()
+	void SaveCoins();
+
+	UFUNCTION()
 	void ResetScores();
+
+	UFUNCTION()
+	void ResetCoins();
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
@@ -144,6 +150,8 @@ private:
 	void ResetBackground();
 
 private:
+	int32 DifficultyLevel = 0;
+
 	UFUNCTION()
 	void IncreaseDifficulty();
 
@@ -180,4 +188,34 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Access)
 	ACollectablesController* GetCollectablesController();
+
+private:
+	UPROPERTY()
+	class UCollectionWidget* CollectionWidget;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	TSubclassOf<UCollectionWidget> CollectionWidgetClass;
+
+	UFUNCTION(BlueprintCallable, Category = UI)
+	void OpenCollection();
+
+	UFUNCTION(BlueprintCallable, Category = Pawn)
+	void RefreshPawn();
+
+	UFUNCTION(BlueprintCallable, Category = UI)
+	void RefreshCollection();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
+	TSubclassOf<ACoinsController> CoinsControllerClass;
+
+private:
+	ACoinsController* CoinsController;
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Controllers)
+	ACoinsController* GetCoinsController();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+	int32 GetCurrentDifficulty();
 };

@@ -16,6 +16,19 @@ int32 UGameplayWidgetBase::GetScores()
 	return 0;
 }
 
+int32 UGameplayWidgetBase::GetCoins()
+{
+	if (AMightyHeroPlayerController* PlayerController = Cast<AMightyHeroPlayerController>(UGameplayStatics::GetPlayerController(this, 0)))
+	{
+		if (AMightyHeroPlayerState* PlayerState = Cast<AMightyHeroPlayerState>(PlayerController->PlayerState))
+		{
+			return PlayerState->GetCoins();
+		}
+	}
+
+	return 0;
+}
+
 void UGameplayWidgetBase::TogglePause()
 {
 	if (UGameplayStatics::IsGamePaused(GetWorld()))

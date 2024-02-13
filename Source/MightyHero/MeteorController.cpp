@@ -23,7 +23,6 @@ void AMeteorController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
 	World = GetWorld();
 
 	currentSatelliteSpawnChance = defaultSatelliteSpawnChance;
@@ -36,18 +35,15 @@ void AMeteorController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (CharacterRef)
+	if (UGameplayStatics::GetPlayerPawn(this, 0)->GetActorLocation().X > NextSpawnDistance)
 	{
-		if (CharacterRef->GetActorLocation().X > NextSpawnDistance)
+		if (ShouldSpawnSatellite())
 		{
-			if (ShouldSpawnSatellite())
-			{
-				SpawnSatellite();
-			}
-			else
-			{
-				SpawnMeteor();
-			}
+			SpawnSatellite();
+		}
+		else
+		{
+			SpawnMeteor();
 		}
 	}
 }
@@ -83,10 +79,14 @@ void AMeteorController::DestroyAllMeteors(bool BlowerImpact)
 
 		if (BlowerImpact)
 		{
-			CharacterRef->GetPlayerState<AMightyHeroPlayerState>()->AddScore();
+			UGameplayStatics::GetPlayerPawn(this, 0)->GetPlayerState<AMightyHeroPlayerState>()->AddScore();
+			Meteor->Destruction(true);
+		}
+		else
+		{
+			Meteor->Destruction();
 		}
 
-		Meteor->Destruction();
 	}
 
 	if (!BlowerImpact)
@@ -149,9 +149,9 @@ void AMeteorController::SpawnSatellite()
 	}
 }
 
-void AMeteorController::IncreaseDifficulty()
+void AMeteorController::IncreaseDifficulty(int32 NewDifficulty)
 {
-	difficultyLevel++;
+	difficultyLevel = NewDifficulty;;
 
 	if (minFallVelocityPerLevel.IsValidIndex(difficultyLevel))
 	{

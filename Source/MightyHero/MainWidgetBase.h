@@ -18,4 +18,13 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void StartGameplay();
+
+	UFUNCTION(BlueprintCallable, Category = UI)
+	void OnOpenCollection();
+
+	UFUNCTION(BlueprintCallable, Category = System)
+	void QuitGame();
+
+	UFUNCTION(BlueprintCallable, Category = Data)
+	int32 LoadCoins();
 };

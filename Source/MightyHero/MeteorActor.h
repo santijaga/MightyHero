@@ -27,8 +27,9 @@ private:
 	double FallVelocity;
 
 public:
-	UFUNCTION(BlueprintCallable, Category=Interaction)
+	UFUNCTION(BlueprintCallable, Category = Interaction)
 	void Destruction();
+	void Destruction(bool bShouldSpawnCoin);
 
 	UPROPERTY(Category = Sprite, EditAnywhere, meta = (DisplayThumbnail = "true"))
 	TObjectPtr<UPaperFlipbook> DestructionFlipbook;
@@ -39,4 +40,6 @@ private:
 
 private:
 	bool bIsDestroyed = false;
+
+	int32 MinLevelForGuaranteedSpawn = 10;
 };

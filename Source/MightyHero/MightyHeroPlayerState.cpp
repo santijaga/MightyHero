@@ -28,3 +28,18 @@ void AMightyHeroPlayerState::ResetScores()
 {
 	Scores = 0;
 }
+
+void AMightyHeroPlayerState::AddCoin()
+{
+	Coins++;
+}
+
+int32 AMightyHeroPlayerState::GetCoins()
+{
+	return Coins;
+}
+
+void AMightyHeroPlayerState::ResetCoins()
+{
+	Coins = 0;
+}

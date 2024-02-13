@@ -16,6 +16,7 @@ class MIGHTYHERO_API AMightyHeroPlayerState : public APlayerState
 
 private:
 	int32 Scores = 0;
+	int32 Coins = 0;
 	bool bIsGameover = true;
 
 protected:
@@ -31,4 +32,13 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = State)
 	void ResetScores();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+	void AddCoin();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+	int32 GetCoins();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+	void ResetCoins();
 };

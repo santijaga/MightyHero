@@ -26,9 +26,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawn)
 	TSubclassOf<class AMeteorActor> MeteorActorClass;
 
-private:
-	class ACharacterBase* CharacterRef;
-
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	float FirstSpawnDistance = 1000.0f;
@@ -80,7 +77,7 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void IncreaseDifficulty();
+	void IncreaseDifficulty(int32 NewDifficulty);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	TArray<float> minFallVelocityPerLevel;

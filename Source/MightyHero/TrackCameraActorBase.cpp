@@ -10,7 +10,8 @@ void ATrackCameraActorBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CharacterRef = Cast<ACharacterBase>(GetWorld()->GetFirstPlayerController()->GetPawn());
+	DefaultCameraTransform = GetActorTransform();
+
 	CharacterCurrentXPosition = GetCharacterCurrentXLocation();
 }
 
@@ -21,28 +22,26 @@ void ATrackCameraActorBase::Tick(float DeltaTime)
 	TrackCharacter();
 }
 
+void ATrackCameraActorBase::ResetCamera()
+{
+	SetActorTransform(DefaultCameraTransform);
+}
+
 void ATrackCameraActorBase::TrackCharacter()
 {
-	if (CharacterRef)
+	if (APawn* ActivePawn = GetWorld()->GetFirstPlayerController()->GetPawn())
 	{
-		double NewCharacterXPosition = GetCharacterCurrentXLocation();
-		double DeltaX = NewCharacterXPosition - CharacterCurrentXPosition;
-		
 		FVector CurrentLocation = GetActorLocation();
-
-		FVector NewLocation = FVector(CurrentLocation.X + DeltaX, CurrentLocation.Y, CurrentLocation.Z);
-		SetActorLocation(NewLocation);
-
+		SetActorLocation(FVector(CurrentLocation.X + GetCharacterCurrentXLocation() - CharacterCurrentXPosition, CurrentLocation.Y, CurrentLocation.Z));
 		CharacterCurrentXPosition = GetCharacterCurrentXLocation();
 	}
 }
 
 double ATrackCameraActorBase::GetCharacterCurrentXLocation()
 {
-	if (CharacterRef)
+	if (APawn* ActivePawn = GetWorld()->GetFirstPlayerController()->GetPawn())
 	{
-		FVector CharacterLocation = CharacterRef->GetActorLocation();
-		return CharacterLocation.X;
+		return ActivePawn->GetActorLocation().X;
 	}
 
 	return 0;

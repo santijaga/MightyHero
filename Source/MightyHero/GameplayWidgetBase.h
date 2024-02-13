@@ -16,6 +16,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Text)
 	int32 GetScores();
 
+	UFUNCTION(BlueprintCallable, Category = Text)
+	int32 GetCoins();
+
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void TogglePause();
 

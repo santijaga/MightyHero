@@ -22,13 +22,16 @@ protected:
 	virtual void Tick(float DeltaTime) override;
 	
 private:
-	class ACharacterBase* CharacterRef;
+	FTransform DefaultCameraTransform;
 
 	double CharacterCurrentXPosition = .0f;
 
 	double GetCharacterCurrentXLocation();
 
 public:
+	UFUNCTION(BlueprintCallable, Category = "Tracking")
+	void ResetCamera();
+
 	UFUNCTION(BlueprintCallable, Category = "Tracking")
 	void TrackCharacter();
 };

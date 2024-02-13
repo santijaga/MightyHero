@@ -18,4 +18,10 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = Basic)
 	bool bSoundIsEnabled;
+
+	UPROPERTY(VisibleAnywhere, Category = Pawn)
+	UClass* ActiveActorClass;
+
+	UPROPERTY(VisibleAnywhere, Category = Currency)
+	int32 Coins;
 };

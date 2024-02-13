@@ -153,203 +153,203 @@
 "../../../Engine/Content/BasicShapes/Cone.ubulk" 152
 "../../../Engine/Content/BasicShapes/Cone.uasset" 153
 "../../../Engine/Content/BasicShapes/Cone.uexp" 154
-"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 155
-"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uexp" 156
-"../../../Engine/Content/EditorResources/S_Terrain.ubulk" 157
-"../../../Engine/Content/EditorResources/S_Terrain.uasset" 158
-"../../../Engine/Content/EditorResources/S_Terrain.uexp" 159
-"../../../Engine/Content/EngineSounds/Master.uasset" 160
-"../../../Engine/Content/EngineSounds/Master.uexp" 161
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/DefaultGizmoLibraryNormalized.uasset" 162
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/DefaultGizmoLibraryNormalized.uexp" 163
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_solid.ubulk" 164
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_solid.uasset" 165
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_solid.uexp" 166
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_3mm.ubulk" 167
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_3mm.uasset" 168
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_3mm.uexp" 169
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_1mm.ubulk" 170
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_1mm.uasset" 171
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_1mm.uexp" 172
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_solid.ubulk" 173
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_solid.uasset" 174
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_solid.uexp" 175
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_3mm.ubulk" 176
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_3mm.uasset" 177
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_3mm.uexp" 178
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_1mm.ubulk" 179
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_1mm.uasset" 180
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_1mm.uexp" 181
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_solid.ubulk" 182
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_solid.uasset" 183
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_solid.uexp" 184
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_3mm.ubulk" 185
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_3mm.uasset" 186
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_3mm.uexp" 187
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_1mm.ubulk" 188
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_1mm.uasset" 189
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_1mm.uexp" 190
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_solid.ubulk" 191
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_solid.uasset" 192
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_solid.uexp" 193
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_3mm.ubulk" 194
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_3mm.uasset" 195
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_3mm.uexp" 196
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_1mm.ubulk" 197
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_1mm.uasset" 198
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_1mm.uexp" 199
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_solid.ubulk" 200
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_solid.uasset" 201
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_solid.uexp" 202
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_3mm.ubulk" 203
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_3mm.uasset" 204
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_3mm.uexp" 205
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_1mm.ubulk" 206
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_1mm.uasset" 207
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_1mm.uexp" 208
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_solid.ubulk" 209
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_solid.uasset" 210
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_solid.uexp" 211
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_3mm.ubulk" 212
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_3mm.uasset" 213
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_3mm.uexp" 214
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_1mm.ubulk" 215
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_1mm.uasset" 216
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_1mm.uexp" 217
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_solid.ubulk" 218
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_solid.uasset" 219
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_solid.uexp" 220
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_3mm.ubulk" 221
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_3mm.uasset" 222
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_3mm.uexp" 223
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_1mm.ubulk" 224
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_1mm.uasset" 225
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_1mm.uexp" 226
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_solid.ubulk" 227
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_solid.uasset" 228
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_solid.uexp" 229
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_3mm.ubulk" 230
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_3mm.uasset" 231
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_3mm.uexp" 232
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_1mm.ubulk" 233
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_1mm.uasset" 234
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_1mm.uexp" 235
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_solid.ubulk" 236
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_solid.uasset" 237
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_solid.uexp" 238
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_3mm.ubulk" 239
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_3mm.uasset" 240
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_3mm.uexp" 241
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_1mm.ubulk" 242
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_1mm.uasset" 243
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_1mm.uexp" 244
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_solid.ubulk" 245
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_solid.uasset" 246
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_solid.uexp" 247
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_3mm.ubulk" 248
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_3mm.uasset" 249
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_3mm.uexp" 250
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_1mm.ubulk" 251
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_1mm.uasset" 252
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_1mm.uexp" 253
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_solid.ubulk" 254
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_solid.uasset" 255
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_solid.uexp" 256
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_3mm.ubulk" 257
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_3mm.uasset" 258
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_3mm.uexp" 259
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_1mm.ubulk" 260
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_1mm.uasset" 261
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_1mm.uexp" 262
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_solid.ubulk" 263
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_solid.uasset" 264
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_solid.uexp" 265
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_3mm.ubulk" 266
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_3mm.uasset" 267
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_3mm.uexp" 268
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_1mm.ubulk" 269
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_1mm.uasset" 270
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_1mm.uexp" 271
-"../../../Engine/Plugins/Runtime/MeshModelingToolset/Content/Materials/M_DynamicMeshComponentVtxColor.uasset" 272
-"../../../Engine/Plugins/Runtime/MeshModelingToolset/Content/Materials/M_DynamicMeshComponentVtxColor.uexp" 273
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Space_adventure_3.ubulk" 274
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Space_adventure_3.uasset" 275
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Space_adventure_3.uexp" 276
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/MainTheme_Cue.uasset" 277
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/MainTheme_Cue.uexp" 278
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long.ubulk" 279
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long.uasset" 280
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long.uexp" 281
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long_Cue.uasset" 282
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long_Cue.uexp" 283
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock2.ubulk" 284
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock2.uasset" 285
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock2.uexp" 286
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock1.ubulk" 287
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock1.uasset" 288
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock1.uexp" 289
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Destruction_Cue.uasset" 290
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Destruction_Cue.uexp" 291
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump.ubulk" 292
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump.uasset" 293
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump.uexp" 294
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump_Cue.uasset" 295
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump_Cue.uexp" 296
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode01.ubulk" 297
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode01.uasset" 298
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode01.uexp" 299
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode03.ubulk" 300
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode03.uasset" 301
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode03.uexp" 302
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode04.ubulk" 303
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode04.uasset" 304
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode04.uexp" 305
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode02.ubulk" 306
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode02.uasset" 307
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode02.uexp" 308
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explosion_Cue.uasset" 309
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explosion_Cue.uexp" 310
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short.ubulk" 311
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short.uasset" 312
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short.uexp" 313
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short_Cue.uasset" 314
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short_Cue.uexp" 315
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SoundController.uasset" 316
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SoundController.uexp" 317
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerState.uasset" 318
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerState.uexp" 319
-"../../../Engine/Plugins/2D/Paper2D/Content/TranslucentUnlitSpriteMaterial.uasset" 320
-"../../../Engine/Plugins/2D/Paper2D/Content/TranslucentUnlitSpriteMaterial.uexp" 321
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background.uasset" 322
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background.uexp" 323
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_0.uasset" 324
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_0.uexp" 325
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Flipbook.uasset" 326
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Flipbook.uexp" 327
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundActor.uasset" 328
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundActor.uexp" 329
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundController.uasset" 330
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundController.uexp" 331
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerController.uasset" 332
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerController.uexp" 333
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4.uasset" 334
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4.uexp" 335
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4_Sprite.uasset" 336
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4_Sprite.uexp" 337
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4.uasset" 338
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4.uexp" 339
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4_Sprite.uasset" 340
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4_Sprite.uexp" 341
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x.uasset" 342
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x.uexp" 343
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x_Sprite.uasset" 344
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x_Sprite.uexp" 345
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4.uasset" 346
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4.uexp" 347
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4_Sprite.uasset" 348
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4_Sprite.uexp" 349
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_MainWidget.uasset" 350
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_MainWidget.uexp" 351
+"../../../Engine/Content/EditorResources/S_Terrain.ubulk" 155
+"../../../Engine/Content/EditorResources/S_Terrain.uasset" 156
+"../../../Engine/Content/EditorResources/S_Terrain.uexp" 157
+"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 158
+"../../../Engine/Content/EngineResources/WhiteSquareTexture.uexp" 159
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 160
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uexp" 161
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 162
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uexp" 163
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 164
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uexp" 165
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 166
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uexp" 167
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 168
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uexp" 169
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 170
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uexp" 171
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 172
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uexp" 173
+"../../../Engine/Content/EngineMaterials/STBlueNoise_vec2_128x128x64.uasset" 174
+"../../../Engine/Content/EngineMaterials/STBlueNoise_vec2_128x128x64.uexp" 175
+"../../../Engine/Content/EngineMaterials/STBlueNoise_scalar_128x128x64.uasset" 176
+"../../../Engine/Content/EngineMaterials/STBlueNoise_scalar_128x128x64.uexp" 177
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/DefaultGizmoLibraryNormalized.uasset" 178
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/DefaultGizmoLibraryNormalized.uexp" 179
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_solid.ubulk" 180
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_solid.uasset" 181
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_solid.uexp" 182
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_3mm.ubulk" 183
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_3mm.uasset" 184
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_3mm.uexp" 185
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_1mm.ubulk" 186
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_1mm.uasset" 187
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Wedge_1mm.uexp" 188
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_solid.ubulk" 189
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_solid.uasset" 190
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_solid.uexp" 191
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_3mm.ubulk" 192
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_3mm.uasset" 193
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_3mm.uexp" 194
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_1mm.ubulk" 195
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_1mm.uasset" 196
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Triangle_1mm.uexp" 197
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_solid.ubulk" 198
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_solid.uasset" 199
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_solid.uexp" 200
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_3mm.ubulk" 201
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_3mm.uasset" 202
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_3mm.uexp" 203
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_1mm.ubulk" 204
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_1mm.uasset" 205
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Star4_1mm.uexp" 206
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_solid.ubulk" 207
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_solid.uasset" 208
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_solid.uexp" 209
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_3mm.ubulk" 210
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_3mm.uasset" 211
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_3mm.uexp" 212
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_1mm.ubulk" 213
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_1mm.uasset" 214
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Square_1mm.uexp" 215
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_solid.ubulk" 216
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_solid.uasset" 217
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_solid.uexp" 218
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_3mm.ubulk" 219
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_3mm.uasset" 220
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_3mm.uexp" 221
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_1mm.ubulk" 222
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_1mm.uasset" 223
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Sphere_1mm.uexp" 224
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_solid.ubulk" 225
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_solid.uasset" 226
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_solid.uexp" 227
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_3mm.ubulk" 228
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_3mm.uasset" 229
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_3mm.uexp" 230
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_1mm.ubulk" 231
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_1mm.uasset" 232
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedTriangle_1mm.uexp" 233
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_solid.ubulk" 234
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_solid.uasset" 235
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_solid.uexp" 236
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_3mm.ubulk" 237
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_3mm.uasset" 238
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_3mm.uexp" 239
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_1mm.ubulk" 240
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_1mm.uasset" 241
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_RoundedSquare_1mm.uexp" 242
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_solid.ubulk" 243
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_solid.uasset" 244
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_solid.uexp" 245
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_3mm.ubulk" 246
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_3mm.uasset" 247
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_3mm.uexp" 248
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_1mm.ubulk" 249
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_1mm.uasset" 250
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_QuarterCircle_1mm.uexp" 251
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_solid.ubulk" 252
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_solid.uasset" 253
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_solid.uexp" 254
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_3mm.ubulk" 255
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_3mm.uasset" 256
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_3mm.uexp" 257
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_1mm.ubulk" 258
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_1mm.uasset" 259
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Pyramid_1mm.uexp" 260
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_solid.ubulk" 261
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_solid.uasset" 262
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_solid.uexp" 263
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_3mm.ubulk" 264
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_3mm.uasset" 265
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_3mm.uexp" 266
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_1mm.ubulk" 267
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_1mm.uasset" 268
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Octagon_1mm.uexp" 269
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_solid.ubulk" 270
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_solid.uasset" 271
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_solid.uexp" 272
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_3mm.ubulk" 273
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_3mm.uasset" 274
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_3mm.uexp" 275
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_1mm.ubulk" 276
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_1mm.uasset" 277
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Hexagon_1mm.uexp" 278
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_solid.ubulk" 279
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_solid.uasset" 280
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_solid.uexp" 281
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_3mm.ubulk" 282
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_3mm.uasset" 283
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_3mm.uexp" 284
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_1mm.ubulk" 285
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_1mm.uasset" 286
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_HalfCircle_1mm.uexp" 287
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Space_adventure_3.ubulk" 288
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Space_adventure_3.uasset" 289
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Space_adventure_3.uexp" 290
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/MainTheme_Cue.uasset" 291
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/MainTheme_Cue.uexp" 292
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long.ubulk" 293
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long.uasset" 294
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long.uexp" 295
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long_Cue.uasset" 296
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Long_Cue.uexp" 297
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock2.ubulk" 298
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock2.uasset" 299
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock2.uexp" 300
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock1.ubulk" 301
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock1.uasset" 302
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/rock1.uexp" 303
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Destruction_Cue.uasset" 304
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Destruction_Cue.uexp" 305
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump.ubulk" 306
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump.uasset" 307
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump.uexp" 308
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump_Cue.uasset" 309
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Jump_Cue.uexp" 310
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode01.ubulk" 311
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode01.uasset" 312
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode01.uexp" 313
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode03.ubulk" 314
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode03.uasset" 315
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode03.uexp" 316
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode04.ubulk" 317
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode04.uasset" 318
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode04.uexp" 319
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode02.ubulk" 320
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode02.uasset" 321
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explode02.uexp" 322
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explosion_Cue.uasset" 323
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/explosion_Cue.uexp" 324
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short.ubulk" 325
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short.uasset" 326
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short.uexp" 327
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short_Cue.uasset" 328
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Collectable_Short_Cue.uexp" 329
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SoundController.uasset" 330
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SoundController.uexp" 331
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerState.uasset" 332
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerState.uexp" 333
+"../../../Engine/Plugins/2D/Paper2D/Content/TranslucentUnlitSpriteMaterial.uasset" 334
+"../../../Engine/Plugins/2D/Paper2D/Content/TranslucentUnlitSpriteMaterial.uexp" 335
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background.uasset" 336
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background.uexp" 337
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_0.uasset" 338
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_0.uexp" 339
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Flipbook.uasset" 340
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Flipbook.uexp" 341
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundActor.uasset" 342
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundActor.uexp" 343
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundController.uasset" 344
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_BackgroundController.uexp" 345
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerController.uasset" 346
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroPlayerController.uexp" 347
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4.uasset" 348
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4.uexp" 349
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4_Sprite.uasset" 350
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOff_x4_Sprite.uexp" 351
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Border_x4.uasset" 352
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Border_x4.uexp" 353
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Scores_x4.ubulk" 354
@@ -357,667 +357,667 @@
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Scores_x4.uexp" 356
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Scores_x4_Sprite.uasset" 357
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Scores_x4_Sprite.uexp" 358
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4.uasset" 359
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4.uexp" 360
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4_Sprite.uasset" 361
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4_Sprite.uexp" 362
-"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 363
-"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uexp" 364
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameplayWidget.uasset" 365
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameplayWidget.uexp" 366
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Textures/Character.uasset" 367
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Textures/Character.uexp" 368
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_1_aseprite.uasset" 369
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_1_aseprite.uexp" 370
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_0_aseprite.uasset" 371
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_0_aseprite.uexp" 372
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_2_aseprite.uasset" 373
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_2_aseprite.uexp" 374
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_3_aseprite.uasset" 375
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_3_aseprite.uexp" 376
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Rise.uasset" 377
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Rise.uexp" 378
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_AnimSource.uasset" 379
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_AnimSource.uexp" 380
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Rise.uasset" 381
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Rise.uexp" 382
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_5_aseprite.uasset" 383
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_5_aseprite.uexp" 384
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_3_aseprite.uasset" 385
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_3_aseprite.uexp" 386
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_0_aseprite.uasset" 387
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_0_aseprite.uexp" 388
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_1_aseprite.uasset" 389
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_1_aseprite.uexp" 390
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_4_aseprite.uasset" 391
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_4_aseprite.uexp" 392
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_6_aseprite.uasset" 393
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_6_aseprite.uexp" 394
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_7_aseprite.uasset" 395
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_7_aseprite.uexp" 396
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_2_aseprite.uasset" 397
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_2_aseprite.uexp" 398
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Sadness.uasset" 399
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Sadness.uexp" 400
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Sad.uasset" 401
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Sad.uexp" 402
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_3_aseprite.uasset" 403
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_3_aseprite.uexp" 404
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_2_aseprite.uasset" 405
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_2_aseprite.uexp" 406
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_0_aseprite.uasset" 407
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_0_aseprite.uexp" 408
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_1_aseprite.uasset" 409
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_1_aseprite.uexp" 410
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Strike.uasset" 411
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Strike.uexp" 412
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Impact.uasset" 413
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Impact.uexp" 414
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_0_aseprite.uasset" 415
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_0_aseprite.uexp" 416
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_1_aseprite.uasset" 417
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_1_aseprite.uexp" 418
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_2_aseprite.uasset" 419
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_2_aseprite.uexp" 420
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__IF.uasset" 421
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__IF.uexp" 422
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/IF.uasset" 423
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/IF.uexp" 424
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_2_aseprite.uasset" 425
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_2_aseprite.uexp" 426
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_5_aseprite.uasset" 427
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_5_aseprite.uexp" 428
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_1_aseprite.uasset" 429
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_1_aseprite.uexp" 430
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_9_aseprite.uasset" 431
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_9_aseprite.uexp" 432
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_6_aseprite.uasset" 433
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_6_aseprite.uexp" 434
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_3_aseprite.uasset" 435
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_3_aseprite.uexp" 436
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_8_aseprite.uasset" 437
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_8_aseprite.uexp" 438
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_7_aseprite.uasset" 439
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_7_aseprite.uexp" 440
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_0_aseprite.uasset" 441
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_0_aseprite.uexp" 442
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_4_aseprite.uasset" 443
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_4_aseprite.uexp" 444
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_Start.uasset" 445
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_Start.uexp" 446
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverStart.uasset" 447
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverStart.uexp" 448
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_6_aseprite.uasset" 449
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_6_aseprite.uexp" 450
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_7_aseprite.uasset" 451
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_7_aseprite.uexp" 452
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_4_aseprite.uasset" 453
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_4_aseprite.uexp" 454
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_1_aseprite.uasset" 455
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_1_aseprite.uexp" 456
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_2_aseprite.uasset" 457
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_2_aseprite.uexp" 458
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_8_aseprite.uasset" 459
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_8_aseprite.uexp" 460
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_3_aseprite.uasset" 461
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_3_aseprite.uexp" 462
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_9_aseprite.uasset" 463
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_9_aseprite.uexp" 464
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_0_aseprite.uasset" 465
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_0_aseprite.uexp" 466
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_10_aseprite.uasset" 467
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_10_aseprite.uexp" 468
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_5_aseprite.uasset" 469
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_5_aseprite.uexp" 470
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_End.uasset" 471
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_End.uexp" 472
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverEnd.uasset" 473
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverEnd.uexp" 474
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_8_aseprite.uasset" 475
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_8_aseprite.uexp" 476
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_7_aseprite.uasset" 477
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_7_aseprite.uexp" 478
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_5_aseprite.uasset" 479
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_5_aseprite.uexp" 480
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_2_aseprite.uasset" 481
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_2_aseprite.uexp" 482
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_6_aseprite.uasset" 483
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_6_aseprite.uexp" 484
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_3_aseprite.uasset" 485
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_3_aseprite.uexp" 486
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_1_aseprite.uasset" 487
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_1_aseprite.uexp" 488
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_9_aseprite.uasset" 489
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_9_aseprite.uexp" 490
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_0_aseprite.uasset" 491
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_0_aseprite.uexp" 492
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_4_aseprite.uasset" 493
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_4_aseprite.uexp" 494
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Idle.uasset" 495
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Idle.uexp" 496
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Idle.uasset" 497
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Idle.uexp" 498
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_1_aseprite.uasset" 499
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_1_aseprite.uexp" 500
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_0_aseprite.uasset" 501
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_0_aseprite.uexp" 502
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_3_aseprite.uasset" 503
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_3_aseprite.uexp" 504
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_2_aseprite.uasset" 505
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_2_aseprite.uexp" 506
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Fall.uasset" 507
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Fall.uexp" 508
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Fall.uasset" 509
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Fall.uexp" 510
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_ABP.uasset" 511
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_ABP.uexp" 512
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Character.uasset" 513
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Character.uexp" 514
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Textures/Satelite.uasset" 515
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Textures/Satelite.uexp" 516
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_1_aseprite.uasset" 517
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_1_aseprite.uexp" 518
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_3_aseprite.uasset" 519
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_3_aseprite.uexp" 520
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_0_aseprite.uasset" 521
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_0_aseprite.uexp" 522
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_2_aseprite.uasset" 523
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_2_aseprite.uexp" 524
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Idle1.uasset" 525
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Idle1.uexp" 526
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_0_aseprite.uasset" 527
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_0_aseprite.uexp" 528
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_3_aseprite.uasset" 529
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_3_aseprite.uexp" 530
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_1_aseprite.uasset" 531
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_1_aseprite.uexp" 532
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_2_aseprite.uasset" 533
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_2_aseprite.uexp" 534
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Smoke1.uasset" 535
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Smoke1.uexp" 536
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_3_aseprite.uasset" 537
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_3_aseprite.uexp" 538
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_2_aseprite.uasset" 539
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_2_aseprite.uexp" 540
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_0_aseprite.uasset" 541
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_0_aseprite.uexp" 542
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_4_aseprite.uasset" 543
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_4_aseprite.uexp" 544
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_1_aseprite.uasset" 545
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_1_aseprite.uexp" 546
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Destruction.uasset" 547
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Destruction.uexp" 548
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SatelliteActor.uasset" 549
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SatelliteActor.uexp" 550
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Textures/Meteor.uasset" 551
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Textures/Meteor.uexp" 552
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_3_aseprite.uasset" 553
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_3_aseprite.uexp" 554
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_1_aseprite.uasset" 555
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_1_aseprite.uexp" 556
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_2_aseprite.uasset" 557
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_2_aseprite.uexp" 558
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_0_aseprite.uasset" 559
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_0_aseprite.uexp" 560
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Destroy.uasset" 561
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Destroy.uexp" 562
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_2_aseprite.uasset" 563
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_2_aseprite.uexp" 564
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_0_aseprite.uasset" 565
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_0_aseprite.uexp" 566
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_1_aseprite.uasset" 567
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_1_aseprite.uexp" 568
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_3_aseprite.uasset" 569
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_3_aseprite.uexp" 570
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Fall.uasset" 571
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Fall.uexp" 572
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorActor.uasset" 573
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorActor.uexp" 574
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorController.uasset" 575
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorController.uexp" 576
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Textures/Character_Aura.uasset" 577
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Textures/Character_Aura.uexp" 578
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_3_aseprite.uasset" 579
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_3_aseprite.uexp" 580
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_2_aseprite.uasset" 581
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_2_aseprite.uexp" 582
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_1_aseprite.uasset" 583
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_1_aseprite.uexp" 584
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_0_aseprite.uasset" 585
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_0_aseprite.uexp" 586
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Pulse.uasset" 587
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Pulse.uexp" 588
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_3_aseprite.uasset" 589
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_3_aseprite.uexp" 590
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_0_aseprite.uasset" 591
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_0_aseprite.uexp" 592
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_2_aseprite.uasset" 593
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_2_aseprite.uexp" 594
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_1_aseprite.uasset" 595
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_1_aseprite.uexp" 596
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Expire.uasset" 597
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Expire.uexp" 598
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/AbilitiesActors/BP_AuraActor.uasset" 599
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/AbilitiesActors/BP_AuraActor.uexp" 600
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Textures/Blower.uasset" 601
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Textures/Blower.uexp" 602
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_2_aseprite.uasset" 603
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_2_aseprite.uexp" 604
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_1_aseprite.uasset" 605
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_1_aseprite.uexp" 606
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_0_aseprite.uasset" 607
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_0_aseprite.uexp" 608
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Collected.uasset" 609
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Collected.uexp" 610
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_4_aseprite.uasset" 611
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_4_aseprite.uexp" 612
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_11_aseprite.uasset" 613
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_11_aseprite.uexp" 614
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_1_aseprite.uasset" 615
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_1_aseprite.uexp" 616
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_5_aseprite.uasset" 617
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_5_aseprite.uexp" 618
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_6_aseprite.uasset" 619
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_6_aseprite.uexp" 620
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_9_aseprite.uasset" 621
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_9_aseprite.uexp" 622
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_2_aseprite.uasset" 623
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_2_aseprite.uexp" 624
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_8_aseprite.uasset" 625
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_8_aseprite.uexp" 626
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_10_aseprite.uasset" 627
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_10_aseprite.uexp" 628
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_3_aseprite.uasset" 629
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_3_aseprite.uexp" 630
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_0_aseprite.uasset" 631
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_0_aseprite.uexp" 632
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_7_aseprite.uasset" 633
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_7_aseprite.uexp" 634
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Idle.uasset" 635
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Idle.uexp" 636
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Blower.uasset" 637
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Blower.uexp" 638
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Textures/Aura.uasset" 639
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Textures/Aura.uexp" 640
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_0_aseprite.uasset" 641
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_0_aseprite.uexp" 642
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_1_aseprite.uasset" 643
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_1_aseprite.uexp" 644
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_2_aseprite.uasset" 645
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_2_aseprite.uexp" 646
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Collected.uasset" 647
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Collected.uexp" 648
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_2_aseprite.uasset" 649
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_2_aseprite.uexp" 650
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_3_aseprite.uasset" 651
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_3_aseprite.uexp" 652
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_0_aseprite.uasset" 653
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_0_aseprite.uexp" 654
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_1_aseprite.uasset" 655
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_1_aseprite.uexp" 656
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Idle.uasset" 657
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Idle.uexp" 658
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/Collectables/BP_AuraCollectable.uasset" 659
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/Collectables/BP_AuraCollectable.uexp" 660
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_CollectablesController.uasset" 661
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_CollectablesController.uexp" 662
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4.uasset" 663
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4.uexp" 664
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4_Sprite.uasset" 665
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4_Sprite.uexp" 666
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4.uasset" 667
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4.uexp" 668
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4_Sprite.uasset" 669
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4_Sprite.uexp" 670
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameOverWidget.uasset" 671
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameOverWidget.uexp" 672
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroGameMode.uasset" 673
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroGameMode.uexp" 674
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.uasset" 675
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.uexp" 676
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Volumetrics/BeersLaw.uasset" 677
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Volumetrics/BeersLaw.uexp" 678
-"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 679
-"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uexp" 680
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.uasset" 681
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.uexp" 682
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uasset" 683
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uexp" 684
-"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.uasset" 685
-"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.uexp" 686
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.ubulk" 687
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uasset" 688
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uexp" 689
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uasset" 690
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uexp" 691
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uasset" 692
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uexp" 693
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uasset" 694
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uexp" 695
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.uasset" 696
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.uexp" 697
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uasset" 698
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uexp" 699
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeCameraFacing.uasset" 700
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeCameraFacing.uexp" 701
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uasset" 702
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uexp" 703
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uasset" 704
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uexp" 705
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uasset" 706
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uexp" 707
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uasset" 708
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uexp" 709
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uasset" 710
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uexp" 711
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uasset" 712
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uexp" 713
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uasset" 714
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uexp" 715
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeMaster.uasset" 716
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeMaster.uexp" 717
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uasset" 718
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uexp" 719
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboardMaster.uasset" 720
-"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboardMaster.uexp" 721
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_solid.ubulk" 722
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_solid.uasset" 723
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_solid.uexp" 724
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_3mm.ubulk" 725
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_3mm.uasset" 726
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_3mm.uexp" 727
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_1mm.ubulk" 728
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_1mm.uasset" 729
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_1mm.uexp" 730
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_solid.ubulk" 731
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_solid.uasset" 732
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_solid.uexp" 733
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_3mm.ubulk" 734
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_3mm.uasset" 735
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_3mm.uexp" 736
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_1mm.ubulk" 737
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_1mm.uasset" 738
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_1mm.uexp" 739
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_solid.ubulk" 740
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_solid.uasset" 741
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_solid.uexp" 742
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_3mm.ubulk" 743
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_3mm.uasset" 744
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_3mm.uexp" 745
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_1mm.ubulk" 746
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_1mm.uasset" 747
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_1mm.uexp" 748
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_solid.ubulk" 749
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_solid.uasset" 750
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_solid.uexp" 751
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_3mm.ubulk" 752
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_3mm.uasset" 753
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_3mm.uexp" 754
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_1mm.ubulk" 755
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_1mm.uasset" 756
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_1mm.uexp" 757
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_solid.ubulk" 758
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_solid.uasset" 759
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_solid.uexp" 760
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_3mm.ubulk" 761
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_3mm.uasset" 762
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_3mm.uexp" 763
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_1mm.ubulk" 764
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_1mm.uasset" 765
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_1mm.uexp" 766
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_solid.ubulk" 767
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_solid.uasset" 768
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_solid.uexp" 769
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_3mm.ubulk" 770
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_3mm.uasset" 771
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_3mm.uexp" 772
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_1mm.ubulk" 773
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_1mm.uasset" 774
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_1mm.uexp" 775
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigXRayMaterial.uasset" 776
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigXRayMaterial.uexp" 777
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigGizmoMaterial.uasset" 778
-"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigGizmoMaterial.uexp" 779
-"../../../Engine/Content/VREditor/TransformGizmo/StartRotationHandleIndicator.ubulk" 780
-"../../../Engine/Content/VREditor/TransformGizmo/StartRotationHandleIndicator.uasset" 781
-"../../../Engine/Content/VREditor/TransformGizmo/StartRotationHandleIndicator.uexp" 782
-"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.ubulk" 783
-"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uasset" 784
-"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uexp" 785
-"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.ubulk" 786
-"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 787
-"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uexp" 788
-"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Grid.ubulk" 789
-"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Grid.uasset" 790
-"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Grid.uexp" 791
-"../../../Engine/Content/VREditor/Sounds/UI/Selection_Changes.ubulk" 792
-"../../../Engine/Content/VREditor/Sounds/UI/Selection_Changes.uasset" 793
-"../../../Engine/Content/VREditor/Sounds/UI/Selection_Changes.uexp" 794
-"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Another_Actor.ubulk" 795
-"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Another_Actor.uasset" 796
-"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Another_Actor.uexp" 797
-"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uasset" 798
-"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uexp" 799
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoFreeRotation.ubulk" 800
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoFreeRotation.uasset" 801
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoFreeRotation.uexp" 802
-"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Down.ubulk" 803
-"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Down.uasset" 804
-"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Down.uexp" 805
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.uasset" 806
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.uexp" 807
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SplitComponents.uasset" 808
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SplitComponents.uexp" 809
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.uasset" 810
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.uexp" 811
-"../../../Engine/Content/VREditor/SnapGrid/SnapGridMaterial.uasset" 812
-"../../../Engine/Content/VREditor/SnapGrid/SnapGridMaterial.uexp" 813
-"../../../Engine/Content/VREditor/SnapGrid/SnapGridPlaneMesh.ubulk" 814
-"../../../Engine/Content/VREditor/SnapGrid/SnapGridPlaneMesh.uasset" 815
-"../../../Engine/Content/VREditor/SnapGrid/SnapGridPlaneMesh.uexp" 816
-"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Up.ubulk" 817
-"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Up.uasset" 818
-"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Up.uexp" 819
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uasset" 820
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uexp" 821
-"../../../Engine/Content/VREditor/Sounds/UI/Gizmo_Handle_Clicked.ubulk" 822
-"../../../Engine/Content/VREditor/Sounds/UI/Gizmo_Handle_Clicked.uasset" 823
-"../../../Engine/Content/VREditor/Sounds/UI/Gizmo_Handle_Clicked.uexp" 824
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleQuarter.ubulk" 825
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleQuarter.uasset" 826
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleQuarter.uexp" 827
-"../../../Engine/Content/VREditor/TransformGizmo/TranslateArrowHandle.ubulk" 828
-"../../../Engine/Content/VREditor/TransformGizmo/TranslateArrowHandle.uasset" 829
-"../../../Engine/Content/VREditor/TransformGizmo/TranslateArrowHandle.uexp" 830
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleIndicator.ubulk" 831
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleIndicator.uasset" 832
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleIndicator.uexp" 833
-"../../../Engine/Content/VREditor/TransformGizmo/UniformScaleHandle.ubulk" 834
-"../../../Engine/Content/VREditor/TransformGizmo/UniformScaleHandle.uasset" 835
-"../../../Engine/Content/VREditor/TransformGizmo/UniformScaleHandle.uexp" 836
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleFull.ubulk" 837
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleFull.uasset" 838
-"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleFull.uexp" 839
-"../../../Engine/Content/VREditor/Sounds/UI/Object_PickUp.ubulk" 840
-"../../../Engine/Content/VREditor/Sounds/UI/Object_PickUp.uasset" 841
-"../../../Engine/Content/VREditor/Sounds/UI/Object_PickUp.uexp" 842
-"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 843
-"../../../Engine/Content/EngineResources/WhiteSquareTexture.uexp" 844
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 845
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uexp" 846
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 847
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uexp" 848
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 849
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uexp" 850
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 851
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uexp" 852
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 853
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uexp" 854
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 855
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uexp" 856
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 857
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uexp" 858
-"../../../Engine/Content/EngineMaterials/STBlueNoise_vec2_128x128x64.uasset" 859
-"../../../Engine/Content/EngineMaterials/STBlueNoise_vec2_128x128x64.uexp" 860
-"../../../Engine/Content/EngineMaterials/STBlueNoise_scalar_128x128x64.uasset" 861
-"../../../Engine/Content/EngineMaterials/STBlueNoise_scalar_128x128x64.uexp" 862
-"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 863
-"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uexp" 864
-"../../../Engine/Content/EngineMaterials/DefaultCalibrationGrayscale.uasset" 865
-"../../../Engine/Content/EngineMaterials/DefaultCalibrationGrayscale.uexp" 866
-"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationGrayscale.uasset" 867
-"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationGrayscale.uexp" 868
-"../../../Engine/Content/EngineMaterials/DefaultCalibrationColor.uasset" 869
-"../../../Engine/Content/EngineMaterials/DefaultCalibrationColor.uexp" 870
-"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationColor.uasset" 871
-"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationColor.uexp" 872
-"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 873
-"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uexp" 874
-"../../../Engine/Content/EngineMaterials/NaniteHiddenSectionMaterial.uasset" 875
-"../../../Engine/Content/EngineMaterials/NaniteHiddenSectionMaterial.uexp" 876
-"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.ubulk" 877
-"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 878
-"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uexp" 879
-"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 880
-"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uexp" 881
-"../../../Engine/Content/EngineMaterials/GizmoMaterial.uasset" 882
-"../../../Engine/Content/EngineMaterials/GizmoMaterial.uexp" 883
-"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap_VT.uasset" 884
-"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap_VT.uexp" 885
-"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap_VT.uasset" 886
-"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap_VT.uexp" 887
-"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor_VT.uasset" 888
-"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor_VT.uexp" 889
-"../../../Engine/Content/EngineMaterials/Black_1x1_EXR_Texture_VT.uasset" 890
-"../../../Engine/Content/EngineMaterials/Black_1x1_EXR_Texture_VT.uexp" 891
-"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap_VT.uasset" 892
-"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap_VT.uexp" 893
-"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap_VT.uasset" 894
-"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap_VT.uexp" 895
-"../../../Engine/Content/EngineMaterials/FlattenMaterial_WS_Normal_VT.uasset" 896
-"../../../Engine/Content/EngineMaterials/FlattenMaterial_WS_Normal_VT.uexp" 897
-"../../../Engine/Content/EngineMaterials/FlattenMaterial_VT.uasset" 898
-"../../../Engine/Content/EngineMaterials/FlattenMaterial_VT.uexp" 899
-"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap.uasset" 900
-"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap.uexp" 901
-"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uasset" 902
-"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uexp" 903
-"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uasset" 904
-"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uexp" 905
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/Black_1x1_EXR_Texture.uasset" 906
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/Black_1x1_EXR_Texture.uexp" 907
-"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uasset" 908
-"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uexp" 909
-"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor.uasset" 910
-"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor.uexp" 911
-"../../../Engine/Content/EngineMaterials/FlattenMaterial.uasset" 912
-"../../../Engine/Content/EngineMaterials/FlattenMaterial.uexp" 913
-"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid_Low.uasset" 914
-"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid_Low.uexp" 915
-"../../../Engine/Content/EngineMaterials/EmissiveMeshMaterial.uasset" 916
-"../../../Engine/Content/EngineMaterials/EmissiveMeshMaterial.uexp" 917
-"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 918
-"../../../Engine/Content/EngineFonts/RobotoDistanceField.uexp" 919
-"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 920
-"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uexp" 921
-"../../../Engine/Content/EngineMaterials/DefaultDiffuse.ubulk" 922
-"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 923
-"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uexp" 924
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 925
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uexp" 926
-"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 927
-"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uexp" 928
-"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 929
-"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uexp" 930
-"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 931
-"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uexp" 932
-"../../../Engine/Content/EngineMaterials/DefaultDestructiblePhysicalMaterial.uasset" 933
-"../../../Engine/Content/EngineMaterials/DefaultDestructiblePhysicalMaterial.uexp" 934
-"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 935
-"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uexp" 936
-"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 937
-"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uexp" 938
-"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uexp" 939
-"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 940
-"../../../Engine/Content/EngineFonts/Faces/RobotoLight.ufont" 941
-"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uexp" 942
-"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 943
-"../../../Engine/Content/EngineFonts/Faces/RobotoBold.ufont" 944
-"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uexp" 945
-"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 946
-"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.ufont" 947
-"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.uexp" 948
-"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.uasset" 949
-"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.ufont" 950
-"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uexp" 951
-"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 952
-"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.ufont" 953
-"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uexp" 954
-"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 955
-"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.ufont" 956
-"../../../Engine/Content/EngineFonts/Roboto.uasset" 957
-"../../../Engine/Content/EngineFonts/Roboto.uexp" 958
-"../../../Engine/Content/EngineDebugMaterials/VolumeToRender.uasset" 959
-"../../../Engine/Content/EngineDebugMaterials/VolumeToRender.uexp" 960
-"../../../Engine/Content/EngineDebugMaterials/M_VolumeRenderSphereTracePP.uasset" 961
-"../../../Engine/Content/EngineDebugMaterials/M_VolumeRenderSphereTracePP.uexp" 962
-"../../../Engine/Content/EngineDebugMaterials/M_SimpleUnlitTranslucent.uasset" 963
-"../../../Engine/Content/EngineDebugMaterials/M_SimpleUnlitTranslucent.uexp" 964
-"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 965
-"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uexp" 966
-"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 967
-"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uexp" 968
-"../../../Engine/Content/EditorResources/BSPVertex.uasset" 969
-"../../../Engine/Content/EditorResources/BSPVertex.uexp" 970
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.ubulk" 971
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 972
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uexp" 973
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 974
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uexp" 975
-"../../../Engine/Content/EditorMaterials/PhAT_UnselectedMaterial.uasset" 976
-"../../../Engine/Content/EditorMaterials/PhAT_UnselectedMaterial.uexp" 977
-"../../../Engine/Content/EditorMaterials/PhAT_NoCollisionMaterial.uasset" 978
-"../../../Engine/Content/EditorMaterials/PhAT_NoCollisionMaterial.uexp" 979
-"../../../Engine/Content/EditorLandscapeResources/DefaultAlphaTexture.uasset" 980
-"../../../Engine/Content/EditorLandscapeResources/DefaultAlphaTexture.uexp" 981
-"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 982
-"../../../Engine/Content/EditorLandscapeResources/DataLayer.uexp" 983
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn.uasset" 984
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn.uexp" 985
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn_Sprite.uasset" 986
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn_Sprite.uexp" 987
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff.uasset" 988
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff.uexp" 989
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff_Sprite.uasset" 990
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff_Sprite.uexp" 991
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores.uasset" 992
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores.uexp" 993
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores_Sprite.uasset" 994
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores_Sprite.uexp" 995
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe.uasset" 996
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe.uexp" 997
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe_Sprite.uasset" 998
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe_Sprite.uexp" 999
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle.uasset" 1000
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle.uexp" 1001
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle_Sprite.uasset" 1002
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle_Sprite.uexp" 1003
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents.uasset" 1004
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents.uexp" 1005
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents_Sprite.uasset" 1006
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents_Sprite.uexp" 1007
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up.uasset" 1008
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up.uexp" 1009
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up_Sprite.uasset" 1010
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up_Sprite.uexp" 1011
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low.uasset" 1012
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low.uexp" 1013
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low_Sprite.uasset" 1014
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low_Sprite.uexp" 1015
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border.uasset" 1016
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border.uexp" 1017
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border_Sprite.uasset" 1018
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border_Sprite.uexp" 1019
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4.uasset" 359
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4.uexp" 360
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4_Sprite.uasset" 361
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/SoundOn_x4_Sprite.uexp" 362
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4.uasset" 363
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4.uexp" 364
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4_Sprite.uasset" 365
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Pause_x4_Sprite.uexp" 366
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 367
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uexp" 368
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameplayWidget.uasset" 369
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameplayWidget.uexp" 370
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4.uasset" 371
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4.uexp" 372
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4_Sprite.uasset" 373
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Icons/Documents_x4_Sprite.uexp" 374
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x.uasset" 375
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x.uexp" 376
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x_Sprite.uasset" 377
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameTitle_4x_Sprite.uexp" 378
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border.uasset" 379
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border.uexp" 380
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border_Sprite.uasset" 381
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Border_Sprite.uexp" 382
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_MainWidget.uasset" 383
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_MainWidget.uexp" 384
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Textures/Character.uasset" 385
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Textures/Character.uexp" 386
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_1_aseprite.uasset" 387
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_1_aseprite.uexp" 388
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_0_aseprite.uasset" 389
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_0_aseprite.uexp" 390
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_2_aseprite.uasset" 391
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_2_aseprite.uexp" 392
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_3_aseprite.uasset" 393
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Rise_3_aseprite.uexp" 394
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Rise.uasset" 395
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Rise.uexp" 396
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_AnimSource.uasset" 397
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_AnimSource.uexp" 398
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Rise.uasset" 399
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Rise.uexp" 400
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_5_aseprite.uasset" 401
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_5_aseprite.uexp" 402
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_3_aseprite.uasset" 403
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_3_aseprite.uexp" 404
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_0_aseprite.uasset" 405
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_0_aseprite.uexp" 406
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_1_aseprite.uasset" 407
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_1_aseprite.uexp" 408
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_4_aseprite.uasset" 409
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_4_aseprite.uexp" 410
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_6_aseprite.uasset" 411
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_6_aseprite.uexp" 412
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_7_aseprite.uasset" 413
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_7_aseprite.uexp" 414
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_2_aseprite.uasset" 415
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Sadness_2_aseprite.uexp" 416
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Sadness.uasset" 417
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Sadness.uexp" 418
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Sad.uasset" 419
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Sad.uexp" 420
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_3_aseprite.uasset" 421
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_3_aseprite.uexp" 422
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_2_aseprite.uasset" 423
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_2_aseprite.uexp" 424
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_0_aseprite.uasset" 425
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_0_aseprite.uexp" 426
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_1_aseprite.uasset" 427
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Strike_1_aseprite.uexp" 428
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Strike.uasset" 429
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Strike.uexp" 430
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Impact.uasset" 431
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Impact.uexp" 432
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_0_aseprite.uasset" 433
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_0_aseprite.uexp" 434
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_1_aseprite.uasset" 435
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_1_aseprite.uexp" 436
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_2_aseprite.uasset" 437
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__IF_2_aseprite.uexp" 438
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__IF.uasset" 439
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__IF.uexp" 440
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/IF.uasset" 441
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/IF.uexp" 442
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_2_aseprite.uasset" 443
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_2_aseprite.uexp" 444
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_5_aseprite.uasset" 445
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_5_aseprite.uexp" 446
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_1_aseprite.uasset" 447
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_1_aseprite.uexp" 448
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_9_aseprite.uasset" 449
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_9_aseprite.uexp" 450
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_6_aseprite.uasset" 451
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_6_aseprite.uexp" 452
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_3_aseprite.uasset" 453
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_3_aseprite.uexp" 454
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_8_aseprite.uasset" 455
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_8_aseprite.uexp" 456
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_7_aseprite.uasset" 457
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_7_aseprite.uexp" 458
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_0_aseprite.uasset" 459
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_0_aseprite.uexp" 460
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_4_aseprite.uasset" 461
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_Start_4_aseprite.uexp" 462
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_Start.uasset" 463
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_Start.uexp" 464
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverStart.uasset" 465
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverStart.uexp" 466
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_6_aseprite.uasset" 467
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_6_aseprite.uexp" 468
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_7_aseprite.uasset" 469
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_7_aseprite.uexp" 470
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_4_aseprite.uasset" 471
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_4_aseprite.uexp" 472
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_1_aseprite.uasset" 473
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_1_aseprite.uexp" 474
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_2_aseprite.uasset" 475
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_2_aseprite.uexp" 476
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_8_aseprite.uasset" 477
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_8_aseprite.uexp" 478
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_3_aseprite.uasset" 479
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_3_aseprite.uexp" 480
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_9_aseprite.uasset" 481
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_9_aseprite.uexp" 482
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_0_aseprite.uasset" 483
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_0_aseprite.uexp" 484
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_10_aseprite.uasset" 485
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_10_aseprite.uexp" 486
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_5_aseprite.uasset" 487
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Catastrophe_End_5_aseprite.uexp" 488
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_End.uasset" 489
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Catastrophe_End.uexp" 490
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverEnd.uasset" 491
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/GameOverEnd.uexp" 492
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_8_aseprite.uasset" 493
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_8_aseprite.uexp" 494
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_7_aseprite.uasset" 495
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_7_aseprite.uexp" 496
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_5_aseprite.uasset" 497
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_5_aseprite.uexp" 498
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_2_aseprite.uasset" 499
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_2_aseprite.uexp" 500
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_6_aseprite.uasset" 501
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_6_aseprite.uexp" 502
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_3_aseprite.uasset" 503
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_3_aseprite.uexp" 504
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_1_aseprite.uasset" 505
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_1_aseprite.uexp" 506
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_9_aseprite.uasset" 507
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_9_aseprite.uexp" 508
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_0_aseprite.uasset" 509
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_0_aseprite.uexp" 510
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_4_aseprite.uasset" 511
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Idle_4_aseprite.uexp" 512
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Idle.uasset" 513
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Idle.uexp" 514
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Idle.uasset" 515
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Idle.uexp" 516
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_1_aseprite.uasset" 517
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_1_aseprite.uexp" 518
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_0_aseprite.uasset" 519
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_0_aseprite.uexp" 520
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_3_aseprite.uasset" 521
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_3_aseprite.uexp" 522
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_2_aseprite.uasset" 523
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Frames/Character__Fall_2_aseprite.uexp" 524
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Fall.uasset" 525
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character__Fall.uexp" 526
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Fall.uasset" 527
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/AnimSequences/Fall.uexp" 528
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_ABP.uasset" 529
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Character/Character_ABP.uexp" 530
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Character.uasset" 531
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Character.uexp" 532
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Textures/Satelite.uasset" 533
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Textures/Satelite.uexp" 534
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_1_aseprite.uasset" 535
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_1_aseprite.uexp" 536
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_3_aseprite.uasset" 537
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_3_aseprite.uexp" 538
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_0_aseprite.uasset" 539
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_0_aseprite.uexp" 540
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_2_aseprite.uasset" 541
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Idle_2_aseprite.uexp" 542
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Idle1.uasset" 543
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Idle1.uexp" 544
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_0_aseprite.uasset" 545
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_0_aseprite.uexp" 546
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_3_aseprite.uasset" 547
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_3_aseprite.uexp" 548
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_1_aseprite.uasset" 549
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_1_aseprite.uexp" 550
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_2_aseprite.uasset" 551
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Smoke_2_aseprite.uexp" 552
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Smoke1.uasset" 553
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Smoke1.uexp" 554
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_3_aseprite.uasset" 555
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_3_aseprite.uexp" 556
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_2_aseprite.uasset" 557
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_2_aseprite.uexp" 558
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_0_aseprite.uasset" 559
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_0_aseprite.uexp" 560
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_4_aseprite.uasset" 561
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_4_aseprite.uexp" 562
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_1_aseprite.uasset" 563
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Frames/Satelite__Destruction_1_aseprite.uexp" 564
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Destruction.uasset" 565
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Satelite/Satelite__Destruction.uexp" 566
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SatelliteActor.uasset" 567
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_SatelliteActor.uexp" 568
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Textures/Meteor.uasset" 569
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Textures/Meteor.uexp" 570
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_3_aseprite.uasset" 571
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_3_aseprite.uexp" 572
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_1_aseprite.uasset" 573
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_1_aseprite.uexp" 574
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_2_aseprite.uasset" 575
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_2_aseprite.uexp" 576
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_0_aseprite.uasset" 577
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Destroy_0_aseprite.uexp" 578
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Destroy.uasset" 579
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Destroy.uexp" 580
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_2_aseprite.uasset" 581
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_2_aseprite.uexp" 582
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_0_aseprite.uasset" 583
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_0_aseprite.uexp" 584
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_1_aseprite.uasset" 585
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_1_aseprite.uexp" 586
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_3_aseprite.uasset" 587
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__Fall_3_aseprite.uexp" 588
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Fall.uasset" 589
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__Fall.uexp" 590
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorActor.uasset" 591
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorActor.uexp" 592
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorController.uasset" 593
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MeteorController.uexp" 594
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Textures/Character_Aura.uasset" 595
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Textures/Character_Aura.uexp" 596
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_3_aseprite.uasset" 597
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_3_aseprite.uexp" 598
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_2_aseprite.uasset" 599
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_2_aseprite.uexp" 600
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_1_aseprite.uasset" 601
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_1_aseprite.uexp" 602
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_0_aseprite.uasset" 603
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Pulse_0_aseprite.uexp" 604
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Pulse.uasset" 605
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Pulse.uexp" 606
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_3_aseprite.uasset" 607
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_3_aseprite.uexp" 608
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_0_aseprite.uasset" 609
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_0_aseprite.uexp" 610
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_2_aseprite.uasset" 611
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_2_aseprite.uexp" 612
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_1_aseprite.uasset" 613
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Frames/Character_Aura__Expire_1_aseprite.uexp" 614
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Expire.uasset" 615
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/CharacterEffects/Aura/Character_Aura__Expire.uexp" 616
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/AbilitiesActors/BP_AuraActor.uasset" 617
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/AbilitiesActors/BP_AuraActor.uexp" 618
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Textures/Blower.uasset" 619
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Textures/Blower.uexp" 620
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_2_aseprite.uasset" 621
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_2_aseprite.uexp" 622
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_1_aseprite.uasset" 623
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_1_aseprite.uexp" 624
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_0_aseprite.uasset" 625
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Collected_0_aseprite.uexp" 626
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Collected.uasset" 627
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Collected.uexp" 628
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_4_aseprite.uasset" 629
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_4_aseprite.uexp" 630
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_11_aseprite.uasset" 631
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_11_aseprite.uexp" 632
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_1_aseprite.uasset" 633
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_1_aseprite.uexp" 634
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_5_aseprite.uasset" 635
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_5_aseprite.uexp" 636
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_6_aseprite.uasset" 637
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_6_aseprite.uexp" 638
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_9_aseprite.uasset" 639
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_9_aseprite.uexp" 640
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_2_aseprite.uasset" 641
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_2_aseprite.uexp" 642
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_8_aseprite.uasset" 643
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_8_aseprite.uexp" 644
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_10_aseprite.uasset" 645
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_10_aseprite.uexp" 646
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_3_aseprite.uasset" 647
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_3_aseprite.uexp" 648
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_0_aseprite.uasset" 649
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_0_aseprite.uexp" 650
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_7_aseprite.uasset" 651
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Frames/Blower__Idle_7_aseprite.uexp" 652
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Idle.uasset" 653
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Blower/Blower__Idle.uexp" 654
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Blower.uasset" 655
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_Blower.uexp" 656
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Textures/Aura.uasset" 657
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Textures/Aura.uexp" 658
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_0_aseprite.uasset" 659
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_0_aseprite.uexp" 660
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_1_aseprite.uasset" 661
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_1_aseprite.uexp" 662
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_2_aseprite.uasset" 663
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Collected_2_aseprite.uexp" 664
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Collected.uasset" 665
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Collected.uexp" 666
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_2_aseprite.uasset" 667
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_2_aseprite.uexp" 668
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_3_aseprite.uasset" 669
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_3_aseprite.uexp" 670
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_0_aseprite.uasset" 671
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_0_aseprite.uexp" 672
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_1_aseprite.uasset" 673
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Frames/Aura__Idle_1_aseprite.uexp" 674
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Idle.uasset" 675
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Collectables/Aura/Aura__Idle.uexp" 676
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/Collectables/BP_AuraCollectable.uasset" 677
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/Collectables/BP_AuraCollectable.uexp" 678
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_CollectablesController.uasset" 679
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_CollectablesController.uexp" 680
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4.uasset" 681
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4.uexp" 682
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4_Sprite.uasset" 683
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Globe_x4_Sprite.uexp" 684
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4.uasset" 685
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4.uexp" 686
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4_Sprite.uasset" 687
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/GameOverCloud_x4_Sprite.uexp" 688
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameOverWidget.uasset" 689
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/UI/UMG_GameOverWidget.uexp" 690
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroGameMode.uasset" 691
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_MightyHeroGameMode.uexp" 692
+"../../../Engine/Plugins/Runtime/MeshModelingToolset/Content/Materials/M_DynamicMeshComponentVtxColor.uasset" 693
+"../../../Engine/Plugins/Runtime/MeshModelingToolset/Content/Materials/M_DynamicMeshComponentVtxColor.uexp" 694
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.uasset" 695
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.uexp" 696
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Volumetrics/BeersLaw.uasset" 697
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Volumetrics/BeersLaw.uexp" 698
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 699
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uexp" 700
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.uasset" 701
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.uexp" 702
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uasset" 703
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uexp" 704
+"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.uasset" 705
+"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.uexp" 706
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.ubulk" 707
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uasset" 708
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uexp" 709
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uasset" 710
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uexp" 711
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uasset" 712
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uexp" 713
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uasset" 714
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uexp" 715
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.uasset" 716
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.uexp" 717
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uasset" 718
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uexp" 719
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeCameraFacing.uasset" 720
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeCameraFacing.uexp" 721
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uasset" 722
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uexp" 723
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uasset" 724
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uexp" 725
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uasset" 726
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uexp" 727
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uasset" 728
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uexp" 729
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uasset" 730
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uexp" 731
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uasset" 732
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uexp" 733
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uasset" 734
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uexp" 735
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeMaster.uasset" 736
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeMaster.uexp" 737
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uasset" 738
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uexp" 739
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboardMaster.uasset" 740
+"../../../Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboardMaster.uexp" 741
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_solid.ubulk" 742
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_solid.uasset" 743
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_solid.uexp" 744
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_3mm.ubulk" 745
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_3mm.uasset" 746
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_3mm.uexp" 747
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_1mm.ubulk" 748
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_1mm.uasset" 749
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Diamond_1mm.uexp" 750
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_solid.ubulk" 751
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_solid.uasset" 752
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_solid.uexp" 753
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_3mm.ubulk" 754
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_3mm.uasset" 755
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_3mm.uexp" 756
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_1mm.ubulk" 757
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_1mm.uasset" 758
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Circle_1mm.uexp" 759
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_solid.ubulk" 760
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_solid.uasset" 761
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_solid.uexp" 762
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_3mm.ubulk" 763
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_3mm.uasset" 764
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_3mm.uexp" 765
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_1mm.ubulk" 766
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_1mm.uasset" 767
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Box_1mm.uexp" 768
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_solid.ubulk" 769
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_solid.uasset" 770
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_solid.uexp" 771
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_3mm.ubulk" 772
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_3mm.uasset" 773
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_3mm.uexp" 774
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_1mm.ubulk" 775
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_1mm.uasset" 776
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow_1mm.uexp" 777
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_solid.ubulk" 778
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_solid.uasset" 779
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_solid.uexp" 780
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_3mm.ubulk" 781
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_3mm.uasset" 782
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_3mm.uexp" 783
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_1mm.ubulk" 784
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_1mm.uasset" 785
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow4_1mm.uexp" 786
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_solid.ubulk" 787
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_solid.uasset" 788
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_solid.uexp" 789
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_3mm.ubulk" 790
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_3mm.uasset" 791
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_3mm.uexp" 792
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_1mm.ubulk" 793
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_1mm.uasset" 794
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRig_Arrow2_1mm.uexp" 795
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigXRayMaterial.uasset" 796
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigXRayMaterial.uexp" 797
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigGizmoMaterial.uasset" 798
+"../../../Engine/Plugins/Animation/ControlRig/Content/Controls/ControlRigGizmoMaterial.uexp" 799
+"../../../Engine/Content/VREditor/TransformGizmo/StartRotationHandleIndicator.ubulk" 800
+"../../../Engine/Content/VREditor/TransformGizmo/StartRotationHandleIndicator.uasset" 801
+"../../../Engine/Content/VREditor/TransformGizmo/StartRotationHandleIndicator.uexp" 802
+"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.ubulk" 803
+"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uasset" 804
+"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uexp" 805
+"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.ubulk" 806
+"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 807
+"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uexp" 808
+"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Grid.ubulk" 809
+"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Grid.uasset" 810
+"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Grid.uexp" 811
+"../../../Engine/Content/VREditor/Sounds/UI/Selection_Changes.ubulk" 812
+"../../../Engine/Content/VREditor/Sounds/UI/Selection_Changes.uasset" 813
+"../../../Engine/Content/VREditor/Sounds/UI/Selection_Changes.uexp" 814
+"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Another_Actor.ubulk" 815
+"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Another_Actor.uasset" 816
+"../../../Engine/Content/VREditor/Sounds/UI/Object_Snaps_To_Another_Actor.uexp" 817
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uasset" 818
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uexp" 819
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoFreeRotation.ubulk" 820
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoFreeRotation.uasset" 821
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoFreeRotation.uexp" 822
+"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Down.ubulk" 823
+"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Down.uasset" 824
+"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Down.uexp" 825
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.uasset" 826
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.uexp" 827
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SplitComponents.uasset" 828
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SplitComponents.uexp" 829
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.uasset" 830
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.uexp" 831
+"../../../Engine/Content/VREditor/SnapGrid/SnapGridMaterial.uasset" 832
+"../../../Engine/Content/VREditor/SnapGrid/SnapGridMaterial.uexp" 833
+"../../../Engine/Content/VREditor/SnapGrid/SnapGridPlaneMesh.ubulk" 834
+"../../../Engine/Content/VREditor/SnapGrid/SnapGridPlaneMesh.uasset" 835
+"../../../Engine/Content/VREditor/SnapGrid/SnapGridPlaneMesh.uexp" 836
+"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Up.ubulk" 837
+"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Up.uasset" 838
+"../../../Engine/Content/VREditor/Sounds/UI/Scaling_Up.uexp" 839
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uasset" 840
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uexp" 841
+"../../../Engine/Content/VREditor/Sounds/UI/Gizmo_Handle_Clicked.ubulk" 842
+"../../../Engine/Content/VREditor/Sounds/UI/Gizmo_Handle_Clicked.uasset" 843
+"../../../Engine/Content/VREditor/Sounds/UI/Gizmo_Handle_Clicked.uexp" 844
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleQuarter.ubulk" 845
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleQuarter.uasset" 846
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleQuarter.uexp" 847
+"../../../Engine/Content/VREditor/TransformGizmo/TranslateArrowHandle.ubulk" 848
+"../../../Engine/Content/VREditor/TransformGizmo/TranslateArrowHandle.uasset" 849
+"../../../Engine/Content/VREditor/TransformGizmo/TranslateArrowHandle.uexp" 850
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleIndicator.ubulk" 851
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleIndicator.uasset" 852
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleIndicator.uexp" 853
+"../../../Engine/Content/VREditor/TransformGizmo/UniformScaleHandle.ubulk" 854
+"../../../Engine/Content/VREditor/TransformGizmo/UniformScaleHandle.uasset" 855
+"../../../Engine/Content/VREditor/TransformGizmo/UniformScaleHandle.uexp" 856
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleFull.ubulk" 857
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleFull.uasset" 858
+"../../../Engine/Content/VREditor/TransformGizmo/RotationHandleFull.uexp" 859
+"../../../Engine/Content/VREditor/Sounds/UI/Object_PickUp.ubulk" 860
+"../../../Engine/Content/VREditor/Sounds/UI/Object_PickUp.uasset" 861
+"../../../Engine/Content/VREditor/Sounds/UI/Object_PickUp.uexp" 862
+"../../../Engine/Content/EngineSounds/Master.uasset" 863
+"../../../Engine/Content/EngineSounds/Master.uexp" 864
+"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 865
+"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uexp" 866
+"../../../Engine/Content/EngineMaterials/DefaultCalibrationGrayscale.uasset" 867
+"../../../Engine/Content/EngineMaterials/DefaultCalibrationGrayscale.uexp" 868
+"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationGrayscale.uasset" 869
+"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationGrayscale.uexp" 870
+"../../../Engine/Content/EngineMaterials/DefaultCalibrationColor.uasset" 871
+"../../../Engine/Content/EngineMaterials/DefaultCalibrationColor.uexp" 872
+"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationColor.uasset" 873
+"../../../Engine/Content/EngineMaterials/PPM_DefaultCalibrationColor.uexp" 874
+"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 875
+"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uexp" 876
+"../../../Engine/Content/EngineMaterials/NaniteHiddenSectionMaterial.uasset" 877
+"../../../Engine/Content/EngineMaterials/NaniteHiddenSectionMaterial.uexp" 878
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.ubulk" 879
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 880
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uexp" 881
+"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 882
+"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uexp" 883
+"../../../Engine/Content/EngineMaterials/GizmoMaterial.uasset" 884
+"../../../Engine/Content/EngineMaterials/GizmoMaterial.uexp" 885
+"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap_VT.uasset" 886
+"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap_VT.uexp" 887
+"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap_VT.uasset" 888
+"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap_VT.uexp" 889
+"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor_VT.uasset" 890
+"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor_VT.uexp" 891
+"../../../Engine/Content/EngineMaterials/Black_1x1_EXR_Texture_VT.uasset" 892
+"../../../Engine/Content/EngineMaterials/Black_1x1_EXR_Texture_VT.uexp" 893
+"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap_VT.uasset" 894
+"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap_VT.uexp" 895
+"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap_VT.uasset" 896
+"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap_VT.uexp" 897
+"../../../Engine/Content/EngineMaterials/FlattenMaterial_WS_Normal_VT.uasset" 898
+"../../../Engine/Content/EngineMaterials/FlattenMaterial_WS_Normal_VT.uexp" 899
+"../../../Engine/Content/EngineMaterials/FlattenMaterial_VT.uasset" 900
+"../../../Engine/Content/EngineMaterials/FlattenMaterial_VT.uexp" 901
+"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap.uasset" 902
+"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap.uexp" 903
+"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uasset" 904
+"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uexp" 905
+"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uasset" 906
+"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uexp" 907
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/Black_1x1_EXR_Texture.uasset" 908
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/Black_1x1_EXR_Texture.uexp" 909
+"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uasset" 910
+"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uexp" 911
+"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor.uasset" 912
+"../../../Engine/Content/EngineMaterials/BaseFlattenLinearColor.uexp" 913
+"../../../Engine/Content/EngineMaterials/FlattenMaterial.uasset" 914
+"../../../Engine/Content/EngineMaterials/FlattenMaterial.uexp" 915
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid_Low.uasset" 916
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid_Low.uexp" 917
+"../../../Engine/Content/EngineMaterials/EmissiveMeshMaterial.uasset" 918
+"../../../Engine/Content/EngineMaterials/EmissiveMeshMaterial.uexp" 919
+"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 920
+"../../../Engine/Content/EngineFonts/RobotoDistanceField.uexp" 921
+"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 922
+"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uexp" 923
+"../../../Engine/Content/EngineMaterials/DefaultDiffuse.ubulk" 924
+"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 925
+"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uexp" 926
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 927
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uexp" 928
+"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 929
+"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uexp" 930
+"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 931
+"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uexp" 932
+"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 933
+"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uexp" 934
+"../../../Engine/Content/EngineMaterials/DefaultDestructiblePhysicalMaterial.uasset" 935
+"../../../Engine/Content/EngineMaterials/DefaultDestructiblePhysicalMaterial.uexp" 936
+"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 937
+"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uexp" 938
+"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 939
+"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uexp" 940
+"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uexp" 941
+"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 942
+"../../../Engine/Content/EngineFonts/Faces/RobotoLight.ufont" 943
+"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uexp" 944
+"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 945
+"../../../Engine/Content/EngineFonts/Faces/RobotoBold.ufont" 946
+"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uexp" 947
+"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 948
+"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.ufont" 949
+"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.uexp" 950
+"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.uasset" 951
+"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.ufont" 952
+"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uexp" 953
+"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 954
+"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.ufont" 955
+"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uexp" 956
+"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 957
+"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.ufont" 958
+"../../../Engine/Content/EngineFonts/Roboto.uasset" 959
+"../../../Engine/Content/EngineFonts/Roboto.uexp" 960
+"../../../Engine/Content/EngineDebugMaterials/VolumeToRender.uasset" 961
+"../../../Engine/Content/EngineDebugMaterials/VolumeToRender.uexp" 962
+"../../../Engine/Content/EngineDebugMaterials/M_VolumeRenderSphereTracePP.uasset" 963
+"../../../Engine/Content/EngineDebugMaterials/M_VolumeRenderSphereTracePP.uexp" 964
+"../../../Engine/Content/EngineDebugMaterials/M_SimpleUnlitTranslucent.uasset" 965
+"../../../Engine/Content/EngineDebugMaterials/M_SimpleUnlitTranslucent.uexp" 966
+"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 967
+"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uexp" 968
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 969
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uexp" 970
+"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 971
+"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uexp" 972
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 973
+"../../../Engine/Content/EditorResources/BSPVertex.uexp" 974
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.ubulk" 975
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 976
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uexp" 977
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 978
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uexp" 979
+"../../../Engine/Content/EditorMaterials/PhAT_UnselectedMaterial.uasset" 980
+"../../../Engine/Content/EditorMaterials/PhAT_UnselectedMaterial.uexp" 981
+"../../../Engine/Content/EditorMaterials/PhAT_NoCollisionMaterial.uasset" 982
+"../../../Engine/Content/EditorMaterials/PhAT_NoCollisionMaterial.uexp" 983
+"../../../Engine/Content/EditorLandscapeResources/DefaultAlphaTexture.uasset" 984
+"../../../Engine/Content/EditorLandscapeResources/DefaultAlphaTexture.uexp" 985
+"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 986
+"../../../Engine/Content/EditorLandscapeResources/DataLayer.uexp" 987
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn.uasset" 988
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn.uexp" 989
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn_Sprite.uasset" 990
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOn_Sprite.uexp" 991
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff.uasset" 992
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff.uexp" 993
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff_Sprite.uasset" 994
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/SoundOff_Sprite.uexp" 995
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores.uasset" 996
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores.uexp" 997
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores_Sprite.uasset" 998
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Scores_Sprite.uexp" 999
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe.uasset" 1000
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe.uexp" 1001
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe_Sprite.uasset" 1002
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Globe_Sprite.uexp" 1003
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle.uasset" 1004
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle.uexp" 1005
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle_Sprite.uasset" 1006
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/GameTitle_Sprite.uexp" 1007
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents.uasset" 1008
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents.uexp" 1009
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents_Sprite.uasset" 1010
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Documents_Sprite.uexp" 1011
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up.uasset" 1012
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up.uexp" 1013
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up_Sprite.uasset" 1014
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Up_Sprite.uexp" 1015
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low.uasset" 1016
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low.uexp" 1017
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low_Sprite.uasset" 1018
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/DialogCloud_Low_Sprite.uexp" 1019
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Spacer_adventure_2.ubulk" 1020
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Spacer_adventure_2.uasset" 1021
 "C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Music/Spacer_adventure_2.uexp" 1022
@@ -1064,38 +1064,38 @@
 "../../../Engine/Content/EngineMaterials/Substrate/Volume/SubstrateSimpleVolumeEnvLUT2D.uexp" 1063
 "../../../Engine/Content/EngineMaterials/Substrate/Volume/SubstrateSimpleVolumeEnvLUT3D.uasset" 1064
 "../../../Engine/Content/EngineMaterials/Substrate/Volume/SubstrateSimpleVolumeEnvLUT3D.uexp" 1065
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_5.uasset" 1066
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_5.uexp" 1067
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_4.uasset" 1068
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_4.uexp" 1069
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_3.uasset" 1070
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_3.uexp" 1071
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4.uasset" 1072
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4.uexp" 1073
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4_Sprite.uasset" 1074
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4_Sprite.uexp" 1075
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4.uasset" 1076
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4.uexp" 1077
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4_Sprite.uasset" 1078
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4_Sprite.uexp" 1079
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Border_x4_Sprite.uasset" 1080
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Border_x4_Sprite.uexp" 1081
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_2_aseprite.uasset" 1082
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_2_aseprite.uexp" 1083
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_1_aseprite.uasset" 1084
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_1_aseprite.uexp" 1085
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_0_aseprite.uasset" 1086
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_0_aseprite.uexp" 1087
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__IF.uasset" 1088
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__IF.uexp" 1089
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up.uasset" 1090
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up.uexp" 1091
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up_Sprite.uasset" 1092
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up_Sprite.uexp" 1093
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot.uasset" 1094
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot.uexp" 1095
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot_Sprite.uasset" 1096
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot_Sprite.uexp" 1097
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4.uasset" 1066
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4.uexp" 1067
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4_Sprite.uasset" 1068
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Up_x4_Sprite.uexp" 1069
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4.uasset" 1070
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4.uexp" 1071
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4_Sprite.uasset" 1072
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/DialogCloud_Low_x4_Sprite.uexp" 1073
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Border_x4_Sprite.uasset" 1074
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/UI/Border_x4_Sprite.uexp" 1075
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_2_aseprite.uasset" 1076
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_2_aseprite.uexp" 1077
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_1_aseprite.uasset" 1078
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_1_aseprite.uexp" 1079
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_0_aseprite.uasset" 1080
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Frames/Meteor__IF_0_aseprite.uexp" 1081
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__IF.uasset" 1082
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Meteor/Meteor__IF.uexp" 1083
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up.uasset" 1084
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up.uexp" 1085
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up_Sprite.uasset" 1086
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Up_Sprite.uexp" 1087
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot.uasset" 1088
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot.uexp" 1089
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot_Sprite.uasset" 1090
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Limiter/Limiter_Bot_Sprite.uexp" 1091
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_5.uasset" 1092
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_5.uexp" 1093
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_4.uasset" 1094
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_4.uexp" 1095
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_3.uasset" 1096
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Assets/Sprites/Background/Background_Sprite_3.uexp" 1097
 "../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 1098
 "../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uexp" 1099
 "../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 1100
@@ -7248,11 +7248,11 @@
 "../../../Engine/Content/EngineMaterials/Substrate/GLints/dict_16_192_64_0p5_0p02_0045_0010.uexp" 7247
 "../../../Engine/Content/EngineMaterials/Substrate/GLints/AGlintTex2dArray.uasset" 7248
 "../../../Engine/Content/EngineMaterials/Substrate/GLints/AGlintTex2dArray.uexp" 7249
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_TrackCameraActor.uasset" 7250
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_TrackCameraActor.uexp" 7251
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Maps/Main.uexp" 7252
-"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Maps/Main.umap" 7253
-"../../../Engine/Content/Maps/Entry_BuiltData.uasset" 7254
-"../../../Engine/Content/Maps/Entry_BuiltData.uexp" 7255
-"../../../Engine/Content/Maps/Entry.uexp" 7256
-"../../../Engine/Content/Maps/Entry.umap" 7257
+"../../../Engine/Content/Maps/Entry_BuiltData.uasset" 7250
+"../../../Engine/Content/Maps/Entry_BuiltData.uexp" 7251
+"../../../Engine/Content/Maps/Entry.uexp" 7252
+"../../../Engine/Content/Maps/Entry.umap" 7253
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_TrackCameraActor.uasset" 7254
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Blueprints/BP_TrackCameraActor.uexp" 7255
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Maps/Main.uexp" 7256
+"C:/Users/silve/OneDrive/Documents/Unreal Projects/MightyHero/Content/Maps/Main.umap" 7257
