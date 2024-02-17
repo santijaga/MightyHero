@@ -20,4 +20,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "UI")
 	void RefreshAllCards();
+
+	UFUNCTION(BlueprintCallable, Category = "TEST")
+	void LockAllCards();
+
+	UFUNCTION(BlueprintCallable, Category = "TEST")
+	void AddMoreCoins();
 };

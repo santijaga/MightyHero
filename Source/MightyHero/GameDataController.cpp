@@ -81,3 +81,23 @@ int32 UGameDataController::LoadCoins()
 
 	return 0;
 }
+
+void UGameDataController::SaveUnlockedSkins(TArray<FString> Skins)
+{
+	UMightyHeroSaveGame* SaveGameInstance = Cast<UMightyHeroSaveGame>(UGameplayStatics::CreateSaveGameObject(UMightyHeroSaveGame::StaticClass()));
+	SaveGameInstance->UnlockedSkins = Skins;
+	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MightyHeroUnlockedSkins"), 0);
+}
+
+TArray<FString> UGameDataController::LoadUnlockedSkins()
+{
+	if (UGameplayStatics::DoesSaveGameExist(TEXT("MightyHeroUnlockedSkins"), 0))
+	{
+		if (UMightyHeroSaveGame* LoadGameInstance = Cast<UMightyHeroSaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("MightyHeroUnlockedSkins"), 0)))
+		{
+			return LoadGameInstance->UnlockedSkins;
+		}
+	}
+
+	return TArray<FString>();
+}

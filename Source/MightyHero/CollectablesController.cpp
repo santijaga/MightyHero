@@ -229,6 +229,8 @@ void ACollectablesController::CollectableBehaviour(ACollectableBase* ActiveColle
 	{
 		AuraBehaviour(AuraCollectable);
 	}
+
+	ActiveCollectable->Collect();
 }
 
 void ACollectablesController::BlowerBehaviour(ABlower* ActiveBlower)

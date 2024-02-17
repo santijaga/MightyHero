@@ -23,4 +23,6 @@ public:
 	UClass* LoadActivePawnClass();
 	void SaveCoins(int32 Coins);
 	int32 LoadCoins();
+	void SaveUnlockedSkins(TArray<FString> Skins);
+	TArray<FString> LoadUnlockedSkins();
 };

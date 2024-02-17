@@ -24,4 +24,7 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = Currency)
 	int32 Coins;
+
+	UPROPERTY(VisibleAnywhere, Category = Skins)
+	TArray<FString> UnlockedSkins;
 };

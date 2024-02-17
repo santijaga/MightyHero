@@ -6,6 +6,7 @@
 #include "Blueprint/WidgetTree.h"
 #include "Components/PanelWidget.h"
 #include "CollectionCardWidget.h"
+#include "GameDataController.h"
 
 void UCollectionWidget::CloseCollection()
 {
@@ -33,6 +34,30 @@ void UCollectionWidget::RefreshAllCards()
                 CardWidget->RefreshCardStatus();
             }
         }
+    }
+}
+
+void UCollectionWidget::LockAllCards()
+{
+	if (UGameDataController* GameDataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+	{
+		TArray<FString> UnlockedSkins = GameDataController->LoadUnlockedSkins();
+
+		UnlockedSkins.Empty();
+
+		GameDataController->SaveUnlockedSkins(UnlockedSkins);
+
+        RefreshAllCards();
+	}
+}
+
+void UCollectionWidget::AddMoreCoins()
+{
+    if (UGameDataController* GameDataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+    {
+        int32 AvailibleCoins = GameDataController->LoadCoins();
+
+        GameDataController->SaveCoins(AvailibleCoins + 100);
     }
 }
 

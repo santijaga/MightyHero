@@ -7,15 +7,22 @@
 
 void UCollectionCardWidget::OnSelectItemFromCollection()
 {
-	if (UGameDataController* GameDataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+	if (bIsUnlockedByDefault || !bIsLocked)
 	{
-		GameDataController->SaveActivePawnClass(CardValue);
-
-		if (AMightyHeroGameModeBase* GameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+		if (UGameDataController* GameDataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
 		{
-			GameMode->RefreshPawn();
-			GameMode->RefreshCollection();
+			GameDataController->SaveActivePawnClass(CardValue);
+
+			if (AMightyHeroGameModeBase* GameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+			{
+				GameMode->RefreshPawn();
+				GameMode->RefreshCollection();
+			}
 		}
+	}
+	else
+	{
+		bShouldShowUnlockDialog = true;
 	}
 }
 
@@ -32,5 +39,82 @@ void UCollectionCardWidget::RefreshCardStatus()
 		{
 			isActive = false;
 		}
+
+		TArray<FString> UnlockedSkins = GameDataController->LoadUnlockedSkins();
+
+		if (UnlockedSkins.IsValidIndex(UnlockedSkins.Find(CardName)))
+		{
+			bIsLocked = false;
+		}
+		else
+		{
+			bIsLocked = true;
+		}
+
+		bShouldShowConfirmDialog = false;
+		bShouldShowFailDialog = false;
+		bShouldShowUnlockDialog = false;
 	}
+}
+
+
+
+bool UCollectionCardWidget::GetIsCardLocked()
+{
+	if (bIsUnlockedByDefault)
+	{
+		return false;
+	}
+
+	return bIsLocked;
+}
+
+void UCollectionCardWidget::OnUnlockButtonPressed()
+{
+	if (UGameDataController* GameDataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+	{
+		int32 AvailibleCoins = GameDataController->LoadCoins();
+
+		bShouldShowUnlockDialog = false;
+
+		if (AvailibleCoins < UnlockCost)
+		{
+			bShouldShowFailDialog = true;
+		}
+		else
+		{
+			bShouldShowConfirmDialog = true;
+		}
+	}
+}
+
+void UCollectionCardWidget::OnFailureButtonPressed()
+{
+	bShouldShowFailDialog = false;
+}
+
+void UCollectionCardWidget::OnConfirmButtonPressed()
+{
+	if (UGameDataController* GameDataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
+	{
+		TArray<FString> UnlockedSkins = GameDataController->LoadUnlockedSkins();
+
+		UnlockedSkins.Add(CardName);
+
+		GameDataController->SaveUnlockedSkins(UnlockedSkins);
+
+		int32 AvailibleCoins = GameDataController->LoadCoins();
+
+		GameDataController->SaveCoins(AvailibleCoins - UnlockCost);
+
+		if (AMightyHeroGameModeBase* GameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+		{
+			GameMode->RefreshCollection();
+		}
+	}
+}
+
+void UCollectionCardWidget::OnCancelButtonPressed()
+{
+	RefreshCardStatus();
 }
