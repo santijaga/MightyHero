@@ -2,22 +2,23 @@
 
 
 #include "MightyHeroGameModeBase.h"
-#include "MightyHeroPlayerController.h"
-#include "TrackCameraActorBase.h"
-#include "EngineUtils.h"
-#include "CharacterBase.h"
-#include "MainWidgetBase.h"
-#include "GameplayWidgetBase.h"
-#include "MeteorController.h"
-#include "GameOverWidgetBase.h"
-#include "Kismet/GameplayStatics.h"
-#include "GameDataController.h"
-#include "MightyHeroPlayerState.h"
+
 #include "BackgroundController.h"
-#include "SoundController.h"
+#include "CharacterBase.h"
+#include "CoinsController.h"
 #include "CollectablesController.h"
 #include "CollectionWidget.h"
-#include "CoinsController.h"
+#include "EngineUtils.h"
+#include "GameDataController.h"
+#include "GameOverWidgetBase.h"
+#include "GameplayWidgetBase.h"
+#include "Kismet/GameplayStatics.h"
+#include "MainWidgetBase.h"
+#include "MeteorController.h"
+#include "MightyHeroPlayerController.h"
+#include "MightyHeroPlayerState.h"
+#include "SoundController.h"
+#include "TrackCameraActorBase.h"
 
 void AMightyHeroGameModeBase::BeginPlay()
 {
