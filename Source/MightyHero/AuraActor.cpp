@@ -12,6 +12,7 @@
 #include "Components/BoxComponent.h"
 #include "PaperFlipbookComponent.h"
 #include "SoundController.h"
+#include "Coin.h"
 
 AAuraActor::AAuraActor()
 {
@@ -71,6 +72,11 @@ void AAuraActor::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
 
 	if (ACollectableBase* Collectable = Cast<ACollectableBase>(OtherActor))
 	{
+		if (ACoin* Coin = Cast<ACoin>(Collectable))
+		{
+			return;
+		}
+
 		if (ACollectablesController* CollectablesController = Cast<ACollectablesController>(Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetCollectablesController()))
 		{
 			CollectablesController->CollectableBehaviour(Collectable);

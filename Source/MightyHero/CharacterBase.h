@@ -39,7 +39,7 @@ public:
 	float DefaultGravityScale = 1.5f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX")
-	USoundCue* JumpCue;
+	class USoundCue* JumpCue;
 	
 private:
 	bool bIsMovementAllowed = false;

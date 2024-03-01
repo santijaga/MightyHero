@@ -30,4 +30,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void ResumeGame();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+	void BackToMainMenu();
 };

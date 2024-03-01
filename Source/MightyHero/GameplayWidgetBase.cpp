@@ -2,6 +2,8 @@
 #include "MightyHeroPlayerController.h"
 #include "MightyHeroPlayerState.h"
 #include "Kismet/GameplayStatics.h"
+#include "SoundController.h"
+#include "MightyHeroGameModeBase.h"
 
 int32 UGameplayWidgetBase::GetScores()
 {
@@ -49,4 +51,18 @@ void UGameplayWidgetBase::ResumeGame()
 {
 	isResuming = false;
 	UGameplayStatics::SetGamePaused(GetWorld(), false);
+}
+
+void UGameplayWidgetBase::BackToMainMenu()
+{
+	if (UWorld* World = GetWorld())
+	{
+		if (ASoundController* SoundController = Cast<ASoundController>((Cast<AMightyHeroGameModeBase>(UGameplayStatics::GetGameMode(GetWorld()))->GetSoundController())))
+		{
+			SoundController->PlayShortCollectCue();
+		}
+
+		FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(World, true);
+		UGameplayStatics::OpenLevel(World, FName(*CurrentLevelName), false);
+	}
 }

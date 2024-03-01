@@ -7,11 +7,17 @@
 #include "Components/PanelWidget.h"
 #include "CollectionCardWidget.h"
 #include "GameDataController.h"
+#include "SoundController.h"
 
 void UCollectionWidget::CloseCollection()
 {
 	if (AMightyHeroGameModeBase* GameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
 	{
+        if (ASoundController* SoundController = Cast<ASoundController>(GameMode->GetSoundController()))
+        {
+            SoundController->PlayShortCollectCue();
+        }
+
 		GameMode->ShowMainWidget();
 	}
 

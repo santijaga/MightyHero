@@ -3,12 +3,13 @@
 #include "GameDataController.h"
 #include "MightyHeroPlayerState.h"
 #include "MightyHeroPlayerController.h"
+#include "Kismet/GameplayStatics.h"
 
 void UGameOverWidgetBase::BackToMainMenu()
 {
 	if (bCanContinue)
 	{
-		if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+		if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
 		{
 			CurrentGameMode->ResetGame();
 		}
@@ -17,15 +18,9 @@ void UGameOverWidgetBase::BackToMainMenu()
 
 int32 UGameOverWidgetBase::LoadScores()
 {
-	if (UWorld* World = GetWorld())
+	if (AMightyHeroPlayerState* PlayerState = Cast<AMightyHeroPlayerState>(UGameplayStatics::GetPlayerState(GetWorld(), 0)))
 	{
-		if (AMightyHeroPlayerController* PlayerController = Cast<AMightyHeroPlayerController>(World->GetFirstPlayerController()))
-		{
-			if (AMightyHeroPlayerState* PlayerState = Cast<AMightyHeroPlayerState>(PlayerController->GetPawn()->GetPlayerState()))
-			{
-				return PlayerState->GetScores();
-			}
-		}
+		return PlayerState->GetScores();
 	}
 
 	return 0;
@@ -41,6 +36,16 @@ int32 UGameOverWidgetBase::LoadHighScores()
 	return 0;
 }
 
+int32 UGameOverWidgetBase::LoadCollectedCoins()
+{
+	if (AMightyHeroPlayerState* PlayerState = Cast<AMightyHeroPlayerState>(UGameplayStatics::GetPlayerState(GetWorld(), 0)))
+	{
+		return PlayerState->GetCoins();
+	}
+
+	return 0;
+}
+
 bool UGameOverWidgetBase::WasHighScore()
 {
 	return wasHighScore;
@@ -51,12 +56,17 @@ int32 UGameOverWidgetBase::GetScores()
 	return CurrentScores;
 }
 
+int32 UGameOverWidgetBase::GetCollectedCoins()
+{
+	return CollectedCoins;
+}
+
 void UGameOverWidgetBase::LoadData()
 {
 	CurrentScores = LoadScores();
 	HighScores = LoadHighScores();
-
 	wasHighScore = CurrentScores > HighScores;
+	CollectedCoins = LoadCollectedCoins();
 }
 
 void UGameOverWidgetBase::EnableContinue()

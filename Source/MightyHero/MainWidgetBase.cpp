@@ -2,6 +2,8 @@
 #include "GameDataController.h"
 #include "MightyHeroGameModeBase.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
+#include "SoundController.h"
 
 int32 UMainWidgetBase::LoadHighScore()
 {
@@ -15,7 +17,7 @@ int32 UMainWidgetBase::LoadHighScore()
 
 void UMainWidgetBase::StartGameplay()
 {
-	if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+	if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
 	{
 		CurrentGameMode->StartGameplay();
 	}
@@ -23,10 +25,15 @@ void UMainWidgetBase::StartGameplay()
 
 void UMainWidgetBase::OnOpenCollection()
 {
-    if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
+    if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
     {
         CurrentGameMode->HideMainWidget();
         CurrentGameMode->OpenCollection();
+
+        if (ASoundController* SoundController = Cast<ASoundController>((CurrentGameMode->GetSoundController())))
+        {
+            SoundController->PlayShortCollectCue();
+        }
     }
 }
 
@@ -37,6 +44,12 @@ void UMainWidgetBase::QuitGame()
         if (World)
         {
             APlayerController* PlayerController = World->GetFirstPlayerController();
+
+            if (ASoundController* SoundController = Cast<ASoundController>((Cast<AMightyHeroGameModeBase>(UGameplayStatics::GetGameMode(GetWorld()))->GetSoundController())))
+            {
+                SoundController->PlayShortCollectCue();
+            }
+
             if (PlayerController)
             {
                 UKismetSystemLibrary::QuitGame(

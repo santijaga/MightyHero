@@ -18,18 +18,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void BackToMainMenu();
 
-private:
-	UFUNCTION()
-	int32 LoadScores();
-
-	UFUNCTION()
-	int32 LoadHighScores();
-
-	bool wasHighScore = false;
-	int32 HighScores = 0;
-	int32 CurrentScores = 0;
-
-public:
 	UFUNCTION(BlueprintCallable, Category = Data)
 	bool WasHighScore();
 
@@ -37,13 +25,22 @@ public:
 	int32 GetScores();
 
 	UFUNCTION(BlueprintCallable, Category = Data)
+	int32 GetCollectedCoins();
+
+	UFUNCTION(BlueprintCallable, Category = Data)
 	void LoadData();
 
-private:
-	UPROPERTY()
-	bool bCanContinue = false;
-
-public:
-	UFUNCTION(Category = State)
+	UFUNCTION()
 	void EnableContinue();
+
+private:
+	bool wasHighScore = false;
+	bool bCanContinue = false;
+	int32 HighScores = 0;
+	int32 CurrentScores = 0;
+	int32 CollectedCoins = 0;
+
+	int32 LoadScores();
+	int32 LoadHighScores();
+	int32 LoadCollectedCoins();
 };

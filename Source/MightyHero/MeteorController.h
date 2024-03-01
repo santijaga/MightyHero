@@ -33,6 +33,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	float SpawnStepDistance = 500.f;
 
+	UFUNCTION()
+	float GetDeltaSpawnLocation();
+	
 private:
 	float CurrentSpawnStepDistance = 0;
 	float NextSpawnDistance = 0;
@@ -42,6 +45,11 @@ private:
 
 	float DefaultScale = 1;
 	float CurrentScale = 1;
+
+	float PenultimateSpawnLocation = 0;
+	float LastSpawnLocation = 0;
+
+	bool bJustSpawnedSattelite = false;
 
 	void SpawnMeteor();
 

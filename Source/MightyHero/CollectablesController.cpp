@@ -11,6 +11,7 @@
 #include "AuraCollectable.h"
 #include "AuraActor.h"
 #include "SoundController.h"
+#include "LaserActor.h"
 
 // Sets default values
 ACollectablesController::ACollectablesController()
@@ -60,7 +61,7 @@ void ACollectablesController::SpawnBlower()
 
 		FVector SpawnLocation = GetActorLocation();
 
-		SpawnLocation.X = NextSpawnDistance + SpawnThreshold;
+		SpawnLocation.X = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetMeteorController()->GetDeltaSpawnLocation();;
 		SpawnLocation.Z = FMath::RandRange(BlowerSpawnMinHeight, BlowerSpawnMaxHeight);
 
 		FRotator Rotation = GetActorRotation();
@@ -121,6 +122,18 @@ void ACollectablesController::DestroyAllCollectables()
 		else
 		{
 			UE_LOG(LogTemp, Error, TEXT("Aura cannot be accessed!"));
+		}
+	}
+
+	for (TActorIterator<ALaserActor> ActorItr(World); ActorItr; ++ActorItr)
+	{
+		if (ALaserActor* Laser = *ActorItr)
+		{
+			Laser->Deactivate(false);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Laser cannot be accessed!"));
 		}
 	}
 }
@@ -184,7 +197,9 @@ void ACollectablesController::SpawnRandomAbilitiesCollectable()
 
 		FVector CharacterLocation = UGameplayStatics::GetPlayerPawn(this, 0)->GetActorLocation();
 
-		FVector SpawnLocation = FVector(CharacterLocation.X + AbilitiesCollectablesSpawnIndent, 0, 0);
+		
+		FVector SpawnLocation = FVector(0);
+		SpawnLocation.X = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode())->GetMeteorController()->GetDeltaSpawnLocation();
 		SpawnLocation.Z = FMath::RandRange(AbilitiesCollectablesSpawnMinHeight, AbilitiesCollectablesMaxHeight);
 
 		FRotator Rotation = GetActorRotation();
@@ -209,6 +224,12 @@ void ACollectablesController::DestroyAnyCollectablesOutOfBounds(double XBound, d
 	for (TActorIterator<ACollectableBase> ActorItr(World); ActorItr; ++ActorItr)
 	{
 		ACollectableBase* Collectable = *ActorItr;
+
+		if (AbilitiesCollectables.Contains(Collectable->GetClass()))
+		{
+			ScheduleNextCollectable();
+		}
+
 		FVector CollectableLocation = Collectable->GetActorLocation();
 
 		if (CollectableLocation.X < XBound || CollectableLocation.Z < ZBound)
@@ -285,4 +306,3 @@ void ACollectablesController::PlayLongCollectSound()
 		}
 	}
 }
-

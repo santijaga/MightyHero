@@ -48,6 +48,11 @@ void AMeteorController::Tick(float DeltaTime)
 	}
 }
 
+float AMeteorController::GetDeltaSpawnLocation()
+{
+	return (PenultimateSpawnLocation + LastSpawnLocation) * 0.5f + CurrentSpawnStepDistance * 2;
+}
+
 void AMeteorController::SpawnMeteor()
 {
 	if (World && MeteorActorClass)
@@ -60,6 +65,9 @@ void AMeteorController::SpawnMeteor()
 		SpawnLocation.X = NextSpawnDistance + SpawnThreshold;
 		SpawnLocation.Z = ZThreshold;
 
+		PenultimateSpawnLocation = LastSpawnLocation;
+		LastSpawnLocation = SpawnLocation.X;
+
 		FRotator Rotation = GetActorRotation();
 		FVector Scale = FVector(CurrentScale);
 		FTransform SpawnTransform = FTransform(Rotation, SpawnLocation, Scale);
@@ -68,6 +76,8 @@ void AMeteorController::SpawnMeteor()
 		Meteor->SetFallVelocity(FMath::RandRange(minFallVelocity, maxFallVelocity));
 
 		NextSpawnDistance += CurrentSpawnStepDistance;
+
+		bJustSpawnedSattelite = false;
 	}
 }
 
@@ -112,6 +122,11 @@ void AMeteorController::ResetController()
 
 bool AMeteorController::ShouldSpawnSatellite()
 {
+	if (bJustSpawnedSattelite)
+	{
+		return false;
+	}
+	
 	if (difficultyLevel >= satelliteSpawnDifficultyLevel)
 	{
 		int32 rollResult = FMath::RandRange(1, 100);
@@ -140,12 +155,18 @@ void AMeteorController::SpawnSatellite()
 		FVector SpawnLocation = GetActorLocation();
 
 		SpawnLocation.X = NextSpawnDistance + SpawnThreshold;
+
+		PenultimateSpawnLocation = LastSpawnLocation;
+		LastSpawnLocation = SpawnLocation.X;
+
 		SpawnLocation.Z = FMath::RandRange(satelliteSpawnMinHeight, satelliteSpawnMaxHeight);
 
 		FRotator Rotation = GetActorRotation();
 		ASatelliteActor* satelliteActor = World->SpawnActor<ASatelliteActor>(SatelliteActorClass, SpawnLocation, Rotation, SpawnParams);
 
 		NextSpawnDistance += CurrentSpawnStepDistance;
+
+		bJustSpawnedSattelite = true;
 	}
 }
 

@@ -117,9 +117,6 @@ public:
 	TArray<TSubclassOf<ACollectableBase>> AbilitiesCollectables;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AbilitiesCollectable)
-	float AbilitiesCollectablesSpawnIndent = 0;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AbilitiesCollectable)
 	float AbilitiesCollectablesSpawnMinHeight = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AbilitiesCollectable)

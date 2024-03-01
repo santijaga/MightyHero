@@ -16,4 +16,7 @@ class MIGHTYHERO_API ALaserToken : public ACollectableBase
 	
 public:
 	void Collect() override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn")
+	TSubclassOf<class ALaserActor> LaserActorClass;
 };
