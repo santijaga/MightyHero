@@ -20,42 +20,43 @@
 #include "SoundController.h"
 #include "TrackCameraActorBase.h"
 
+#include "UI/UIController.h"
+
 void AMightyHeroGameModeBase::BeginPlay()
 {
     Super::BeginPlay();
 
-    PlayerController = Cast<AMightyHeroPlayerController>(GetWorld()->GetFirstPlayerController());
+    SetupControllers();
 
     InitUI();
 
-    UWorld* World = GetWorld();
-    if (World)
+    if (GetWorld())
     {
         FActorSpawnParameters SpawnParameters;
         SpawnParameters.Owner = this;
-        MeteorController = World->SpawnActor<AMeteorController>(MeteorControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
+        MeteorController = GetWorld()->SpawnActor<AMeteorController>(MeteorControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
     }
 
-    if (PlayerController)
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
     {
         FString PlayerStartTag = "MainStart";
-        MainPlayerStart = FindPlayerStart(PlayerController, PlayerStartTag);
+        MainPlayerStart = FindPlayerStart(PC, PlayerStartTag);
     }
 
     DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
 
-    if (World)
+    if (GetWorld())
     {
         FActorSpawnParameters SpawnParameters;
         SpawnParameters.Owner = this;
-        BackgroundController = World->SpawnActor<ABackgroundController>(BackgroundControllerClass, FVector(0, -100.f, 0), FRotator(0, 0, 0), SpawnParameters);
+        BackgroundController = GetWorld()->SpawnActor<ABackgroundController>(BackgroundControllerClass, FVector(0, -100.f, 0), FRotator(0, 0, 0), SpawnParameters);
     }
 
-    if (World && SoundControllerClass)
+    if (GetWorld() && SoundControllerClass)
     {
         FActorSpawnParameters SpawnParameters;
         SpawnParameters.Owner = this;
-        SoundController = World->SpawnActor<ASoundController>(SoundControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
+        SoundController = GetWorld()->SpawnActor<ASoundController>(SoundControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
 
         if (SoundController)
         {
@@ -63,11 +64,11 @@ void AMightyHeroGameModeBase::BeginPlay()
         }
     }
 
-    if (World)
+    if (GetWorld())
     {
         FActorSpawnParameters SpawnParameters;
         SpawnParameters.Owner = this;
-        CollectablesController = World->SpawnActor<ACollectablesController>(CollectablesControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
+        CollectablesController = GetWorld()->SpawnActor<ACollectablesController>(CollectablesControllerClass, FVector(0, 0, 0), FRotator(0, 0, 0), SpawnParameters);
     }
 
     if (DataController)
@@ -81,13 +82,13 @@ void AMightyHeroGameModeBase::BeginPlay()
         }
     }
 
-    if (World)
+    if (GetWorld())
     {
         if (CoinsControllerClass)
         {
             FActorSpawnParameters SpawnParameters;
             SpawnParameters.Owner = this;
-            CoinsController = World->SpawnActor<ACoinsController>(CoinsControllerClass, FVector(0), FRotator(0), SpawnParameters);
+            CoinsController = GetWorld()->SpawnActor<ACoinsController>(CoinsControllerClass, FVector(0), FRotator(0), SpawnParameters);
         }
         else
         {
@@ -179,11 +180,11 @@ void AMightyHeroGameModeBase::InitCameras()
 
 void AMightyHeroGameModeBase::ShowMainWidget()
 {
-    if (PlayerController)
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
     {
         if (MainWidgetClass)
         {
-            MainWidget = Cast<UMainWidgetBase>(CreateWidget<UUserWidget>(PlayerController, MainWidgetClass));
+            MainWidget = Cast<UMainWidgetBase>(CreateWidget<UUserWidget>(PC, MainWidgetClass));
             if (MainWidget)
             {
                 MainWidget->ShowWidget();
@@ -199,11 +200,11 @@ bool AMightyHeroGameModeBase::IsGameOver()
 
 void AMightyHeroGameModeBase::ShowGameplayWidget()
 {
-    if (PlayerController)
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
     {
         if (GameplayWidgetClass)
         {
-            GameplayWidget = Cast<UGameplayWidgetBase>(CreateWidget<UUserWidget>(PlayerController, GameplayWidgetClass));
+            GameplayWidget = Cast<UGameplayWidgetBase>(CreateWidget<UUserWidget>(PC, GameplayWidgetClass));
             if (GameplayWidget)
             {
                 GameplayWidget->ShowWidget();
@@ -264,6 +265,10 @@ void AMightyHeroGameModeBase::CheckForGameOver()
     }
 }
 
+void AMightyHeroGameModeBase::SetupControllers()
+{
+}
+
 bool AMightyHeroGameModeBase::CheckForMeteorsOutOfBounds()
 {
     bool isAnyMeteorsOutOfBounds = false;
@@ -299,11 +304,11 @@ void AMightyHeroGameModeBase::ResetGame()
 
 void AMightyHeroGameModeBase::ShowGameOverWidget()
 {
-    if (PlayerController)
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
     {
         if (GameOverWidgetClass)
         {
-            GameOverWidget = Cast<UGameOverWidgetBase>(CreateWidget<UUserWidget>(PlayerController, GameOverWidgetClass));
+            GameOverWidget = Cast<UGameOverWidgetBase>(CreateWidget<UUserWidget>(PC, GameOverWidgetClass));
             if (GameOverWidget)
             {
                 GameOverWidget->ShowWidget();
@@ -427,11 +432,11 @@ ACollectablesController* AMightyHeroGameModeBase::GetCollectablesController()
 
 void AMightyHeroGameModeBase::OpenCollection()
 {
-    if (PlayerController)
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
     {
         if (CollectionWidgetClass)
         {
-            CollectionWidget = Cast<UCollectionWidget>(CreateWidget<UUserWidget>(PlayerController, CollectionWidgetClass));
+            CollectionWidget = Cast<UCollectionWidget>(CreateWidget<UUserWidget>(PC, CollectionWidgetClass));
             if (CollectionWidget)
             {
                 CollectionWidget->ShowWidget();
@@ -458,21 +463,21 @@ void AMightyHeroGameModeBase::RefreshPawn()
 
                     if (ACharacterBase* SpawnedActor = GetWorld()->SpawnActor<ACharacterBase>(ClassToSpawn, SpawnTransform, SpawnParams))
                     {
-                        if (PlayerController)
+                        if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
                         {
                             AActor* PreviousPawn = UGameplayStatics::GetPlayerPawn(this, 0);
 
-                            PlayerController->UnPossess();
+                            PC->UnPossess();
 
                             PreviousPawn->Destroy();
 
-                            PlayerController->Possess(SpawnedActor);
+                            PC->Possess(SpawnedActor);
 
                             ResetCharacter();
 
                             MainCamera->ResetCamera();
 
-                            PlayerController->SetViewTargetWithBlend(MainCamera, 0.0f);
+                            PC->SetViewTargetWithBlend(MainCamera, 0.0f);
                         }
                     }
                 }

@@ -18,6 +18,7 @@ class UGameDataController;
 class UGameplayWidgetBase;
 class UGameOverWidgetBase;
 class UMainWidgetBase;
+class AUIController;
 
 /**
  * 
@@ -30,8 +31,6 @@ class MIGHTYHERO_API AMightyHeroGameModeBase : public AGameModeBase
 private:
 	bool bIsGameOver = true;
 	bool bIsCharacterFall = false;
-	
-	AMightyHeroPlayerController* PlayerController;
 
 	virtual	void BeginPlay() override;
 	void CheckForGameOver();
@@ -94,11 +93,17 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void GameOver();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Controllers)
 	TSubclassOf<AMeteorController> MeteorControllerClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Controllers)
+	TSubclassOf<AUIController> UIControllerClass;
 
 private:
 	AMeteorController* MeteorController;
+	AUIController* UIController;
+
+	void SetupControllers();
 
 	UFUNCTION()
 	bool CheckForMeteorsOutOfBounds();
