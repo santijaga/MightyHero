@@ -6,10 +6,18 @@
 #include "GameFramework/GameModeBase.h"
 #include "MightyHeroGameModeBase.generated.h"
 
-class UGameDataController;
 class ABackgroundController;
-class ASoundController;
 class ACoinsController;
+class ACollectablesController;
+class AMeteorController;
+class AMightyHeroPlayerController;
+class ASoundController;
+class ATrackCameraActorBase;
+class UCollectionWidget;
+class UGameDataController;
+class UGameplayWidgetBase;
+class UGameOverWidgetBase;
+class UMainWidgetBase;
 
 /**
  * 
@@ -20,28 +28,48 @@ class MIGHTYHERO_API AMightyHeroGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 private:
+	bool bIsGameOver = true;
+	bool bIsCharacterFall = false;
+	
+	AMightyHeroPlayerController* PlayerController;
+
+	virtual	void BeginPlay() override;
+
 	UFUNCTION(BlueprintCallable, Category = Camera)
 	void InitCameras();
-
-	class AMightyHeroPlayerController* PlayerController;
-
-	bool bIsGameOver = true;
-
-protected:
-	UFUNCTION(BlueprintCallable)
-	virtual	void BeginPlay() override;
+	
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable, Category = Tracking)
+	FVector TrackCharacterLocation();
+
+	void CheckForGameOver();
+
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	double LowerBound = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	double BackBound = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	double UpperBound = 0;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
-	class ATrackCameraActorBase* MainCamera;
+	ATrackCameraActorBase* MainCamera;
 
 	UPROPERTY(BlueprintReadWrite, Category = UI)
-	class UMainWidgetBase* MainWidget;
+	UMainWidgetBase* MainWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
 	TSubclassOf<UMainWidgetBase> MainWidgetClass;
 
+	UPROPERTY(BlueprintReadWrite, Category = UI)
+	UGameplayWidgetBase* GameplayWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	TSubclassOf<UGameplayWidgetBase> GameplayWidgetClass;
+	
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void InitUI();
 
@@ -57,41 +85,17 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	bool IsGameOver();
 
-	UPROPERTY(BlueprintReadWrite, Category = UI)
-	class UGameplayWidgetBase* GameplayWidget;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
-	TSubclassOf<UGameplayWidgetBase> GameplayWidgetClass;
-
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void ShowGameplayWidget();
 
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void HideGameplayWidget();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
-	double LowerBound = 0;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
-	double BackBound = 0;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
-	double UpperBound = 0;
-
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void GameOver();
 
-private:
-	bool bIsCharacterFall = false;
-
-	UFUNCTION(BlueprintCallable, Category = Tracking)
-	FVector TrackCharacterLocation();
-
-	void CheckForGameOver();
-
-public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
-	TSubclassOf<class AMeteorController> MeteorControllerClass;
+	TSubclassOf<AMeteorController> MeteorControllerClass;
 
 private:
 	AMeteorController* MeteorController;
@@ -107,7 +111,7 @@ public:
 	void ResetGame();
 
 	UPROPERTY(BlueprintReadWrite, Category = UI)
-	class UGameOverWidgetBase* GameOverWidget;
+	UGameOverWidgetBase* GameOverWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
 	TSubclassOf<UGameOverWidgetBase> GameOverWidgetClass;
@@ -174,7 +178,7 @@ private:
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
-	TSubclassOf<class ACollectablesController> CollectablesControllerClass;
+	TSubclassOf<ACollectablesController> CollectablesControllerClass;
 
 private:
 	ACollectablesController* CollectablesController;
@@ -191,7 +195,7 @@ public:
 
 private:
 	UPROPERTY()
-	class UCollectionWidget* CollectionWidget;
+	UCollectionWidget* CollectionWidget;
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
