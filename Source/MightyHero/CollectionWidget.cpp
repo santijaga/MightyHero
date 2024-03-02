@@ -5,7 +5,7 @@
 #include "MightyHeroGameModeBase.h"
 #include "Blueprint/WidgetTree.h"
 #include "Components/PanelWidget.h"
-#include "CollectionCardWidget.h"
+#include "UI/Widgets/CollectionCardWidget.h"
 #include "GameDataController.h"
 #include "SoundController.h"
 

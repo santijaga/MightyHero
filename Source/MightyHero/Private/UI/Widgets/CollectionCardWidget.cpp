@@ -1,9 +1,9 @@
 
 
 
-#include "CollectionCardWidget.h"
-#include "GameDataController.h"
-#include "MightyHeroGameModeBase.h"
+#include "UI/Widgets/CollectionCardWidget.h"
+#include "../GameDataController.h"
+#include "../MightyHeroGameModeBase.h"
 
 void UCollectionCardWidget::OnSelectItemFromCollection()
 {
