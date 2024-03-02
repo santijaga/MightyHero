@@ -34,6 +34,7 @@ private:
 	AMightyHeroPlayerController* PlayerController;
 
 	virtual	void BeginPlay() override;
+	void CheckForGameOver();
 
 	UFUNCTION(BlueprintCallable, Category = Camera)
 	void InitCameras();
@@ -43,7 +44,6 @@ private:
 	UFUNCTION(BlueprintCallable, Category = Tracking)
 	FVector TrackCharacterLocation();
 
-	void CheckForGameOver();
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
