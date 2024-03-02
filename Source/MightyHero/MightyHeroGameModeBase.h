@@ -105,6 +105,9 @@ private:
 
 	void SetupControllers();
 
+	template<typename ControllerClass>
+	void SetupController(TSubclassOf<ControllerClass>& ControllerClassRef, ControllerClass*& ControllerInstance);
+
 	UFUNCTION()
 	bool CheckForMeteorsOutOfBounds();
 

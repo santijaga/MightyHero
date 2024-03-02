@@ -225,56 +225,29 @@ void AMightyHeroGameModeBase::SetupControllers()
 {
     if (GetWorld())
     {
+        SetupController(MeteorControllerClass, MeteorController);
+        SetupController(BackgroundControllerClass, BackgroundController);
+        SetupController(SoundControllerClass, SoundController);
+        SetupController(CollectablesControllerClass, CollectablesController);
+        SetupController(CoinsControllerClass, CoinsController);
+
+        DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
+    }
+}
+
+template<typename ControllerClass>
+void AMightyHeroGameModeBase::SetupController(TSubclassOf<ControllerClass>& ControllerClassRef, ControllerClass*& ControllerInstance)
+{
+    if (ControllerClassRef)
+    {
         FActorSpawnParameters SpawnParameters;
         SpawnParameters.Owner = this;
         FTransform SpawnTransform = FTransform(FRotator(0), FVector(0), FVector(1));
-
-        if (MeteorControllerClass)
-        {
-            MeteorController = GetWorld()->SpawnActor<AMeteorController>(MeteorControllerClass, SpawnTransform, SpawnParameters);
-        }
-        else
-        {
-            UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: MeteorControllerClass not set!"));
-        }
-
-        if (BackgroundControllerClass)
-        {
-            BackgroundController = GetWorld()->SpawnActor<ABackgroundController>(BackgroundControllerClass, SpawnTransform, SpawnParameters);
-        }
-        else
-        {
-            UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: BackgroundControllerClass not set!"));
-        }
-        
-        if (SoundControllerClass)
-        {
-            SoundController = GetWorld()->SpawnActor<ASoundController>(SoundControllerClass, SpawnTransform, SpawnParameters);
-        }
-        else
-        {
-            UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: SoundControllerClass not set!"));
-        }
-        
-        if (CollectablesControllerClass)
-        {
-            CollectablesController = GetWorld()->SpawnActor<ACollectablesController>(CollectablesControllerClass, SpawnTransform, SpawnParameters);
-        }
-        else
-        {
-            UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: CollectablesControllerClass not set!"));
-        }
-        
-        if (CoinsControllerClass)
-        {
-            CoinsController = GetWorld()->SpawnActor<ACoinsController>(CoinsControllerClass, SpawnTransform, SpawnParameters);
-        }
-        else
-        {
-            UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: CoinsControllerClass not set!"));
-        }
-
-        DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
+        ControllerInstance = GetWorld()->SpawnActor<ControllerClass>(ControllerClassRef, SpawnTransform, SpawnParameters);
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: %s not set!"), *ControllerClassRef->GetName());
     }
 }
 
