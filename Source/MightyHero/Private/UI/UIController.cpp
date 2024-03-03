@@ -3,6 +3,8 @@
 
 #include "UI/UIController.h"
 
+#include "../MainWidgetBase.h"
+
 // Sets default values
 AUIController::AUIController()
 {
@@ -15,7 +17,6 @@ AUIController::AUIController()
 void AUIController::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -25,3 +26,27 @@ void AUIController::Tick(float DeltaTime)
 
 }
 
+
+// Main widget block start
+void AUIController::ShowMainWidget()
+{
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
+    {
+        if (MainWidgetClass)
+        {
+            MainWidget = CreateWidget<UMainWidgetBase>(PC, MainWidgetClass);
+            if (MainWidget)
+            {
+                MainWidget->ShowWidget();
+            }
+        }
+    }
+}
+
+void AUIController::HideMainWidget()
+{
+    if (MainWidget)
+    {
+        MainWidget->RemoveWidget();
+    }
+}

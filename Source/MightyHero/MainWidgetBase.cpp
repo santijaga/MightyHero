@@ -4,6 +4,7 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "SoundController.h"
+#include "UI/UIController.h"
 
 int32 UMainWidgetBase::LoadHighScore()
 {
@@ -27,7 +28,11 @@ void UMainWidgetBase::OnOpenCollection()
 {
     if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
     {
-        CurrentGameMode->HideMainWidget();
+        if (AUIController* UIController = CurrentGameMode->GetUIController())
+        {
+            UIController->HideMainWidget();
+        }
+
         CurrentGameMode->OpenCollection();
 
         if (ASoundController* SoundController = Cast<ASoundController>((CurrentGameMode->GetSoundController())))

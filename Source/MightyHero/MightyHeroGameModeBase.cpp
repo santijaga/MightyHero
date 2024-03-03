@@ -27,7 +27,6 @@ void AMightyHeroGameModeBase::BeginPlay()
     Super::BeginPlay();
 
     SetupControllers();
-
     InitUI();
 
     if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
@@ -53,6 +52,22 @@ void AMightyHeroGameModeBase::BeginPlay()
     }
 }
 
+/*
+* Controllers
+*/
+
+// UIController
+
+AUIController* AMightyHeroGameModeBase::GetUIController()
+{
+    if (UIController)
+    {
+        return UIController;
+    }
+
+    return nullptr;
+}
+
 void AMightyHeroGameModeBase::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
@@ -67,12 +82,19 @@ void AMightyHeroGameModeBase::Tick(float DeltaTime)
 
 void AMightyHeroGameModeBase::InitUI()
 {
-    ShowMainWidget();
+    if (UIController)
+    {
+        UIController->ShowMainWidget();
+    }
 }
 
 void AMightyHeroGameModeBase::StartGameplay()
 {
-    HideMainWidget();
+    if (UIController)
+    {
+        UIController->HideMainWidget();
+    }
+
     ShowGameplayWidget();
 
     if (UGameplayStatics::GetPlayerPawn(this, 0))
@@ -110,14 +132,6 @@ void AMightyHeroGameModeBase::GameOver()
     SaveCoins();
 }
 
-void AMightyHeroGameModeBase::HideMainWidget()
-{
-    if (MainWidget)
-    {
-        MainWidget->RemoveWidget();
-    }
-}
-
 void AMightyHeroGameModeBase::InitCameras()
 {
     for (TActorIterator<ATrackCameraActorBase> ActorItr(GetWorld()); ActorItr; ++ActorItr)
@@ -129,21 +143,6 @@ void AMightyHeroGameModeBase::InitCameras()
             if (Camera->ActorHasTag(FName("Main")))
             {
                 MainCamera = Camera;
-            }
-        }
-    }
-}
-
-void AMightyHeroGameModeBase::ShowMainWidget()
-{
-    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
-    {
-        if (MainWidgetClass)
-        {
-            MainWidget = Cast<UMainWidgetBase>(CreateWidget<UUserWidget>(PC, MainWidgetClass));
-            if (MainWidget)
-            {
-                MainWidget->ShowWidget();
             }
         }
     }
@@ -230,6 +229,7 @@ void AMightyHeroGameModeBase::SetupControllers()
         SetupController(SoundControllerClass, SoundController);
         SetupController(CollectablesControllerClass, CollectablesController);
         SetupController(CoinsControllerClass, CoinsController);
+        SetupController(UIControllerClass, UIController);
 
         DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
     }
@@ -276,7 +276,11 @@ void AMightyHeroGameModeBase::CheckForCollectablesOutOfBounds()
 void AMightyHeroGameModeBase::ResetGame()
 {
     HideGameOverWidget();
-    ShowMainWidget();
+    if (UIController)
+    {
+        UIController->ShowMainWidget();
+    }
+
     ResetCharacter();
     ResetScores();
     ResetBackground();

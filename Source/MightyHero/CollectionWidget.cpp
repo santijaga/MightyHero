@@ -5,6 +5,7 @@
 #include "MightyHeroGameModeBase.h"
 #include "Blueprint/WidgetTree.h"
 #include "Components/PanelWidget.h"
+#include "UI/UIController.h"
 #include "UI/Widgets/CollectionCardWidget.h"
 #include "GameDataController.h"
 #include "SoundController.h"
@@ -18,7 +19,10 @@ void UCollectionWidget::CloseCollection()
             SoundController->PlayShortCollectCue();
         }
 
-		GameMode->ShowMainWidget();
+        if (AUIController* UIController = GameMode->GetUIController())
+        {
+            UIController->ShowMainWidget();
+        }
 	}
 
 	this->RemoveWidget();

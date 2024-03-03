@@ -28,7 +28,24 @@ class MIGHTYHERO_API AMightyHeroGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 
-private:
+	/*
+	* Controllers
+	*/
+
+	// UIController
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
+	TSubclassOf<AUIController> UIControllerClass;
+
+	AUIController* GetUIController();
+
+protected:
+	AUIController* UIController;
+
+	// End of Controllers
+
+
+protected:
 	bool bIsGameOver = true;
 	bool bIsCharacterFall = false;
 
@@ -72,14 +89,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void InitUI();
 
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void ShowMainWidget();
-
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void StartGameplay();
-
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void HideMainWidget();
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	bool IsGameOver();
@@ -96,12 +107,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Controllers)
 	TSubclassOf<AMeteorController> MeteorControllerClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Controllers)
-	TSubclassOf<AUIController> UIControllerClass;
-
 private:
 	AMeteorController* MeteorController;
-	AUIController* UIController;
 
 	void SetupControllers();
 
