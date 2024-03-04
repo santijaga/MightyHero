@@ -4,6 +4,7 @@
 #include "UI/UIController.h"
 
 #include "../MainWidgetBase.h"
+#include "../GameplayWidgetBase.h"
 
 // Sets default values
 AUIController::AUIController()
@@ -27,7 +28,7 @@ void AUIController::Tick(float DeltaTime)
 }
 
 
-// Main widget block start
+// MAIN WIDGET
 void AUIController::ShowMainWidget()
 {
     if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
@@ -48,5 +49,29 @@ void AUIController::HideMainWidget()
     if (MainWidget)
     {
         MainWidget->RemoveWidget();
+    }
+}
+
+// GAMEPLAY WIDGET
+void AUIController::ShowGameplayWidget()
+{
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
+    {
+        if (GameplayWidgetClass)
+        {
+            GameplayWidget = CreateWidget<UGameplayWidgetBase>(PC, GameplayWidgetClass);
+            if (GameplayWidget)
+            {
+                GameplayWidget->ShowWidget();
+            }
+        }
+    }
+}
+
+void AUIController::HideGameplayWidget()
+{
+    if (GameplayWidget)
+    {
+        GameplayWidget->RemoveWidget();
     }
 }

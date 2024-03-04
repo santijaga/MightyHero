@@ -31,6 +31,11 @@ class MIGHTYHERO_API AMightyHeroGameModeBase : public AGameModeBase
 	/*
 	* Controllers
 	*/
+protected:
+	void SetupControllers();
+
+	template<typename ControllerClass>
+	void SetupController(TSubclassOf<ControllerClass>& ControllerClassRef, ControllerClass*& ControllerInstance);
 
 	// UIController
 public:
@@ -73,18 +78,6 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
 	ATrackCameraActorBase* MainCamera;
-
-	UPROPERTY(BlueprintReadWrite, Category = UI)
-	UMainWidgetBase* MainWidget;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
-	TSubclassOf<UMainWidgetBase> MainWidgetClass;
-
-	UPROPERTY(BlueprintReadWrite, Category = UI)
-	UGameplayWidgetBase* GameplayWidget;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
-	TSubclassOf<UGameplayWidgetBase> GameplayWidgetClass;
 	
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void InitUI();
@@ -95,12 +88,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	bool IsGameOver();
 
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void ShowGameplayWidget();
-
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void HideGameplayWidget();
-
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void GameOver();
 
@@ -109,11 +96,6 @@ public:
 
 private:
 	AMeteorController* MeteorController;
-
-	void SetupControllers();
-
-	template<typename ControllerClass>
-	void SetupController(TSubclassOf<ControllerClass>& ControllerClassRef, ControllerClass*& ControllerInstance);
 
 	UFUNCTION()
 	bool CheckForMeteorsOutOfBounds();

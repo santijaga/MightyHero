@@ -7,6 +7,7 @@
 #include "UIController.generated.h"
 
 class UMainWidgetBase;
+class UGameplayWidgetBase;
 
 /*
 * UI Controller provide access to game widgets
@@ -56,4 +57,29 @@ public:
 	void HideMainWidget();
 
 	// Main widget block end
+
+	// Gameplay widget block start
+
+	/*
+	* Gameplay widget is in game widget providing access to
+	* - Pause the game
+	* - Quit back to main menu
+	* - Toggle sound
+	* 
+	* This widget displays
+	* - Current scores
+	* - Current coins
+	*/
+protected:
+	UPROPERTY(BlueprintReadWrite, Category = UI)
+	UGameplayWidgetBase* GameplayWidget;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	TSubclassOf<UGameplayWidgetBase> GameplayWidgetClass;
+
+	void ShowGameplayWidget();
+	void HideGameplayWidget();
+
+	// Gameplay widget block end
 };

@@ -56,6 +56,37 @@ void AMightyHeroGameModeBase::BeginPlay()
 * Controllers
 */
 
+void AMightyHeroGameModeBase::SetupControllers()
+{
+    if (GetWorld())
+    {
+        SetupController(MeteorControllerClass, MeteorController);
+        SetupController(BackgroundControllerClass, BackgroundController);
+        SetupController(SoundControllerClass, SoundController);
+        SetupController(CollectablesControllerClass, CollectablesController);
+        SetupController(CoinsControllerClass, CoinsController);
+        SetupController(UIControllerClass, UIController);
+
+        DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
+    }
+}
+
+template<typename ControllerClass>
+void AMightyHeroGameModeBase::SetupController(TSubclassOf<ControllerClass>& ControllerClassRef, ControllerClass*& ControllerInstance)
+{
+    if (ControllerClassRef)
+    {
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.Owner = this;
+        FTransform SpawnTransform = FTransform(FRotator(0), FVector(0), FVector(1));
+        ControllerInstance = GetWorld()->SpawnActor<ControllerClass>(ControllerClassRef, SpawnTransform, SpawnParameters);
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: %s not set!"), *ControllerClassRef->GetName());
+    }
+}
+
 // UIController
 
 AUIController* AMightyHeroGameModeBase::GetUIController()
@@ -93,9 +124,8 @@ void AMightyHeroGameModeBase::StartGameplay()
     if (UIController)
     {
         UIController->HideMainWidget();
+        UIController->ShowGameplayWidget();
     }
-
-    ShowGameplayWidget();
 
     if (UGameplayStatics::GetPlayerPawn(this, 0))
     {
@@ -124,9 +154,21 @@ void AMightyHeroGameModeBase::GameOver()
     UE_LOG(LogTemp, Warning, TEXT("Game is over"));
 
     bIsGameOver = true;
-    MeteorController->DestroyAllMeteors(false);
-    CollectablesController->StopGameplay();
-    HideGameplayWidget();
+    if (MeteorController)
+    {
+        MeteorController->DestroyAllMeteors(false);
+    }
+
+    if (CollectablesController)
+    {
+        CollectablesController->StopGameplay();
+    }
+
+    if (UIController)
+    {
+        UIController->HideGameplayWidget();
+    }
+
     ShowGameOverWidget();
     SaveHighScore();
     SaveCoins();
@@ -151,29 +193,6 @@ void AMightyHeroGameModeBase::InitCameras()
 bool AMightyHeroGameModeBase::IsGameOver()
 {
     return bIsGameOver;
-}
-
-void AMightyHeroGameModeBase::ShowGameplayWidget()
-{
-    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
-    {
-        if (GameplayWidgetClass)
-        {
-            GameplayWidget = Cast<UGameplayWidgetBase>(CreateWidget<UUserWidget>(PC, GameplayWidgetClass));
-            if (GameplayWidget)
-            {
-                GameplayWidget->ShowWidget();
-            }
-        }
-    }
-}
-
-void AMightyHeroGameModeBase::HideGameplayWidget()
-{
-    if (GameplayWidget)
-    {
-        GameplayWidget->RemoveWidget();
-    }
 }
 
 FVector AMightyHeroGameModeBase::TrackCharacterLocation()
@@ -217,37 +236,6 @@ void AMightyHeroGameModeBase::CheckForGameOver()
     if (bIsCharacterFall || bOutOfBounds || bCharacterCrashedInSatellite)
     {
         GameOver();
-    }
-}
-
-void AMightyHeroGameModeBase::SetupControllers()
-{
-    if (GetWorld())
-    {
-        SetupController(MeteorControllerClass, MeteorController);
-        SetupController(BackgroundControllerClass, BackgroundController);
-        SetupController(SoundControllerClass, SoundController);
-        SetupController(CollectablesControllerClass, CollectablesController);
-        SetupController(CoinsControllerClass, CoinsController);
-        SetupController(UIControllerClass, UIController);
-
-        DataController = NewObject<UGameDataController>(this, UGameDataController::StaticClass());
-    }
-}
-
-template<typename ControllerClass>
-void AMightyHeroGameModeBase::SetupController(TSubclassOf<ControllerClass>& ControllerClassRef, ControllerClass*& ControllerInstance)
-{
-    if (ControllerClassRef)
-    {
-        FActorSpawnParameters SpawnParameters;
-        SpawnParameters.Owner = this;
-        FTransform SpawnTransform = FTransform(FRotator(0), FVector(0), FVector(1));
-        ControllerInstance = GetWorld()->SpawnActor<ControllerClass>(ControllerClassRef, SpawnTransform, SpawnParameters);
-    }
-    else
-    {
-        UE_LOG(LogTemp, Error, TEXT("[Mighty Hero Game Mode Base] Setup Controllers: %s not set!"), *ControllerClassRef->GetName());
     }
 }
 
