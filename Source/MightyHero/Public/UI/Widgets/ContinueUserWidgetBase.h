@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "../UserWidgetBase.h"
+#include "UserWidgetBase.h"
 #include "ContinueUserWidgetBase.generated.h"
 
 /**

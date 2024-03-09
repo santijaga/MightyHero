@@ -1,10 +1,13 @@
-#include "MainWidgetBase.h"
-#include "GameDataController.h"
-#include "MightyHeroGameModeBase.h"
+#include "UI/Widgets/MainWidgetBase.h"
+
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
-#include "SoundController.h"
+
 #include "UI/UIController.h"
+#include "../../../GameDataController.h"
+#include "../../../MightyHeroGameModeBase.h"
+#include "../../../SoundController.h"
+
 
 int32 UMainWidgetBase::LoadHighScore()
 {

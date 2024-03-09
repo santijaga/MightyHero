@@ -3,10 +3,10 @@
 
 #include "UI/UIController.h"
 
-#include "../MainWidgetBase.h"
-#include "../CollectionWidget.h"
-#include "../GameplayWidgetBase.h"
-#include "../GameOverWidgetBase.h"
+#include "UI/Widgets/MainWidgetBase.h"
+#include "UI/Widgets/CollectionWidget.h"
+#include "UI/Widgets/GameplayWidgetBase.h"
+#include "UI/Widgets/GameOverWidgetBase.h"
 
 // Sets default values
 AUIController::AUIController()

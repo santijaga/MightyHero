@@ -1,7 +1,8 @@
-#include "UserWidgetBase.h"
-#include "GameDataController.h"
-#include "MightyHeroGameModeBase.h"
-#include "SoundController.h"
+#include "UI/Widgets/UserWidgetBase.h"
+
+#include "../../../GameDataController.h"
+#include "../../../MightyHeroGameModeBase.h"
+#include "../../../SoundController.h"
 
 void UUserWidgetBase::ShowWidget()
 {
