@@ -30,15 +30,14 @@ void UMainWidgetBase::OnOpenCollection()
     {
         if (AUIController* UIController = CurrentGameMode->GetUIController())
         {
-            UIController->HideMainWidget();
+            UIController->ShowCollectionUI(false);
+
+            if (ASoundController* SoundController = Cast<ASoundController>((CurrentGameMode->GetSoundController())))
+            {
+                SoundController->PlayShortCollectCue();
+            }
         }
 
-        CurrentGameMode->OpenCollection();
-
-        if (ASoundController* SoundController = Cast<ASoundController>((CurrentGameMode->GetSoundController())))
-        {
-            SoundController->PlayShortCollectCue();
-        }
     }
 }
 

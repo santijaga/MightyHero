@@ -7,13 +7,9 @@
 #include "CharacterBase.h"
 #include "CoinsController.h"
 #include "CollectablesController.h"
-#include "CollectionWidget.h"
 #include "EngineUtils.h"
 #include "GameDataController.h"
-#include "GameOverWidgetBase.h"
-#include "GameplayWidgetBase.h"
 #include "Kismet/GameplayStatics.h"
-#include "MainWidgetBase.h"
 #include "MeteorController.h"
 #include "MightyHeroPlayerController.h"
 #include "MightyHeroPlayerState.h"
@@ -27,7 +23,11 @@ void AMightyHeroGameModeBase::BeginPlay()
     Super::BeginPlay();
 
     SetupControllers();
-    InitUI();
+    
+    if (UIController)
+    {
+        UIController->ShowMainMenuUI();
+    }
 
     if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
     {
@@ -111,20 +111,11 @@ void AMightyHeroGameModeBase::Tick(float DeltaTime)
     }
 }
 
-void AMightyHeroGameModeBase::InitUI()
-{
-    if (UIController)
-    {
-        UIController->ShowMainWidget();
-    }
-}
-
 void AMightyHeroGameModeBase::StartGameplay()
 {
     if (UIController)
     {
-        UIController->HideMainWidget();
-        UIController->ShowGameplayWidget();
+        UIController->ShowGameplayUI();
     }
 
     if (UGameplayStatics::GetPlayerPawn(this, 0))
@@ -166,10 +157,9 @@ void AMightyHeroGameModeBase::GameOver()
 
     if (UIController)
     {
-        UIController->HideGameplayWidget();
+        UIController->ShowGameOverUI(true);
     }
 
-    ShowGameOverWidget();
     SaveHighScore();
     SaveCoins();
 }
@@ -227,14 +217,29 @@ void AMightyHeroGameModeBase::CheckForGameOver()
         bIsCharacterFall = true;
     }
 
-    bool bOutOfBounds = CheckForMeteorsOutOfBounds();
+    bool bMeteorIsOutOfBounds = CheckForMeteorsOutOfBounds();
 
-    if (bOutOfBounds) {
+    if (bMeteorIsOutOfBounds) {
         CharacterRef->EarthDestroyed();
     }
 
-    if (bIsCharacterFall || bOutOfBounds || bCharacterCrashedInSatellite)
+    if (bIsCharacterFall || bMeteorIsOutOfBounds || bCharacterCrashedInSatellite)
     {
+        if (bIsCharacterFall)
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Game Over due character fall"));
+        }
+
+        if (bMeteorIsOutOfBounds)
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Game Over due meteor was out of bounds"));
+        }
+
+        if (bCharacterCrashedInSatellite)
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Game Over due character destroyed satellite"));
+        }
+
         GameOver();
     }
 }
@@ -263,10 +268,9 @@ void AMightyHeroGameModeBase::CheckForCollectablesOutOfBounds()
 
 void AMightyHeroGameModeBase::ResetGame()
 {
-    HideGameOverWidget();
     if (UIController)
     {
-        UIController->ShowMainWidget();
+        UIController->ShowMainMenuUI();
     }
 
     ResetCharacter();
@@ -274,33 +278,6 @@ void AMightyHeroGameModeBase::ResetGame()
     ResetBackground();
     ResetCoins();
     nextIncreaseScores = difficultyStep;
-}
-
-void AMightyHeroGameModeBase::ShowGameOverWidget()
-{
-    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
-    {
-        if (GameOverWidgetClass)
-        {
-            GameOverWidget = Cast<UGameOverWidgetBase>(CreateWidget<UUserWidget>(PC, GameOverWidgetClass));
-            if (GameOverWidget)
-            {
-                GameOverWidget->ShowWidget();
-                GetWorld()->GetTimerManager().SetTimer(EnableContinueTimerHandle, [this]()
-                {
-                    GameOverWidget->EnableContinue();
-                }, 2.0f, false);
-            }
-        }
-    }
-}
-
-void AMightyHeroGameModeBase::HideGameOverWidget()
-{
-    if (GameOverWidget)
-    {
-        GameOverWidget->RemoveWidget();
-    }
 }
 
 void AMightyHeroGameModeBase::ResetCharacter()
@@ -404,22 +381,6 @@ ACollectablesController* AMightyHeroGameModeBase::GetCollectablesController()
     return nullptr;
 }
 
-void AMightyHeroGameModeBase::OpenCollection()
-{
-    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
-    {
-        if (CollectionWidgetClass)
-        {
-            CollectionWidget = Cast<UCollectionWidget>(CreateWidget<UUserWidget>(PC, CollectionWidgetClass));
-            if (CollectionWidget)
-            {
-                CollectionWidget->ShowWidget();
-                RefreshCollection();
-            }
-        }
-    }
-}
-
 void AMightyHeroGameModeBase::RefreshPawn()
 {
     if (GetWorld())
@@ -457,14 +418,6 @@ void AMightyHeroGameModeBase::RefreshPawn()
                 }
             }
         }
-    }
-}
-
-void AMightyHeroGameModeBase::RefreshCollection()
-{
-    if (CollectionWidget)
-    {
-        CollectionWidget->RefreshAllCards();
     }
 }
 

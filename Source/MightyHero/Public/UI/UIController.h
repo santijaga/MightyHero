@@ -7,7 +7,9 @@
 #include "UIController.generated.h"
 
 class UMainWidgetBase;
+class UCollectionWidget;
 class UGameplayWidgetBase;
+class UGameOverWidgetBase;
 
 /*
 * UI Controller provide access to game widgets
@@ -32,6 +34,23 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	/*
+	* UI Controller Interface
+	* 
+	* Public methods to controll game UI
+	* 
+	* - ShowMainMenuUI
+	* - ShowGameplayUI
+	* - ShowGameoverUI
+	* - ShowCollectionUI
+	*/
+public:
+	void ShowMainMenuUI();
+	void ShowGameplayUI();
+	void ShowGameOverUI(bool bWithContinueTimeout);
+	void ShowCollectionUI(bool bRefreshOnly);
+	// Controller Interface End
+
 	// Main widget block start
 
 	/*
@@ -53,6 +72,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
 	TSubclassOf<UMainWidgetBase> MainWidgetClass;
 
+protected:
 	void ShowMainWidget();
 	void HideMainWidget();
 
@@ -71,15 +91,70 @@ public:
 	* - Current coins
 	*/
 protected:
-	UPROPERTY(BlueprintReadWrite, Category = UI)
 	UGameplayWidgetBase* GameplayWidget;
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
 	TSubclassOf<UGameplayWidgetBase> GameplayWidgetClass;
 
+protected:
 	void ShowGameplayWidget();
 	void HideGameplayWidget();
 
 	// Gameplay widget block end
+
+	// Gameover widget block start
+	/*
+	* Gameover widget is in-game widget providing access to
+	* - Return to menu
+	* 
+	* This widget displays
+	* - Final scores
+	* - Collected coins
+	*/
+protected:
+	UGameOverWidgetBase* GameOverWidget;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	TSubclassOf<UGameOverWidgetBase> GameOverWidgetClass;
+
+protected:
+	void ShowGameOverWidget();
+	void HideGameOverWidget();
+	void EnableGameOverContinue();
+
+private:
+	FTimerHandle EnableContinueTimerHandle;
+	void OnEnableContinueTimerEnds();
+	// Gameover widget block over
+
+	// Collection widget block start
+	/*
+	* Collection widget is widget providing access to
+	* - Return to menu
+	* 
+	* This widget displays
+	* - Collection cards
+	*/
+protected:
+	UCollectionWidget* CollectionWidget;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
+	TSubclassOf<UCollectionWidget> CollectionWidgetClass;
+
+protected:
+	void ShowCollectionWidget();
+	void HideCollectionWidget();
+	void RefreshCollection();
+	// Collection widget block over
+
+	/*
+	* Utils
+	*
+	* - Removing all widgets
+	*/
+private:
+	void HideAllWidgets();
 };

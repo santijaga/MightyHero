@@ -13,11 +13,7 @@ class AMeteorController;
 class AMightyHeroPlayerController;
 class ASoundController;
 class ATrackCameraActorBase;
-class UCollectionWidget;
 class UGameDataController;
-class UGameplayWidgetBase;
-class UGameOverWidgetBase;
-class UMainWidgetBase;
 class AUIController;
 
 /**
@@ -78,9 +74,6 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera)
 	ATrackCameraActorBase* MainCamera;
-	
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void InitUI();
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void StartGameplay();
@@ -106,18 +99,6 @@ private:
 public:
 	UFUNCTION()
 	void ResetGame();
-
-	UPROPERTY(BlueprintReadWrite, Category = UI)
-	UGameOverWidgetBase* GameOverWidget;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
-	TSubclassOf<UGameOverWidgetBase> GameOverWidgetClass;
-
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void ShowGameOverWidget();
-
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void HideGameOverWidget();
 
 private:
 	UPROPERTY()
@@ -163,9 +144,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
 	int32 difficultyStep = 5;
 
-private:
-	FTimerHandle EnableContinueTimerHandle;
-
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
 	TSubclassOf<ASoundController> SoundControllerClass;
@@ -190,22 +168,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Access)
 	ACollectablesController* GetCollectablesController();
 
-private:
-	UPROPERTY()
-	UCollectionWidget* CollectionWidget;
-
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI)
-	TSubclassOf<UCollectionWidget> CollectionWidgetClass;
-
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void OpenCollection();
-
 	UFUNCTION(BlueprintCallable, Category = Pawn)
 	void RefreshPawn();
-
-	UFUNCTION(BlueprintCallable, Category = UI)
-	void RefreshCollection();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controllers)
 	TSubclassOf<ACoinsController> CoinsControllerClass;

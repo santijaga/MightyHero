@@ -2,6 +2,7 @@
 
 
 #include "UI/Widgets/CollectionCardWidget.h"
+#include "UI/UIController.h"
 #include "../GameDataController.h"
 #include "../MightyHeroGameModeBase.h"
 
@@ -16,7 +17,11 @@ void UCollectionCardWidget::OnSelectItemFromCollection()
 			if (AMightyHeroGameModeBase* GameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
 			{
 				GameMode->RefreshPawn();
-				GameMode->RefreshCollection();
+
+				if (AUIController* UIController = GameMode->GetUIController())
+				{
+					UIController->ShowCollectionUI(true);
+				}
 			}
 		}
 	}
@@ -109,7 +114,10 @@ void UCollectionCardWidget::OnConfirmButtonPressed()
 
 		if (AMightyHeroGameModeBase* GameMode = Cast<AMightyHeroGameModeBase>(GetWorld()->GetAuthGameMode()))
 		{
-			GameMode->RefreshCollection();
+			if (AUIController* UIController = GameMode->GetUIController())
+			{
+				UIController->ShowCollectionUI(true);
+			}
 		}
 	}
 }

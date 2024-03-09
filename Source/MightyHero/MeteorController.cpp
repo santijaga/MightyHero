@@ -118,6 +118,8 @@ void AMeteorController::ResetController()
 	currentSatelliteSpawnChance = defaultSatelliteSpawnChance;
 	minFallVelocity = DefaultMinFallVelocity;
 	maxFallVelocity = DefaultMaxFallVelocity;
+
+	DestroyAllMeteors(false);
 }
 
 bool AMeteorController::ShouldSpawnSatellite()
@@ -197,21 +199,33 @@ void AMeteorController::IncreaseDifficulty(int32 NewDifficulty)
 
 bool AMeteorController::HasAnyMeteorsOutOfBounds(double XBound, double ZBound)
 {
-	bool isAnyMeteorsOutOfBounds = false;
+	bool isAnyMeteorTooFar = false;
+	bool isAnyMeteorTooLow = false;
 
 	for (TActorIterator<AMeteorActor> ActorItr(World); ActorItr; ++ActorItr)
 	{
 		AMeteorActor* Meteor = *ActorItr;
 		FVector MeteorLocation = Meteor->GetActorLocation();
 
-		if (MeteorLocation.X < XBound || MeteorLocation.Z < ZBound)
+		if (MeteorLocation.X < XBound)
 		{
-			isAnyMeteorsOutOfBounds = true;
-			break;
+			isAnyMeteorTooFar = true;
+			UE_LOG(LogTemp, Warning, TEXT("Meteor is too far"));
+		}
+
+		if (MeteorLocation.Z < ZBound)
+		{
+			isAnyMeteorTooLow = true;
+			UE_LOG(LogTemp, Warning, TEXT("Meteor is too low"));
+		}
+
+		if (isAnyMeteorTooFar || isAnyMeteorTooLow)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%s - failed meteor location"), *MeteorLocation.ToString());
 		}
 	}
 
-	return isAnyMeteorsOutOfBounds;
+	return isAnyMeteorTooFar || isAnyMeteorTooLow;
 }
 
 

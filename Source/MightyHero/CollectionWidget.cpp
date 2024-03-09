@@ -21,7 +21,7 @@ void UCollectionWidget::CloseCollection()
 
         if (AUIController* UIController = GameMode->GetUIController())
         {
-            UIController->ShowMainWidget();
+            UIController->ShowMainMenuUI();
         }
 	}
 

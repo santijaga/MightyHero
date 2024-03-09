@@ -40,6 +40,4 @@ private:
 
 private:
 	bool bIsDestroyed = false;
-
-	int32 MinLevelForGuaranteedSpawn = 10;
 };
