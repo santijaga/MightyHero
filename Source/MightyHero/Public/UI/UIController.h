@@ -8,6 +8,7 @@
 
 class UMainWidgetBase;
 class UCollectionWidget;
+class UContinueUserWidgetBase;
 class UGameplayWidgetBase;
 class UGameOverWidgetBase;
 
@@ -49,6 +50,7 @@ public:
 	void ShowGameplayUI();
 	void ShowGameOverUI(bool bWithContinueTimeout);
 	void ShowCollectionUI(bool bRefreshOnly);
+	void ShowContinueUI();
 	// Controller Interface End
 
 	// Main widget block start
@@ -150,6 +152,21 @@ protected:
 	void RefreshCollection();
 	// Collection widget block over
 
+	// Continue widget block start
+	/*
+	* Continue widget allow to continue game
+	*/
+protected:
+	UContinueUserWidgetBase* ContinueWidget;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=UI)
+	TSubclassOf<UContinueUserWidgetBase> ContinueWidgetClass;
+
+protected:
+	void ShowContinueWidget();
+	void HideContinueWidget();
+	// Continue widget block over
 	/*
 	* Utils
 	*

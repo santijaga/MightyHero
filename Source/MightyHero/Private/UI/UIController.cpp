@@ -5,6 +5,7 @@
 
 #include "UI/Widgets/MainWidgetBase.h"
 #include "UI/Widgets/CollectionWidget.h"
+#include "UI/Widgets/ContinueUserWidgetBase.h"
 #include "UI/Widgets/GameplayWidgetBase.h"
 #include "UI/Widgets/GameOverWidgetBase.h"
 
@@ -69,6 +70,12 @@ void AUIController::ShowCollectionUI(bool bRefreshOnly)
     }
 
     RefreshCollection();
+}
+
+void AUIController::ShowContinueUI()
+{
+    HideAllWidgets();
+    ShowContinueWidget();
 }
 // Controller Interface End
 
@@ -198,6 +205,31 @@ void AUIController::RefreshCollection()
     }
 }
 
+// CONTINUE WIDGET
+void AUIController::ShowContinueWidget()
+{
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
+    {
+        if (ContinueWidgetClass)
+        {
+            ContinueWidget = CreateWidget<UContinueUserWidgetBase>(PC, ContinueWidgetClass);
+            if (ContinueWidget)
+            {
+                ContinueWidget->ShowWidget();
+            }
+        }
+    }
+}
+
+void AUIController::HideContinueWidget()
+{
+    if (ContinueWidget)
+    {
+        ContinueWidget->RemoveWidget();
+        ContinueWidget = nullptr;
+    }
+}
+
 // UTILS
 void AUIController::HideAllWidgets()
 {
@@ -205,4 +237,5 @@ void AUIController::HideAllWidgets()
     HideGameplayWidget();
     HideGameOverWidget();
     HideCollectionWidget();
+    HideContinueWidget();
 }
