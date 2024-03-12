@@ -111,7 +111,7 @@ void AMightyHeroGameModeBase::Tick(float DeltaTime)
     }
 }
 
-void AMightyHeroGameModeBase::StartGameplay()
+void AMightyHeroGameModeBase::StartGameplay(bool bIsContinue)
 {
     if (UIController)
     {
@@ -120,27 +120,60 @@ void AMightyHeroGameModeBase::StartGameplay()
 
     if (UGameplayStatics::GetPlayerPawn(this, 0))
     {
-        Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0))->StartGameplay();
+        if (!bIsContinue)
+        {
+            Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0))->StartGameplay(bIsContinue);
+        }
+        else
+        {
+            ACharacterBase* PP = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
+            FVector PawnLocation = PP->GetActorLocation();
+            FVector StartPositionLocation = MainPlayerStart->GetActorLocation();
+            PP->SetActorLocation(FVector(PawnLocation.X, PawnLocation.Y, StartPositionLocation.Z));
+            PP->StatesEnum = ECharacterStates::SE_Idle;
+            PP->bCrashedInSatellite = false;
+            GetWorld()->GetTimerManager().SetTimer(ContinueTimerHandle, this, &AMightyHeroGameModeBase::OnContinue, 1.0f, false);            
+        }
     }
 
     if (MeteorController)
     {
-        MeteorController->ResetController();
+        if (!bIsContinue)
+        {
+            MeteorController->ResetController();
+        }
     }
 
     if (CollectablesController)
     {
-        CollectablesController->ResetController();
+        if (!bIsContinue)
+        {
+            CollectablesController->ResetController();
+        }
+
         CollectablesController->StartGameplay();
     }
 
-    DifficultyLevel = 0;
-    nextIncreaseScores = difficultyStep;
+    if (!bIsContinue)
+    {
+        DifficultyLevel = 0;
+        nextIncreaseScores = difficultyStep;
+        bWasGameContinued = false;
+    }
+
     bIsGameOver = false;
     bIsCharacterFall = false;
+    
 }
 
-void AMightyHeroGameModeBase::GameOver()
+void AMightyHeroGameModeBase::OnContinue()
+{
+    ACharacterBase* PP = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0));
+    PP->StartGameplay(true);
+    GetWorld()->GetTimerManager().ClearTimer(ContinueTimerHandle);
+}
+
+void AMightyHeroGameModeBase::GameOver(bool bFirstTime)
 {
     UE_LOG(LogTemp, Warning, TEXT("Game is over"));
 
@@ -155,13 +188,23 @@ void AMightyHeroGameModeBase::GameOver()
         CollectablesController->StopGameplay();
     }
 
-    if (UIController)
+    if (bFirstTime)
     {
-        UIController->ShowGameOverUI(true);
+        if (UIController)
+        {
+            UIController->ShowContinueUI();
+        }
     }
+    else
+    {
+        if (UIController)
+        {
+            UIController->ShowGameOverUI(true);
+        }
 
-    SaveHighScore();
-    SaveCoins();
+        SaveHighScore();
+        SaveCoins();
+    }
 }
 
 void AMightyHeroGameModeBase::InitCameras()
@@ -208,6 +251,7 @@ void AMightyHeroGameModeBase::CheckForGameOver()
         if (CharacterRef->bCrashedInSatellite)
         {
             bCharacterCrashedInSatellite = true;
+            UE_LOG(LogTemp, Warning, TEXT("Game was marked as over due crash into satellite"));
         }
     }
 
@@ -240,7 +284,16 @@ void AMightyHeroGameModeBase::CheckForGameOver()
             UE_LOG(LogTemp, Warning, TEXT("Game Over due character destroyed satellite"));
         }
 
-        GameOver();
+        if (!bWasGameContinued)
+        {
+            bWasGameContinued = true;
+            GameOver(true);
+        }
+        else
+        {
+            bWasGameContinued = false;
+            GameOver(false);
+        }
     }
 }
 
@@ -278,6 +331,7 @@ void AMightyHeroGameModeBase::ResetGame()
     ResetBackground();
     ResetCoins();
     nextIncreaseScores = difficultyStep;
+    bWasGameContinued = false;
 }
 
 void AMightyHeroGameModeBase::ResetCharacter()
@@ -285,7 +339,7 @@ void AMightyHeroGameModeBase::ResetCharacter()
     if (ACharacterBase* CharacterRef = Cast<ACharacterBase>(UGameplayStatics::GetPlayerPawn(this, 0)))
     {
         CharacterRef->SetActorLocation(MainPlayerStart->GetActorLocation());
-        CharacterRef->ResetCharacter();
+        CharacterRef->ResetCharacter(false);
     }
 }
 

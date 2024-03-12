@@ -58,17 +58,53 @@ void ACharacterBase::Tick(float DeltaTime)
 	}
 }
 
-void ACharacterBase::StartGameplay()
+void ACharacterBase::StartGameplay(bool bIsContinue)
 {
-	if (MovementComponent)
+	if (!bIsContinue)
 	{
-		MovementComponent->GravityScale = DefaultGravityScale;
+		if (MovementComponent)
+		{
+			MovementComponent->GravityScale = DefaultGravityScale;
+		}
+
+		ForwardSpeed = DefaultForwardSpeed;
+		JumpVelocity = DefaultJumpVelocity;
+	}
+	else
+	{
+		if (MovementComponent)
+		{
+			if (GravityScalePerLevel.IsValidIndex(difficultyLevel))
+			{
+				MovementComponent->GravityScale = GravityScalePerLevel[difficultyLevel];
+			}
+			else
+			{
+				MovementComponent->GravityScale = GravityScalePerLevel.Last();
+			}
+		}
+
+		if (ForwardSpeedPerLevel.IsValidIndex(difficultyLevel))
+		{
+			ForwardSpeed = ForwardSpeedPerLevel[difficultyLevel];
+		}
+		else
+		{
+			ForwardSpeed = ForwardSpeedPerLevel.Last();
+		}
+
+		if (JumpVelocityPerLevel.IsValidIndex(difficultyLevel))
+		{
+			JumpVelocity = JumpVelocityPerLevel[difficultyLevel];
+		}
+		else
+		{
+			JumpVelocity = JumpVelocityPerLevel.Last();
+		}
 	}
 
-	ForwardSpeed = DefaultForwardSpeed;
-	JumpVelocity = DefaultJumpVelocity;
-
 	bIsMovementAllowed = true;
+	bCrashedInSatellite = false;
 }
 
 void ACharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -175,11 +211,14 @@ bool ACharacterBase::IsFreelyMoving()
 	return StatesEnum == ECharacterStates::SE_Idle || StatesEnum == ECharacterStates::SE_Fall || StatesEnum == ECharacterStates::SE_Rise;
 }
 
-void ACharacterBase::ResetCharacter()
+void ACharacterBase::ResetCharacter(bool bIsContinue)
 {
 	StatesEnum = ECharacterStates::SE_Idle;
 	bCrashedInSatellite = false;
-	difficultyLevel = 1;
+	if (!bIsContinue)
+	{
+		difficultyLevel = 1;
+	}
 }
 
 void ACharacterBase::IncreaseDifficulty(int32 NewDifficulty)

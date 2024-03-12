@@ -55,7 +55,7 @@ protected:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void StartGameplay();
+	void StartGameplay(bool bIsContinue);
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	void CharacterJump();
@@ -87,7 +87,7 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void ResetCharacter();
+	void ResetCharacter(bool bIsContinue);
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Gameplay)

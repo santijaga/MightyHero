@@ -23,7 +23,7 @@ void UMainWidgetBase::StartGameplay()
 {
 	if (AMightyHeroGameModeBase* CurrentGameMode = Cast<AMightyHeroGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
 	{
-		CurrentGameMode->StartGameplay();
+		CurrentGameMode->StartGameplay(false);
 	}
 }
 

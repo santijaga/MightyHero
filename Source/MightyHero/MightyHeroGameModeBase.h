@@ -48,7 +48,10 @@ protected:
 
 protected:
 	bool bIsGameOver = true;
+	bool bWasGameContinued = false;
 	bool bIsCharacterFall = false;
+	FTimerHandle ContinueTimerHandle;
+	void OnContinue();
 
 	virtual	void BeginPlay() override;
 	void CheckForGameOver();
@@ -76,13 +79,13 @@ public:
 	ATrackCameraActorBase* MainCamera;
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void StartGameplay();
+	void StartGameplay(bool bIsContinue);
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 	bool IsGameOver();
 
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
-	void GameOver();
+	void GameOver(bool bFirstTime);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Controllers)
 	TSubclassOf<AMeteorController> MeteorControllerClass;
