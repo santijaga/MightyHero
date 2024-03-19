@@ -23,6 +23,11 @@ void AMightyHeroGameModeBase::BeginPlay()
     Super::BeginPlay();
 
     SetupControllers();
+
+    if (DataController)
+    {
+        DataController->SanitizeSaveData();
+    }
     
     if (UIController)
     {

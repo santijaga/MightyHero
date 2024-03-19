@@ -11,5 +11,5 @@ public class MightyHeroTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V4;
 
 		ExtraModuleNames.AddRange( new string[] { "MightyHero" } );
-	}
+    }
 }

@@ -5,6 +5,7 @@
 #include "GameDataController.generated.h"
 
 class ACharacterBase;
+class UMightyHeroSaveGame;
 
 /**
  * 
@@ -25,4 +26,9 @@ public:
 	int32 LoadCoins();
 	void SaveUnlockedSkins(TArray<FString> Skins);
 	TArray<FString> LoadUnlockedSkins();
+	void SanitizeSaveData();
+
+private:
+	UMightyHeroSaveGame* GetMainSaveSlot();
+	void SaveToMainSaveSlot(UMightyHeroSaveGame* SaveGameInstance);
 };

@@ -19,5 +19,21 @@ public:
 	void Continue();
 
 	UFUNCTION(BlueprintCallable, Category=Gameplay)
+	void EnableContinue();
+
+	UFUNCTION(BlueprintCallable, Category=Gameplay)
 	void GameOver();
+
+	UFUNCTION(BlueprintCallable, Category=Gameplay)
+	bool IsADLoaded();
+
+	UFUNCTION(BlueprintCallable, Category=Gameplay)
+	bool IsContinueEnabled();
+
+	UFUNCTION(BlueprintCallable, Category=Gameplay)
+	void MarkADAsLoaded();
+
+private:
+	bool bIsContinueEnabled = false;
+	bool bIsADLoaded = false;
 };
