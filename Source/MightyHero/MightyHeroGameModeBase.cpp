@@ -2,7 +2,7 @@
 
 
 #include "MightyHeroGameModeBase.h"
-#include "BackgroundController.h"
+#include "Background/BackgroundController.h"
 #include "CharacterBase.h"
 #include "CoinsController.h"
 #include "CollectablesController.h"

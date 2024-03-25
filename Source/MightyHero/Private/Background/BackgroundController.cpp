@@ -1,10 +1,10 @@
 
 
 
-#include "BackgroundController.h"
-#include "CharacterBase.h"
+#include "Background/BackgroundController.h"
+#include "Background/BackgroundActor.h"
+#include "../CharacterBase.h"
 #include "Kismet/GameplayStatics.h"
-#include "BackgroundActor.h"
 #include "GameFramework/Actor.h"
 
 // Sets default values
