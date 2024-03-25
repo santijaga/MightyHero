@@ -2,14 +2,12 @@
 
 
 #include "UI/Widgets/CollectionWidget.h"
-
 #include "Blueprint/WidgetTree.h"
 #include "Components/PanelWidget.h"
-
+#include "Data/GameDataController.h"
 #include "UI/UIController.h"
 #include "UI/Widgets/CollectionCardWidget.h"
 #include "../../../MightyHeroGameModeBase.h"
-#include "../../../GameDataController.h"
 #include "../../../SoundController.h"
 
 void UCollectionWidget::CloseCollection()

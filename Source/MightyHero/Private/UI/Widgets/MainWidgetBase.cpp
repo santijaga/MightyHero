@@ -1,10 +1,8 @@
 #include "UI/Widgets/MainWidgetBase.h"
-
+#include "Data/GameDataController.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
-
 #include "UI/UIController.h"
-#include "../../../GameDataController.h"
 #include "../../../MightyHeroGameModeBase.h"
 #include "../../../SoundController.h"
 

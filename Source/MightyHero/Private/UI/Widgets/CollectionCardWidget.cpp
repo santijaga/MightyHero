@@ -3,7 +3,7 @@
 
 #include "UI/Widgets/CollectionCardWidget.h"
 #include "UI/UIController.h"
-#include "../GameDataController.h"
+#include "Data/GameDataController.h"
 #include "../MightyHeroGameModeBase.h"
 
 void UCollectionCardWidget::OnSelectItemFromCollection()

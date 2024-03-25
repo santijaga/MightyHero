@@ -1,5 +1,5 @@
-#include "GameDataController.h"
-#include "MightyHeroSaveGame.h"
+#include "Data/GameDataController.h"
+#include "Data/MightyHeroSaveGame.h"
 #include "Kismet/GameplayStatics.h"
 
 void UGameDataController::SaveHighScore(int32 Score)

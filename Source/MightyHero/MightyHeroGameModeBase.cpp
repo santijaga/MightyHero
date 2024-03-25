@@ -2,20 +2,18 @@
 
 
 #include "MightyHeroGameModeBase.h"
-
 #include "BackgroundController.h"
 #include "CharacterBase.h"
 #include "CoinsController.h"
 #include "CollectablesController.h"
+#include "Data/GameDataController.h"
 #include "EngineUtils.h"
-#include "GameDataController.h"
 #include "Kismet/GameplayStatics.h"
 #include "MeteorController.h"
 #include "MightyHeroPlayerController.h"
 #include "MightyHeroPlayerState.h"
 #include "SoundController.h"
 #include "TrackCameraActorBase.h"
-
 #include "UI/UIController.h"
 
 void AMightyHeroGameModeBase::BeginPlay()

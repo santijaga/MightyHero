@@ -1,9 +1,8 @@
 #include "UI/Widgets/GameOverWidgetBase.h"
-
+#include "Data/GameDataController.h"
 #include "Kismet/GameplayStatics.h"
 
 #include "../../../MightyHeroGameModeBase.h"
-#include "../../../GameDataController.h"
 #include "../../../MightyHeroPlayerState.h"
 #include "../../../MightyHeroPlayerController.h"
 

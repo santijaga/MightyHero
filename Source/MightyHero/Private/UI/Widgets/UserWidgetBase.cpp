@@ -1,6 +1,5 @@
 #include "UI/Widgets/UserWidgetBase.h"
-
-#include "../../../GameDataController.h"
+#include "Data/GameDataController.h"
 #include "../../../MightyHeroGameModeBase.h"
 #include "../../../SoundController.h"
 
