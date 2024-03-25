@@ -3,6 +3,7 @@
 
 #include "MightyHeroGameModeBase.h"
 #include "Background/BackgroundController.h"
+#include "Camera/TrackCameraActorBase.h"
 #include "CharacterBase.h"
 #include "CoinsController.h"
 #include "CollectablesController.h"
@@ -12,8 +13,7 @@
 #include "MeteorController.h"
 #include "MightyHeroPlayerController.h"
 #include "MightyHeroPlayerState.h"
-#include "SoundController.h"
-#include "TrackCameraActorBase.h"
+#include "Sound/SoundController.h"
 #include "UI/UIController.h"
 
 void AMightyHeroGameModeBase::BeginPlay()

@@ -5,7 +5,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
 #include "MightyHeroGameModeBase.h"
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 #include "CollectablesController.h"
 #include "MeteorActor.h"
 #include "EngineUtils.h"

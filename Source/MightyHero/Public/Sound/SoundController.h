@@ -46,14 +46,8 @@ public:
 private:
 	bool bIsSoundOn = true;
 	class UAudioComponent* BGMAudioComponent;
-
-	UFUNCTION(BlueprintCallable, Category = "Sound")
 	void PlayBGM();
-
-	UFUNCTION(BlueprintCallable, Category = "Sound")
 	void StopBGM();
-
-	UFUNCTION(BlueprintCallable, Category = "Sound")
 	void SetupBGM();
 
 public:

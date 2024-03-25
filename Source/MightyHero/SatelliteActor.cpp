@@ -1,8 +1,8 @@
 #include "SatelliteActor.h"
-#include "PaperFlipbookComponent.h"
 #include "Components/BoxComponent.h"
+#include "PaperFlipbookComponent.h"
 #include "MightyHeroGameModeBase.h"
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 
 ASatelliteActor::ASatelliteActor()
 {

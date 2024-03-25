@@ -1,10 +1,8 @@
 #include "UI/Widgets/GameplayWidgetBase.h"
-
 #include "Kismet/GameplayStatics.h"
-
+#include "Sound/SoundController.h"
 #include "../../../MightyHeroPlayerController.h"
 #include "../../../MightyHeroPlayerState.h"
-#include "../../../SoundController.h"
 #include "../../../MightyHeroGameModeBase.h"
 
 int32 UGameplayWidgetBase::GetScores()

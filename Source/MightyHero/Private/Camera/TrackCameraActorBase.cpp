@@ -1,5 +1,5 @@
-#include "TrackCameraActorBase.h"
-#include "CharacterBase.h"
+#include "Camera/TrackCameraActorBase.h"
+#include "../CharacterBase.h"
 
 ATrackCameraActorBase::ATrackCameraActorBase()
 {

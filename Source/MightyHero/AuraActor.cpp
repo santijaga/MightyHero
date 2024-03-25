@@ -11,7 +11,7 @@
 #include "CollectableBase.h"
 #include "Components/BoxComponent.h"
 #include "PaperFlipbookComponent.h"
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 #include "Coin.h"
 
 AAuraActor::AAuraActor()

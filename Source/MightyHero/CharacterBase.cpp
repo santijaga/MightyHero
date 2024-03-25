@@ -5,7 +5,7 @@
 #include "MightyHeroPlayerState.h"
 #include "Components/CapsuleComponent.h"
 #include "MightyHeroGameModeBase.h"
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 #include "Blower.h"
 #include "MeteorController.h"
 #include "CollectableBase.h"

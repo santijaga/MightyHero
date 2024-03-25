@@ -5,10 +5,10 @@
 #include "Blueprint/WidgetTree.h"
 #include "Components/PanelWidget.h"
 #include "Data/GameDataController.h"
+#include "Sound/SoundController.h"
 #include "UI/UIController.h"
 #include "UI/Widgets/CollectionCardWidget.h"
 #include "../../../MightyHeroGameModeBase.h"
-#include "../../../SoundController.h"
 
 void UCollectionWidget::CloseCollection()
 {

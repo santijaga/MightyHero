@@ -1,7 +1,7 @@
 ﻿
 
 
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 #include "Components/AudioComponent.h"
 #include "Sound/SoundCue.h"
 #include "Kismet/GameplayStatics.h"

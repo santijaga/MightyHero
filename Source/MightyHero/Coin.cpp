@@ -1,6 +1,6 @@
 #include "Coin.h"
 #include "MightyHeroGameModeBase.h"
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 
 ACoin::ACoin()

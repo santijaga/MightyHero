@@ -2,7 +2,7 @@
 #include "PaperFlipbookComponent.h"
 #include "Components/BoxComponent.h"
 #include "MightyHeroGameModeBase.h"
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 #include "CoinsController.h"
 
 AMeteorActor::AMeteorActor()

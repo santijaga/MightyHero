@@ -10,7 +10,7 @@
 #include "MeteorController.h"
 #include "AuraCollectable.h"
 #include "AuraActor.h"
-#include "SoundController.h"
+#include "Sound/SoundController.h"
 #include "LaserActor.h"
 
 // Sets default values
