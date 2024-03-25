@@ -11,8 +11,8 @@
 #include "EngineUtils.h"
 #include "Kismet/GameplayStatics.h"
 #include "MeteorController.h"
-#include "MightyHeroPlayerController.h"
-#include "MightyHeroPlayerState.h"
+#include "Core/MightyHeroPlayerController.h"
+#include "Core/MightyHeroPlayerState.h"
 #include "Sound/SoundController.h"
 #include "UI/UIController.h"
 

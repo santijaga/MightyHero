@@ -1,7 +1,7 @@
 #include "LaserBeamActor.h"
 #include "Kismet/GameplayStatics.h"
 #include "MeteorActor.h"
-#include "MightyHeroPlayerState.h"
+#include "Core/MightyHeroPlayerState.h"
 #include "PaperFlipbookComponent.h"
 
 ALaserBeamActor::ALaserBeamActor()

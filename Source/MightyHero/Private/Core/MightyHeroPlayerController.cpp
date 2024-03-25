@@ -1,7 +1,7 @@
 
 
 
-#include "MightyHeroPlayerController.h"
+#include "Core/MightyHeroPlayerController.h"
 
 void AMightyHeroPlayerController::BeginPlay()
 {

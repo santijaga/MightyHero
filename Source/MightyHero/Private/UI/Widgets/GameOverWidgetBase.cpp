@@ -3,8 +3,8 @@
 #include "Kismet/GameplayStatics.h"
 
 #include "../../../MightyHeroGameModeBase.h"
-#include "../../../MightyHeroPlayerState.h"
-#include "../../../MightyHeroPlayerController.h"
+#include "Core/MightyHeroPlayerState.h"
+#include "Core/MightyHeroPlayerController.h"
 
 void UGameOverWidgetBase::BackToMainMenu()
 {

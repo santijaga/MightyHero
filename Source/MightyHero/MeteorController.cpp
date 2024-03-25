@@ -8,7 +8,7 @@
 #include "CharacterBase.h"
 #include "EngineUtils.h"
 #include "Math/UnrealMathUtility.h"
-#include "MightyHeroPlayerState.h"
+#include "Core/MightyHeroPlayerState.h"
 
 // Sets default values
 AMeteorController::AMeteorController()
