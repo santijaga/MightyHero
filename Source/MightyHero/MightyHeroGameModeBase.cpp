@@ -467,8 +467,6 @@ void AMightyHeroGameModeBase::RefreshPawn()
 
                             ResetCharacter();
 
-                            MainCamera->ResetCamera();
-
                             PC->SetViewTargetWithBlend(MainCamera, 0.0f);
                         }
                     }

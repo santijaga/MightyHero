@@ -1,5 +1,4 @@
 #include "Camera/TrackCameraActorBase.h"
-#include "../CharacterBase.h"
 
 ATrackCameraActorBase::ATrackCameraActorBase()
 {
@@ -10,9 +9,8 @@ void ATrackCameraActorBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-	DefaultCameraTransform = GetActorTransform();
-
-	CharacterCurrentXPosition = GetCharacterCurrentXLocation();
+	SetActorLocation(InitialLocation);
+	SetActorRotation(OffsetRotation);
 }
 
 void ATrackCameraActorBase::Tick(float DeltaTime)
@@ -22,27 +20,15 @@ void ATrackCameraActorBase::Tick(float DeltaTime)
 	TrackCharacter();
 }
 
-void ATrackCameraActorBase::ResetCamera()
-{
-	SetActorTransform(DefaultCameraTransform);
-}
-
 void ATrackCameraActorBase::TrackCharacter()
 {
 	if (APawn* ActivePawn = GetWorld()->GetFirstPlayerController()->GetPawn())
 	{
 		FVector CurrentLocation = GetActorLocation();
-		SetActorLocation(FVector(CurrentLocation.X + GetCharacterCurrentXLocation() - CharacterCurrentXPosition, CurrentLocation.Y, CurrentLocation.Z));
-		CharacterCurrentXPosition = GetCharacterCurrentXLocation();
+		SetActorLocation(FVector(ActivePawn->GetActorLocation().X + Offset.X, InitialLocation.Y, InitialLocation.Z));
 	}
-}
-
-double ATrackCameraActorBase::GetCharacterCurrentXLocation()
-{
-	if (APawn* ActivePawn = GetWorld()->GetFirstPlayerController()->GetPawn())
+	else
 	{
-		return ActivePawn->GetActorLocation().X;
+		UE_LOG(LogTemp, Error, TEXT("[%s] Can't find current pawn"), *GetName());
 	}
-
-	return 0;
 }

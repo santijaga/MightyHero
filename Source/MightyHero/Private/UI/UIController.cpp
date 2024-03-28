@@ -21,6 +21,8 @@ AUIController::AUIController()
 void AUIController::BeginPlay()
 {
 	Super::BeginPlay();
+
+    ShowMainMenuUI();
 }
 
 // Called every frame

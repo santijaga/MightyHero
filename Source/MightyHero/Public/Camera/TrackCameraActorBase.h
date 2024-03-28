@@ -16,22 +16,24 @@ class MIGHTYHERO_API ATrackCameraActorBase : public ACameraActor
 
 	ATrackCameraActorBase();
 
+	/*
+	* SETTINGS
+	*/
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Settings)
+	FVector InitialLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Settings)
+	FVector Offset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Settings)
+	FRotator OffsetRotation;
+
+
 protected:
 	virtual void BeginPlay() override;
-
 	virtual void Tick(float DeltaTime) override;
 	
 private:
-	FTransform DefaultCameraTransform;
-
-	double CharacterCurrentXPosition = .0f;
-
-	double GetCharacterCurrentXLocation();
-
-public:
-	UFUNCTION(BlueprintCallable, Category = "Tracking")
-	void ResetCamera();
-
-	UFUNCTION(BlueprintCallable, Category = "Tracking")
-	void TrackCharacter();
+	void TrackCharacter();	
 };

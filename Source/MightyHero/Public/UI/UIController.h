@@ -44,6 +44,7 @@ public:
 	* - ShowGameplayUI
 	* - ShowGameoverUI
 	* - ShowCollectionUI
+	* - ShowContinueUI
 	*/
 public:
 	void ShowMainMenuUI();
