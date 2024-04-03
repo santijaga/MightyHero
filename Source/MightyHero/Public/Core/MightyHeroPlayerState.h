@@ -15,9 +15,13 @@ class MIGHTYHERO_API AMightyHeroPlayerState : public APlayerState
 	AMightyHeroPlayerState();
 
 private:
-	int32 Scores = 0;
-	int32 Coins = 0;
 	bool bIsGameover = true;
+	int32 Coins = 0;
+	int32 CurrentHitPoints;
+	int32 CurrentShieldPoints;
+	int32 MaxHitPoints;
+	int32 MaxShieldPoints;
+	int32 Scores = 0;
 
 protected:
 	virtual void BeginPlay() override;
@@ -25,20 +29,34 @@ protected:
 	
 public:
 	UFUNCTION(BlueprintCallable, Category = State)
+	void AddCoin();
+
+	UFUNCTION(BlueprintCallable, Category = State)
 	void AddScore();
+
+	UFUNCTION(BlueprintCallable, Category = State)
+	int32 GetCoins();
+	
+	int32 GetCurrentHitPoints();
+	int32 GetCurrentShieldPoints();
+	int32 GetMaxHitPoints();
+	int32 GetMaxShieldPoints();
 
 	UFUNCTION(BlueprintCallable, Category = State)
 	int32 GetScores();
 
 	UFUNCTION(BlueprintCallable, Category = State)
+	void ResetCoins();
+
+	UFUNCTION(BlueprintCallable, Category = State)
 	void ResetScores();
 
 	UFUNCTION(BlueprintCallable, Category = State)
-	void AddCoin();
+	void StartGameplay();
 
-	UFUNCTION(BlueprintCallable, Category = State)
-	int32 GetCoins();
-
-	UFUNCTION(BlueprintCallable, Category = State)
-	void ResetCoins();
+	/*
+	* Utils
+	*/
+private:
+	int CalculateDistanceScores();
 };

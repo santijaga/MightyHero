@@ -65,6 +65,9 @@ public:
 	* Flipbooks
 	*/
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
+	TObjectPtr<UPaperFlipbook> AimFlipbook;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Flipbooks, meta = (DisplayThumbnail = "true"))
 	TObjectPtr<UPaperFlipbook> FlyFlipbook;
 
@@ -77,25 +80,39 @@ public:
 private:
 	ERPGCharacterGameState PawnGameplayState;
 	ERPGCharacterStates PawnState;
+	float StartPoint;
 
 	/*
 	* Interface
 	*/
 public:
 	UFUNCTION(BlueprintCallable, Category=Behaviour)
-	void StartGameplay();
+	void GameOver();
+
+	UFUNCTION(BlueprintCallable, Category=Data)
+	float GetDistance();
+
+	UFUNCTION(BlueprintCallable, Category=Behaviour)
+	void StartGame();
 
 	/*
 	* Movement
 	*/
 private:
 	void Fly();
+	void Stay();
 
 	/*
 	* Animation
 	*/
 private:
 	void SelectFlipbook();
-	void SetFlyFlipbook(UPaperFlipbookComponent* Flipbook);
-	void SetRiseFlipbook(UPaperFlipbookComponent* Flipbook);
+
+	/*
+	* Utils
+	*/
+private:
+	float CalculateDistance();
+	bool IsGameOver();
+	void SetFlipbook(UPaperFlipbookComponent* FlipbookComponent, TObjectPtr<UPaperFlipbook> Flipbook, bool Looping);
 };

@@ -16,17 +16,23 @@ class MIGHTYHERO_API UGameDataController : public UObject
 	GENERATED_BODY()
 	
 public:
-	void SaveHighScore(int32 Score);
-	int32 LoadHighScore();
-	void SaveSoundSetting(bool bNewSoundValue);
-	bool LoadSoundSetting();
-	void SaveActivePawnClass(UClass* SelectedActorClass);
 	UClass* LoadActivePawnClass();
-	void SaveCoins(int32 Coins);
 	int32 LoadCoins();
-	void SaveUnlockedSkins(TArray<FString> Skins);
+	int32 LoadEnergy();
+	int32 LoadHighScore();
+	bool LoadSoundSetting();
+	int32 LoadMission();
+	int32 LoadVitality();
 	TArray<FString> LoadUnlockedSkins();
 	void SanitizeSaveData();
+	void SaveActivePawnClass(UClass* SelectedActorClass);
+	void SaveCoins(int32 Coins);
+	void SaveEnergy(int32 NewEnergy);
+	void SaveHighScore(int32 Score);
+	void SaveSoundSetting(bool bNewSoundValue);
+	void SaveMission(int32 CompletedMission);
+	void SaveVitality(int32 NewVitality);
+	void SaveUnlockedSkins(TArray<FString> Skins);
 
 private:
 	UMightyHeroSaveGame* GetMainSaveSlot();

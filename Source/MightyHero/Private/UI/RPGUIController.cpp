@@ -33,6 +33,11 @@ void ARPGUIController::Tick(float DeltaTime)
 /*
 * Interface
 */
+void ARPGUIController::GameOver()
+{
+
+}
+
 void ARPGUIController::ShowGameplayUI()
 {
 	HideAllWidgets();
@@ -43,6 +48,11 @@ void ARPGUIController::ShowMainMenuUI()
 {
 	HideAllWidgets();
 	ShowMainMenuWidget();
+}
+
+void ARPGUIController::StartGame()
+{
+	ShowGameplayUI();
 }
 
 /*

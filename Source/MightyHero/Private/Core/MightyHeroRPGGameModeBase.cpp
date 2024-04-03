@@ -3,20 +3,71 @@
 
 #include "Core/MightyHeroRPGGameModeBase.h"
 
+#include "Background/BackgroundController.h"
 #include "Camera/TrackCameraActorBase.h"
+#include "Core/MightyHeroPlayerState.h"
+#include "Kismet/GameplayStatics.h"
+#include "Missions/MissionsController.h"
+#include "Pawn/RPGPawn.h"
 #include "UI/RPGUIController.h"
 
 void AMightyHeroRPGGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 
+	SpawnAndAssignActor(BackgroundController, BackgroundControllerClass);
+	SpawnAndAssignActor(MissionsController, MissionsControllerClass);
 	SpawnAndAssignActor(TrackCamera, TrackCameraClass);
 	SpawnAndAssignActor(UIController, UIControllerClass);
 }
 
 /*
+* Interface
+*/
+void AMightyHeroRPGGameModeBase::GameOver()
+{
+	if (ARPGPawn* Pawn = Cast<ARPGPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)))
+	{
+		Pawn->GameOver();
+	}
+
+	if (UIController)
+	{
+		UIController->GameOver();
+	}
+}
+
+void AMightyHeroRPGGameModeBase::StartGame()
+{
+	if (ARPGPawn* Pawn = Cast<ARPGPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)))
+	{
+		Pawn->StartGame();
+	}
+
+	if (UIController)
+	{
+		UIController->StartGame();
+	}
+
+	if (AMightyHeroPlayerState* PS = Cast<AMightyHeroPlayerState>(UGameplayStatics::GetPlayerState(GetWorld(), 0)))
+	{
+		PS->StartGameplay();
+	}
+}
+
+/*
 * Accessors
 */
+ABackgroundController* AMightyHeroRPGGameModeBase::GetBackgroundController()
+{
+	return BackgroundController;
+}
+
+AMissionsController* AMightyHeroRPGGameModeBase::GetMissionsController()
+{
+	return MissionsController;
+}
+
 ATrackCameraActorBase* AMightyHeroRPGGameModeBase::GetTrackCamera()
 {
 	return TrackCamera;

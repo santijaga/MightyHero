@@ -13,17 +13,26 @@ class MIGHTYHERO_API UMightyHeroSaveGame : public USaveGame
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(VisibleAnywhere, Category = Basic)
-	int32 HighScore;
+	UPROPERTY(VisibleAnywhere, Category = Pawn)
+	UClass* ActiveActorClass;
 
 	UPROPERTY(VisibleAnywhere, Category = Basic)
 	bool bSoundIsEnabled;
 
-	UPROPERTY(VisibleAnywhere, Category = Pawn)
-	UClass* ActiveActorClass;
-
 	UPROPERTY(VisibleAnywhere, Category = Currency)
 	int32 Coins;
+
+	UPROPERTY(VisibleAnywhere, Category = Currency)
+	int32 Energy;
+
+	UPROPERTY(VisibleAnywhere, Category = Gameplay)
+	int32 Mission;
+
+	UPROPERTY(VisibleAnywhere, Category = Basic)
+	int32 HighScore;
+
+	UPROPERTY(VisibleAnywhere, Category = Basic)
+	int32 Vitality;
 
 	UPROPERTY(VisibleAnywhere, Category = Skins)
 	TArray<FString> UnlockedSkins;

@@ -1,5 +1,9 @@
 #include "Core/MightyHeroPlayerState.h"
 
+#include "Core/MightyHeroPlayerController.h"
+#include "Kismet/GameplayStatics.h"
+#include "Pawn/RPGPawn.h"
+
 AMightyHeroPlayerState::AMightyHeroPlayerState()
 {
 }
@@ -21,7 +25,8 @@ void AMightyHeroPlayerState::AddScore()
 
 int32 AMightyHeroPlayerState::GetScores()
 {
-	return Scores;
+	int DistanceScores = CalculateDistanceScores();
+	return DistanceScores;
 }
 
 void AMightyHeroPlayerState::ResetScores()
@@ -39,7 +44,53 @@ int32 AMightyHeroPlayerState::GetCoins()
 	return Coins;
 }
 
+int32 AMightyHeroPlayerState::GetCurrentHitPoints()
+{
+	return CurrentHitPoints;
+}
+
+int32 AMightyHeroPlayerState::GetCurrentShieldPoints()
+{
+	return CurrentShieldPoints;
+}
+
+int32 AMightyHeroPlayerState::GetMaxHitPoints()
+{
+	return MaxHitPoints;
+}
+
+int32 AMightyHeroPlayerState::GetMaxShieldPoints()
+{
+	return MaxShieldPoints;
+}
+
 void AMightyHeroPlayerState::ResetCoins()
 {
 	Coins = 0;
+}
+
+void AMightyHeroPlayerState::StartGameplay()
+{
+	if (AMightyHeroPlayerController* PC = Cast<AMightyHeroPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0)))
+	{
+		MaxHitPoints = PC->GetVitality() * 10;
+		CurrentHitPoints = MaxHitPoints;
+		MaxShieldPoints = PC->GetEnergy() * 5;
+		CurrentShieldPoints = MaxShieldPoints;
+	}
+}
+
+/*
+* Utils
+*/
+
+int AMightyHeroPlayerState::CalculateDistanceScores()
+{
+	if (ARPGPawn* Pawn = Cast<ARPGPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)))
+	{
+		float PawnDistance = Pawn->GetDistance();
+		return FMath::RoundToInt(PawnDistance / 100);
+	}
+
+	return 0;
 }

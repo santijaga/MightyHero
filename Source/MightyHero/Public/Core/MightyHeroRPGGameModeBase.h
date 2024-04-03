@@ -6,8 +6,10 @@
 #include "GameFramework/GameModeBase.h"
 #include "MightyHeroRPGGameModeBase.generated.h"
 
-class ATrackCameraActorBase;
+class ABackgroundController;
+class AMissionsController;
 class ARPGUIController;
+class ATrackCameraActorBase;
 
 /**
  * 
@@ -19,11 +21,37 @@ class MIGHTYHERO_API AMightyHeroRPGGameModeBase : public AGameModeBase
 	
 protected:
 	virtual void BeginPlay() override;
+	
+	/*
+	* Rules
+	*/
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	float BottomBound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Rules)
+	float TopBound;
+
+	/*
+	* Interface
+	*/
+public:
+	UFUNCTION(BlueprintCallable, Category=Interface)
+	void GameOver();
+
+	UFUNCTION(BlueprintCallable, Category = Interface)
+	void StartGame();
 
 	/*
 	* Spawns
 	*/
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
+	TSubclassOf<ABackgroundController> BackgroundControllerClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
+	TSubclassOf<AMissionsController> MissionsControllerClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
 	TSubclassOf<ATrackCameraActorBase> TrackCameraClass;
 
@@ -34,6 +62,8 @@ public:
 	* Actors
 	*/
 private:
+	ABackgroundController* BackgroundController;
+	AMissionsController* MissionsController;
 	ATrackCameraActorBase* TrackCamera;
 	ARPGUIController* UIController;
 
@@ -41,6 +71,12 @@ private:
 	* Accessors
 	*/
 public:
+	UFUNCTION(BlueprintCallable, Category=Accessors)
+	ABackgroundController* GetBackgroundController();
+
+	UFUNCTION(BlueprintCallable, Category = Accessors)
+	AMissionsController* GetMissionsController();
+
 	UFUNCTION(BlueprintCallable, Category=Accessors)
 	ATrackCameraActorBase* GetTrackCamera();
 

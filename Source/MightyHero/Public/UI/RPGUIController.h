@@ -30,11 +30,17 @@ public:
 	* Interface
 	*/
 public:
+	UFUNCTION(BlueprintCallable, Category=Interface)
+	void GameOver();
+
 	UFUNCTION(BlueprintCallable, Category = UI)
 	void ShowGameplayUI();
 
 	UFUNCTION(BlueprintCallable, Category=UI)
 	void ShowMainMenuUI();
+
+	UFUNCTION(BlueprintCallable, Category = Interface)
+	void StartGame();
 
 	/*
 	* Widget Classes

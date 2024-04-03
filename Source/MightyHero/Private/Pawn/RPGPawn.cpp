@@ -4,24 +4,17 @@
 #include "Pawn/RPGPawn.h"
 
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Core/MightyHeroRPGGameModeBase.h"
+#include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
 
 void ARPGPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (UCharacterMovementComponent* MC = GetCharacterMovement())
-	{
-		MC->GravityScale = 0;
-		MC->Velocity = FVector(0, 0, 0);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("[%s] [BeginPlay] UCharacterMovementComponent not found"), *this->GetName());
-	}
-
 	PawnState = ERPGCharacterStates::SE_Idle;
 	PawnGameplayState = ERPGCharacterGameState::SE_StandBy;
+	StartPoint = GetActorLocation().X;
 }
 
 void ARPGPawn::Tick(float DeltaSeconds)
@@ -31,6 +24,19 @@ void ARPGPawn::Tick(float DeltaSeconds)
 	if (PawnGameplayState == ERPGCharacterGameState::SE_Playing)
 	{
 		Fly();
+
+		if (IsGameOver())
+		{
+			if (AMightyHeroRPGGameModeBase* GM = Cast<AMightyHeroRPGGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
+			{
+				GM->GameOver();
+			}
+		}
+	}
+
+	if (PawnGameplayState == ERPGCharacterGameState::SE_StandBy)
+	{
+		Stay();
 	}
 
 	SelectFlipbook();
@@ -57,9 +63,18 @@ void ARPGPawn::TouchPressed(ETouchIndex::Type FingerIndex, FVector Location)
 /*
 * Interface
 */
-void ARPGPawn::StartGameplay()
+void ARPGPawn::GameOver()
 {
-	UE_LOG(LogTemp, Warning, TEXT("[%s] Gameplay started"), *this->GetName());
+	PawnGameplayState = ERPGCharacterGameState::SE_StandBy;
+}
+
+float ARPGPawn::GetDistance()
+{
+	return CalculateDistance();
+}
+
+void ARPGPawn::StartGame()
+{
 	PawnGameplayState = ERPGCharacterGameState::SE_Playing;
 }
 
@@ -94,12 +109,19 @@ void ARPGPawn::Fly()
 		}
 
 		MC->Velocity = NewVelocity;
-
-		UE_LOG(LogTemp, Warning, TEXT("[%s] Current velocity = %s; Current gravity scale = %f"), *this->GetName(), *MC->Velocity.ToString(), MC->GravityScale);
 	}
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("[%s] Movement component not found"), *this->GetName());
+	}
+}
+
+void ARPGPawn::Stay()
+{
+	if (UCharacterMovementComponent* MC = GetCharacterMovement())
+	{
+		MC->GravityScale = 0;
+		MC->Velocity = FVector(0, 0, 0);
 	}
 }
 
@@ -110,11 +132,19 @@ void ARPGPawn::SelectFlipbook()
 {
 	if (UPaperFlipbookComponent* Flipbook = GetSprite())
 	{
+		if (PawnState == ERPGCharacterStates::SE_Aim)
+		{
+			if (Flipbook->GetFlipbook() != AimFlipbook)
+			{
+				SetFlipbook(Flipbook, AimFlipbook, true);
+			}
+		}
+
 		if (PawnState == ERPGCharacterStates::SE_Fall)
 		{
 			if (Flipbook->GetFlipbook() != FlyFlipbook)
 			{
-				SetFlyFlipbook(Flipbook);
+				SetFlipbook(Flipbook, FlyFlipbook, true);
 			}
 		}
 
@@ -122,22 +152,42 @@ void ARPGPawn::SelectFlipbook()
 		{
 			if (Flipbook->GetFlipbook() != RiseFlipbook)
 			{
-				SetRiseFlipbook(Flipbook);
+				SetFlipbook(Flipbook, RiseFlipbook, true);
 			}
 		}
 	}
 }
 
-void ARPGPawn::SetFlyFlipbook(UPaperFlipbookComponent* Flipbook)
+/*
+* Utils
+*/
+float ARPGPawn::CalculateDistance()
 {
-	Flipbook->SetFlipbook(FlyFlipbook);
-	Flipbook->SetLooping(true);
-	Flipbook->PlayFromStart();
+	return GetActorLocation().X - StartPoint;
 }
 
-void ARPGPawn::SetRiseFlipbook(UPaperFlipbookComponent* Flipbook)
+bool ARPGPawn::IsGameOver()
 {
-	Flipbook->SetFlipbook(RiseFlipbook);
-	Flipbook->SetLooping(true);
-	Flipbook->PlayFromStart();
+	if (AMightyHeroRPGGameModeBase* GM = Cast<AMightyHeroRPGGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
+	{
+		FVector CurrentLocation = GetActorLocation();
+		if (CurrentLocation.Z < GM->BottomBound)
+		{
+			return true;
+		}
+
+		if (CurrentLocation.Z > GM->TopBound)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+void ARPGPawn::SetFlipbook(UPaperFlipbookComponent* FlipbookComponent, TObjectPtr<UPaperFlipbook> Flipbook, bool Looping)
+{
+	FlipbookComponent->SetFlipbook(Flipbook);
+	FlipbookComponent->SetLooping(Looping);
+	FlipbookComponent->PlayFromStart();
 }

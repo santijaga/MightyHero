@@ -16,4 +16,23 @@ class MIGHTYHERO_API AMightyHeroPlayerController : public APlayerController
 	
 protected:
 	virtual void BeginPlay() override;
+
+	/*
+	* Interface
+	*/
+public:
+	int32 GetEnergy();
+
+	UFUNCTION(BlueprintCallable, Category=Characteristics)
+	int32 GetVitality();
+
+	UFUNCTION(BlueprintCallable, Category=Characteristics)
+	void LoadCharacteristics();
+
+	/*
+	* Characterisctics
+	*/
+private:
+	int32 Energy;
+	int32 Vitality;
 };
