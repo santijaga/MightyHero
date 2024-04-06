@@ -35,6 +35,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Mission Data")
 	FString GetMissionName();
 
+	void StartGameplay();
+
 	/*
 	* Missions List
 	*/

@@ -36,7 +36,6 @@ void AMissionsController::BeginPlay()
 void AMissionsController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 /*
@@ -50,4 +49,9 @@ FString AMissionsController::GetMissionDescription()
 FString AMissionsController::GetMissionName()
 {
 	return CurrentMission->GetName();
+}
+
+void AMissionsController::StartGameplay()
+{
+	CurrentMission->StartGameplay();
 }

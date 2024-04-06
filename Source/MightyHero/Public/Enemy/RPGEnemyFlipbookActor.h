@@ -14,4 +14,7 @@ class MIGHTYHERO_API ARPGEnemyFlipbookActor : public APaperFlipbookActor
 {
 	GENERATED_BODY()
 	
+protected:
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 };

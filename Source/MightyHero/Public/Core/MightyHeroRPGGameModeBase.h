@@ -7,6 +7,7 @@
 #include "MightyHeroRPGGameModeBase.generated.h"
 
 class ABackgroundController;
+class ARPGEnemyController;
 class AMissionsController;
 class ARPGUIController;
 class ATrackCameraActorBase;
@@ -49,6 +50,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
 	TSubclassOf<ABackgroundController> BackgroundControllerClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Spawn)
+	TSubclassOf<ARPGEnemyController> EnemyControllerClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
 	TSubclassOf<AMissionsController> MissionsControllerClass;
 
@@ -65,6 +69,7 @@ private:
 	ABackgroundController* BackgroundController;
 	AMissionsController* MissionsController;
 	ATrackCameraActorBase* TrackCamera;
+	ARPGEnemyController* EnemyController;
 	ARPGUIController* UIController;
 
 	/*
@@ -73,6 +78,8 @@ private:
 public:
 	UFUNCTION(BlueprintCallable, Category=Accessors)
 	ABackgroundController* GetBackgroundController();
+
+	ARPGEnemyController* GetEnemyController();
 
 	UFUNCTION(BlueprintCallable, Category = Accessors)
 	AMissionsController* GetMissionsController();

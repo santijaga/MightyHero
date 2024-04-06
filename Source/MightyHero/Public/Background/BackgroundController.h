@@ -25,7 +25,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	double BackgroundSegmentLength = 1600.0;
+	double BackgroundSegmentLength = 3200.0;
 	double Threshold = 0;
 	double DistanceLimit = 0;
 

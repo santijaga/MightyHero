@@ -29,8 +29,14 @@ public:
 	* Settings
 	*/
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Settings)
+	float LowerBound;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Settings)
 	float SpawnDistance;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Settings)
+	float UpperBound;
 
 	/*
 	* Enemy Classes

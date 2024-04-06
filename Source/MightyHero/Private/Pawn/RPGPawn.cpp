@@ -5,15 +5,28 @@
 
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Core/MightyHeroRPGGameModeBase.h"
+#include "Components/BoxComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
+
+ARPGPawn::ARPGPawn()
+{
+	ThreatCollider = CreateDefaultSubobject<UBoxComponent>(TEXT("Threat Collider"));
+	ThreatCollider->SetupAttachment(RootComponent);
+
+	MeeleHitBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Meele Hit Box"));
+	MeeleHitBox->SetupAttachment(RootComponent);
+}
 
 void ARPGPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
-	PawnState = ERPGCharacterStates::SE_Idle;
-	PawnGameplayState = ERPGCharacterGameState::SE_StandBy;
+	ThreatCollider->OnComponentBeginOverlap.AddDynamic(this, &ARPGPawn::OnThreatColliderOverlapBegin);
+	MeeleHitBox->OnComponentBeginOverlap.AddDynamic(this, &ARPGPawn::OnMeeleHitBoxOverlapBegin);
+
+	bIsIdle = true;
+	PawnGameplayState = ERPGCharacterGameStates::SE_StandBy;
 	StartPoint = GetActorLocation().X;
 }
 
@@ -21,7 +34,7 @@ void ARPGPawn::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
-	if (PawnGameplayState == ERPGCharacterGameState::SE_Playing)
+	if (PawnGameplayState == ERPGCharacterGameStates::SE_Playing)
 	{
 		Fly();
 
@@ -34,11 +47,12 @@ void ARPGPawn::Tick(float DeltaSeconds)
 		}
 	}
 
-	if (PawnGameplayState == ERPGCharacterGameState::SE_StandBy)
+	if (PawnGameplayState == ERPGCharacterGameStates::SE_StandBy)
 	{
 		Stay();
 	}
 
+	CalculateAnimationState();
 	SelectFlipbook();
 }
 
@@ -54,9 +68,9 @@ void ARPGPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void ARPGPawn::TouchPressed(ETouchIndex::Type FingerIndex, FVector Location)
 {
-	if (PawnGameplayState == ERPGCharacterGameState::SE_Playing)
+	if (PawnGameplayState == ERPGCharacterGameStates::SE_Playing)
 	{
-		PawnState = ERPGCharacterStates::SE_Jump;
+		bIsJumping = true;
 	}
 }
 
@@ -65,7 +79,7 @@ void ARPGPawn::TouchPressed(ETouchIndex::Type FingerIndex, FVector Location)
 */
 void ARPGPawn::GameOver()
 {
-	PawnGameplayState = ERPGCharacterGameState::SE_StandBy;
+	PawnGameplayState = ERPGCharacterGameStates::SE_StandBy;
 }
 
 float ARPGPawn::GetDistance()
@@ -75,7 +89,8 @@ float ARPGPawn::GetDistance()
 
 void ARPGPawn::StartGame()
 {
-	PawnGameplayState = ERPGCharacterGameState::SE_Playing;
+	PawnGameplayState = ERPGCharacterGameStates::SE_Playing;
+	bIsIdle = false;
 }
 
 /*
@@ -89,9 +104,10 @@ void ARPGPawn::Fly()
 		FVector CurrentVelocity = MC->Velocity;
 		FVector ForwardDirection = GetActorForwardVector();
 		FVector NewVelocity = ForwardDirection * BaseFlySpeed;
-		if (PawnState == ERPGCharacterStates::SE_Jump)
+		if (bIsJumping)
 		{
 			NewVelocity.Z = BaseJumpVelocity;
+			bIsJumping = false;
 		}
 		else
 		{
@@ -100,12 +116,14 @@ void ARPGPawn::Fly()
 
 		if (NewVelocity.Z > 0)
 		{
-			PawnState = ERPGCharacterStates::SE_Rise;
+			bIsRising = true;
+			bIsFalling = false;
 		}
 
 		if (NewVelocity.Z < 0)
 		{
-			PawnState = ERPGCharacterStates::SE_Fall;
+			bIsFalling = true;
+			bIsRising = false;
 		}
 
 		MC->Velocity = NewVelocity;
@@ -128,11 +146,62 @@ void ARPGPawn::Stay()
 /*
 * Animation
 */
+void ARPGPawn::CalculateAnimationState()
+{
+	if (bIsIdle)
+	{
+		PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Idle;
+	}
+	else
+	{
+		if (bIsAttacking)
+		{
+			PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Attack;
+		}
+		else
+		{
+			if (bIsAiming)
+			{
+				PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Aim;
+			}
+			else
+			{
+				if (bIsRising)
+				{
+					PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Rise;
+				}
+
+				if (bIsFalling)
+				{
+					PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Fall;
+				}
+			}
+		}
+	}
+}
+
 void ARPGPawn::SelectFlipbook()
 {
 	if (UPaperFlipbookComponent* Flipbook = GetSprite())
 	{
-		if (PawnState == ERPGCharacterStates::SE_Aim)
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_Attack)
+		{
+			if (Flipbook->GetFlipbook() != AttackFlipbook)
+			{
+				SetFlipbook(Flipbook, AttackFlipbook, false);
+				Flipbook->OnFinishedPlaying.AddDynamic(this, &ARPGPawn::OnAttackEnded);
+			}
+		}
+
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_Idle)
+		{
+			if (Flipbook->GetFlipbook() != IdleFlipbook)
+			{
+				SetFlipbook(Flipbook, IdleFlipbook, true);
+			}
+		}
+
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_Aim)
 		{
 			if (Flipbook->GetFlipbook() != AimFlipbook)
 			{
@@ -140,7 +209,7 @@ void ARPGPawn::SelectFlipbook()
 			}
 		}
 
-		if (PawnState == ERPGCharacterStates::SE_Fall)
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_Fall)
 		{
 			if (Flipbook->GetFlipbook() != FlyFlipbook)
 			{
@@ -148,7 +217,7 @@ void ARPGPawn::SelectFlipbook()
 			}
 		}
 
-		if (PawnState == ERPGCharacterStates::SE_Rise)
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_Rise)
 		{
 			if (Flipbook->GetFlipbook() != RiseFlipbook)
 			{
@@ -190,4 +259,34 @@ void ARPGPawn::SetFlipbook(UPaperFlipbookComponent* FlipbookComponent, TObjectPt
 	FlipbookComponent->SetFlipbook(Flipbook);
 	FlipbookComponent->SetLooping(Looping);
 	FlipbookComponent->PlayFromStart();
+}
+
+/*
+* EventHandlers
+*/
+void ARPGPawn::OnAttackEnded()
+{
+	bIsAttacking = false;
+
+	if (UPaperFlipbookComponent* Flipbook = GetSprite())
+	{
+		Flipbook->OnFinishedPlaying.RemoveAll(this);
+	}
+}
+
+void ARPGPawn::OnMeeleHitBoxOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	bIsAttacking = true;
+	bIsAiming = false;
+	GetWorld()->GetTimerManager().ClearTimer(AimHandle);
+}
+
+void ARPGPawn::OnThreatColliderOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	bIsAiming = true;
+	GetWorld()->GetTimerManager().SetTimer(AimHandle, [this]() mutable
+		{
+			bIsAiming = false;
+			GetWorld()->GetTimerManager().ClearTimer(AimHandle);
+		}, 2.0f, false);
 }

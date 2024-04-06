@@ -18,13 +18,21 @@ float URPGGameplayUserWidget::GetHealthPercentage()
 		if (int32 MaxHP = PlayerState->GetMaxHitPoints() != 0)
 		{
 			int32 CurrentHP = PlayerState->GetCurrentHitPoints();
-
-			UE_LOG(LogTemp, Warning, TEXT("Max HP - %d, Current HP - %d"), MaxHP, CurrentHP);
 			return (CurrentHP / MaxHP) * 100;
 		}
 	}
 
 	return 0.0f;
+}
+
+int32 URPGGameplayUserWidget::GetHitPoints()
+{
+	if (AMightyHeroPlayerState* PS = Cast<AMightyHeroPlayerState>(UGameplayStatics::GetPlayerState(GetWorld(), 0)))
+	{
+		return PS->GetCurrentHitPoints();
+	}
+
+	return 0;
 }
 
 FString URPGGameplayUserWidget::GetMissionDescription()
@@ -69,4 +77,14 @@ float URPGGameplayUserWidget::GetShieldPercentage()
 	}
 
 	return 0.0f;
+}
+
+int32 URPGGameplayUserWidget::GetShieldPoints()
+{
+	if (AMightyHeroPlayerState* PS = Cast<AMightyHeroPlayerState>(UGameplayStatics::GetPlayerState(GetWorld(), 0)))
+	{
+		return PS->GetCurrentShieldPoints();
+	}
+
+	return 0;
 }

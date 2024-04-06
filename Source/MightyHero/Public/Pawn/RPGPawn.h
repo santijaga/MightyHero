@@ -8,23 +8,21 @@
 
 class UPaperFlipbook;
 class UPaperFlipbookComponent;
+class UBoxComponent;
 
 UENUM(BlueprintType)
-enum class ERPGCharacterGameState : uint8 {
+enum class ERPGCharacterGameStates : uint8 {
 	SE_StandBy = 0 UMETA(DisplayName = "On stand by"),
 	SE_Playing = 1 UMETA(DisplayName = "Active Gameplay")
 };
 
 UENUM(BlueprintType)
-enum class ERPGCharacterStates : uint8 {
-	SE_Idle = 0 UMETA(DisplayName = "Idle"),
-	SE_Fall = 1 UMETA(DisplayName = "Fall"),
-	SE_Rise = 2 UMETA(DisplayName = "Rise"),
-	SE_Strike = 3 UMETA(DisplayName = "Strike"),
-	SE_Lose = 4 UMETA(DisplayName = "Lose"),
-	SE_Aim = 5 UMETA(DisplayName = "Aim"),
-	SE_Death = 6 UMETA(DisplayName = "Death"),
-	SE_Jump = 7 UMETA(DisplayName = "Jump")
+enum class ERPGCharacterAnimationStates : uint8 {
+	SE_Anim_Rise = 0 UMETA(DisplayName = "Animation Rise"),
+	SE_Anim_Fall = 1 UMETA(DisplayName = "Animation Fall"),
+	SE_Anim_Aim = 2 UMETA(DisplayName = "Animation Aim"),
+	SE_Anim_Idle = 3 UMETA(DisplayName = "Animation Idle"),
+	SE_Anim_Attack = 4 UMETA(DisplayName = "Animation Attack"),
 };
 
 /**
@@ -34,6 +32,8 @@ UCLASS()
 class MIGHTYHERO_API ARPGPawn : public APaperCharacter
 {
 	GENERATED_BODY()
+
+	ARPGPawn();
 	
 public:
 	virtual void BeginPlay() override;
@@ -68,6 +68,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
 	TObjectPtr<UPaperFlipbook> AimFlipbook;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
+	TObjectPtr<UPaperFlipbook> AttackFlipbook;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
+	TObjectPtr<UPaperFlipbook> IdleFlipbook;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Flipbooks, meta = (DisplayThumbnail = "true"))
 	TObjectPtr<UPaperFlipbook> FlyFlipbook;
 
@@ -78,9 +84,15 @@ public:
 	* Properties
 	*/
 private:
-	ERPGCharacterGameState PawnGameplayState;
-	ERPGCharacterStates PawnState;
+	ERPGCharacterAnimationStates PawnAnimState;
+	ERPGCharacterGameStates PawnGameplayState;
 	float StartPoint;
+	bool bIsAiming = false;
+	bool bIsAttacking = false;
+	bool bIsFalling = false;
+	bool bIsJumping = false;
+	bool bIsIdle = false;
+	bool bIsRising = false;
 
 	/*
 	* Interface
@@ -106,6 +118,7 @@ private:
 	* Animation
 	*/
 private:
+	void CalculateAnimationState();
 	void SelectFlipbook();
 
 	/*
@@ -115,4 +128,33 @@ private:
 	float CalculateDistance();
 	bool IsGameOver();
 	void SetFlipbook(UPaperFlipbookComponent* FlipbookComponent, TObjectPtr<UPaperFlipbook> Flipbook, bool Looping);
+
+	/*
+	* Collisions
+	*/
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Collision")
+	UBoxComponent* MeeleHitBox;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Collision")
+	UBoxComponent* ThreatCollider;
+
+	/*
+	* Timer Handles
+	*/
+private:
+	FTimerHandle AimHandle;
+
+	/*
+	* EventHandlers
+	*/
+public:
+	UFUNCTION()
+	void OnAttackEnded();
+
+	UFUNCTION()
+	void OnMeeleHitBoxOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION(BlueprintCallable, Category = "Event Handler")
+	void OnThreatColliderOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };

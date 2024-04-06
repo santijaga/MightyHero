@@ -38,3 +38,7 @@ FString AMissionActor::GetName()
 {
 	return Name;
 }
+
+void AMissionActor::StartGameplay()
+{
+}

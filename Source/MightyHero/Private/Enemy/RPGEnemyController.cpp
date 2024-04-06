@@ -4,6 +4,7 @@
 #include "Enemy/RPGEnemyController.h"
 
 #include "Core/MightyHeroRPGGameModeBase.h"
+#include "Enemy/RPGEnemyFlipbookActor.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -40,11 +41,11 @@ void ARPGEnemyController::SpawnMinorMaw()
 * Utils
 */
 void ARPGEnemyController::SpawnEnemy(TSubclassOf<ARPGEnemyFlipbookActor> EnemyToSpawn) {
-	if (AMightyHeroRPGGameModeBase* GM = Cast<AMightyHeroRPGGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
+	APawn* Pawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (Pawn)
 	{
-		float TopBound = GM->TopBound;
-		float BotBound = GM->BottomBound;
-
-
+		float HorizontalDistance = Pawn->GetActorLocation().X + SpawnDistance;
+		float VerticalPosition = FMath::RandRange(LowerBound, UpperBound);
+		GetWorld()->SpawnActor<ARPGEnemyFlipbookActor>(EnemyToSpawn, FVector(HorizontalDistance, 0, VerticalPosition), FRotator(0, 0, 0));
 	}
 }

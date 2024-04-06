@@ -19,6 +19,8 @@ ABackgroundController::ABackgroundController()
 void ABackgroundController::BeginPlay()
 {
 	Super::BeginPlay();
+
+	SetActorLocation(FVector(0, -3000, 0));
 	
 	InitStartSegments();
 }

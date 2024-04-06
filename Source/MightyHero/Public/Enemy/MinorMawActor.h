@@ -13,5 +13,4 @@ UCLASS()
 class MIGHTYHERO_API AMinorMawActor : public ARPGEnemyFlipbookActor
 {
 	GENERATED_BODY()
-	
 };

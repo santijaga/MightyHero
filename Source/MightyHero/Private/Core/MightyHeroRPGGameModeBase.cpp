@@ -6,6 +6,7 @@
 #include "Background/BackgroundController.h"
 #include "Camera/TrackCameraActorBase.h"
 #include "Core/MightyHeroPlayerState.h"
+#include "Enemy/RPGEnemyController.h"
 #include "Kismet/GameplayStatics.h"
 #include "Missions/MissionsController.h"
 #include "Pawn/RPGPawn.h"
@@ -16,6 +17,7 @@ void AMightyHeroRPGGameModeBase::BeginPlay()
 	Super::BeginPlay();
 
 	SpawnAndAssignActor(BackgroundController, BackgroundControllerClass);
+	SpawnAndAssignActor(EnemyController, EnemyControllerClass);
 	SpawnAndAssignActor(MissionsController, MissionsControllerClass);
 	SpawnAndAssignActor(TrackCamera, TrackCameraClass);
 	SpawnAndAssignActor(UIController, UIControllerClass);
@@ -53,6 +55,11 @@ void AMightyHeroRPGGameModeBase::StartGame()
 	{
 		PS->StartGameplay();
 	}
+
+	if (MissionsController)
+	{
+		MissionsController->StartGameplay();
+	}
 }
 
 /*
@@ -61,6 +68,11 @@ void AMightyHeroRPGGameModeBase::StartGame()
 ABackgroundController* AMightyHeroRPGGameModeBase::GetBackgroundController()
 {
 	return BackgroundController;
+}
+
+ARPGEnemyController* AMightyHeroRPGGameModeBase::GetEnemyController()
+{
+	return EnemyController;
 }
 
 AMissionsController* AMightyHeroRPGGameModeBase::GetMissionsController()

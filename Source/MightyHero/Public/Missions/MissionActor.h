@@ -33,6 +33,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Accessors)
 	FString GetName();
 
+	virtual void StartGameplay();
+
 	/*
 	* Properties
 	*/

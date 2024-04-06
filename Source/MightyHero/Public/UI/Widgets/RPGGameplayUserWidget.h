@@ -21,6 +21,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category=Data)
 	float GetHealthPercentage();
 
+	UFUNCTION(BlueprintCallable, Category = Data)
+	int32 GetHitPoints();
+
 	UFUNCTION(BlueprintCallable, Category=Mission)
 	FString GetMissionDescription();
 
@@ -32,4 +35,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category=Data)
 	float GetShieldPercentage();
+
+	UFUNCTION(BlueprintCallable, Category = Data)
+	int32 GetShieldPoints();
 };
