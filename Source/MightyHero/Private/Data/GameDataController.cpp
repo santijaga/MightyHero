@@ -55,16 +55,6 @@ bool UGameDataController::LoadSoundSetting()
 	return true;
 }
 
-int32 UGameDataController::LoadMission()
-{
-	if (UMightyHeroSaveGame* LoadGameInstance = GetMainSaveSlot())
-	{
-		return LoadGameInstance->Mission;
-	}
-
-	return 0;
-}
-
 int32 UGameDataController::LoadVitality()
 {
 	if (UMightyHeroSaveGame* LoadGameInstance = GetMainSaveSlot())
@@ -73,6 +63,19 @@ int32 UGameDataController::LoadVitality()
 		if (Vitality == 0) return 1;
 
 		return Vitality;
+	}
+
+	return 1;
+}
+
+int32 UGameDataController::LoadStrength()
+{
+	if (UMightyHeroSaveGame* LoadGameInstance = GetMainSaveSlot())
+	{
+		int32 Strength = LoadGameInstance->Strength;
+		if (Strength == 0) return 1;
+
+		return Strength;
 	}
 
 	return 1;
@@ -196,17 +199,17 @@ void UGameDataController::SaveSoundSetting(bool bNewSoundValue)
 	SaveToMainSaveSlot(SaveGameInstance);
 }
 
-void UGameDataController::SaveMission(int32 CompletedMission)
-{
-	UMightyHeroSaveGame* SaveGameInstance = GetMainSaveSlot();
-	SaveGameInstance->Mission = CompletedMission;
-	SaveToMainSaveSlot(SaveGameInstance);
-}
-
 void UGameDataController::SaveVitality(int32 NewVitality)
 {
 	UMightyHeroSaveGame* SaveGameInstance = GetMainSaveSlot();
 	SaveGameInstance->Vitality = NewVitality;
+	SaveToMainSaveSlot(SaveGameInstance);
+}
+
+void UGameDataController::SaveStrength(int32 NewStrength)
+{
+	UMightyHeroSaveGame* SaveGameInstance = GetMainSaveSlot();
+	SaveGameInstance->Strength = NewStrength;
 	SaveToMainSaveSlot(SaveGameInstance);
 }
 

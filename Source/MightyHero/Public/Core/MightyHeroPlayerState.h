@@ -26,13 +26,19 @@ private:
 protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
-	
+
+
+	/*
+	* Interface
+	*/
 public:
 	UFUNCTION(BlueprintCallable, Category = State)
 	void AddCoin();
 
 	UFUNCTION(BlueprintCallable, Category = State)
 	void AddScore();
+
+	void ApplyDamage(float Damage);
 
 	UFUNCTION(BlueprintCallable, Category = State)
 	int32 GetCoins();

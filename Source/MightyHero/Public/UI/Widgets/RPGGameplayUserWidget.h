@@ -24,12 +24,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Data)
 	int32 GetHitPoints();
 
-	UFUNCTION(BlueprintCallable, Category=Mission)
-	FString GetMissionDescription();
-
-	UFUNCTION(BlueprintCallable, Category = Mission)
-	FString GetMissionName();
-
 	UFUNCTION(BlueprintCallable, Category=Data)
 	int32 GetScores();
 

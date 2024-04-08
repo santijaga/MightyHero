@@ -20,7 +20,7 @@ void ABackgroundController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	SetActorLocation(FVector(0, -3000, 0));
+	SetActorLocation(FVector(0, -DistanceFromCamera, 0));
 	
 	InitStartSegments();
 }
@@ -56,7 +56,7 @@ void ABackgroundController::SpawnNextSegment()
 
 		Location.X += Threshold;
 
-		FRotator Rotation = GetActorRotation();
+		FRotator Rotation = GetActorRotation() + AdditionalRotation;
 
 		ABackgroundActor* NewActor = World->SpawnActor<ABackgroundActor>(BackgroundActorClass, Location, Rotation, SpawnParams);
 

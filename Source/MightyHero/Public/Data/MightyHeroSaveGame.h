@@ -25,11 +25,11 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Currency)
 	int32 Energy;
 
-	UPROPERTY(VisibleAnywhere, Category = Gameplay)
-	int32 Mission;
-
 	UPROPERTY(VisibleAnywhere, Category = Basic)
 	int32 HighScore;
+
+	UPROPERTY(VisibleAnywhere, Category = Basic)
+	int32 Strength;
 
 	UPROPERTY(VisibleAnywhere, Category = Basic)
 	int32 Vitality;

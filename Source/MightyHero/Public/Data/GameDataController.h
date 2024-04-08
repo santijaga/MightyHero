@@ -21,8 +21,8 @@ public:
 	int32 LoadEnergy();
 	int32 LoadHighScore();
 	bool LoadSoundSetting();
-	int32 LoadMission();
 	int32 LoadVitality();
+	int32 LoadStrength();
 	TArray<FString> LoadUnlockedSkins();
 	void SanitizeSaveData();
 	void SaveActivePawnClass(UClass* SelectedActorClass);
@@ -30,8 +30,8 @@ public:
 	void SaveEnergy(int32 NewEnergy);
 	void SaveHighScore(int32 Score);
 	void SaveSoundSetting(bool bNewSoundValue);
-	void SaveMission(int32 CompletedMission);
 	void SaveVitality(int32 NewVitality);
+	void SaveStrength(int32 NewStrength);
 	void SaveUnlockedSkins(TArray<FString> Skins);
 
 private:

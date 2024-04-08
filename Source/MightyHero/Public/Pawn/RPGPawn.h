@@ -4,8 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "InputActionValue.h"
 #include "RPGPawn.generated.h"
 
+class UInputMappingContext;
+class UInputAction;
 class UPaperFlipbook;
 class UPaperFlipbookComponent;
 class UBoxComponent;
@@ -22,7 +25,7 @@ enum class ERPGCharacterAnimationStates : uint8 {
 	SE_Anim_Fall = 1 UMETA(DisplayName = "Animation Fall"),
 	SE_Anim_Aim = 2 UMETA(DisplayName = "Animation Aim"),
 	SE_Anim_Idle = 3 UMETA(DisplayName = "Animation Idle"),
-	SE_Anim_Attack = 4 UMETA(DisplayName = "Animation Attack"),
+	SE_Anim_Attack = 4 UMETA(DisplayName = "Animation Attack")
 };
 
 /**
@@ -43,9 +46,16 @@ public:
 	* User input
 	*/
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="User input")
+	UInputMappingContext* GameplayMappingContext;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "User input")
+	UInputAction* JumpAction;
+
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 private:
+	void JumpActionTriggered(const FInputActionValue& Value);
 	void TouchPressed(ETouchIndex::Type FingerIndex, FVector Location);
 
 	/*
@@ -104,6 +114,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category=Data)
 	float GetDistance();
 
+	void TakeHit(float Damage);
+
 	UFUNCTION(BlueprintCallable, Category=Behaviour)
 	void StartGame();
 
@@ -112,6 +124,7 @@ public:
 	*/
 private:
 	void Fly();
+	void Jump();
 	void Stay();
 
 	/*

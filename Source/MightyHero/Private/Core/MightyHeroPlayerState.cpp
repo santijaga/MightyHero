@@ -23,6 +23,22 @@ void AMightyHeroPlayerState::AddScore()
 	Scores++;
 }
 
+void AMightyHeroPlayerState::ApplyDamage(float Damage)
+{
+	float RecievedDamage = Damage;
+
+	if (CurrentShieldPoints > RecievedDamage)
+	{
+		CurrentShieldPoints -= RecievedDamage;
+	}
+	else
+	{
+		RecievedDamage -= CurrentShieldPoints;
+		CurrentShieldPoints = 0;
+		CurrentHitPoints -= RecievedDamage;
+	}
+}
+
 int32 AMightyHeroPlayerState::GetScores()
 {
 	int DistanceScores = CalculateDistanceScores();

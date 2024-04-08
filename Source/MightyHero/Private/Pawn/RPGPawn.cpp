@@ -5,7 +5,12 @@
 
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Core/MightyHeroRPGGameModeBase.h"
+#include "Core/MightyHeroPlayerController.h"
+#include "Core/MightyHeroPlayerState.h"
 #include "Components/BoxComponent.h"
+#include "Enemy/RPGEnemyFlipbookActor.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
 
@@ -21,6 +26,14 @@ ARPGPawn::ARPGPawn()
 void ARPGPawn::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (AMightyHeroPlayerController* PC = Cast<AMightyHeroPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0)))
+	{
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PC->GetLocalPlayer()))
+		{
+			Subsystem->AddMappingContext(GameplayMappingContext, 0);
+		}
+	}
 
 	ThreatCollider->OnComponentBeginOverlap.AddDynamic(this, &ARPGPawn::OnThreatColliderOverlapBegin);
 	MeeleHitBox->OnComponentBeginOverlap.AddDynamic(this, &ARPGPawn::OnMeeleHitBoxOverlapBegin);
@@ -64,14 +77,24 @@ void ARPGPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ARPGPawn::TouchPressed);
+
+	if (UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+	{
+		EIC->BindAction(JumpAction, ETriggerEvent::Started, this, &ARPGPawn::Jump);
+	}
+}
+
+void ARPGPawn::JumpActionTriggered(const FInputActionValue& Value)
+{
+	if (Value.Get<bool>())
+	{
+		Jump();
+	}
 }
 
 void ARPGPawn::TouchPressed(ETouchIndex::Type FingerIndex, FVector Location)
 {
-	if (PawnGameplayState == ERPGCharacterGameStates::SE_Playing)
-	{
-		bIsJumping = true;
-	}
+	Jump();
 }
 
 /*
@@ -85,6 +108,14 @@ void ARPGPawn::GameOver()
 float ARPGPawn::GetDistance()
 {
 	return CalculateDistance();
+}
+
+void ARPGPawn::TakeHit(float Damage)
+{
+	if (AMightyHeroPlayerState* PS = Cast<AMightyHeroPlayerState>(UGameplayStatics::GetPlayerState(GetWorld(), 0)))
+	{
+		PS->ApplyDamage(Damage);
+	}
 }
 
 void ARPGPawn::StartGame()
@@ -131,6 +162,14 @@ void ARPGPawn::Fly()
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("[%s] Movement component not found"), *this->GetName());
+	}
+}
+
+void ARPGPawn::Jump()
+{
+	if (PawnGameplayState == ERPGCharacterGameStates::SE_Playing)
+	{
+		bIsJumping = true;
 	}
 }
 
@@ -276,17 +315,26 @@ void ARPGPawn::OnAttackEnded()
 
 void ARPGPawn::OnMeeleHitBoxOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	bIsAttacking = true;
-	bIsAiming = false;
-	GetWorld()->GetTimerManager().ClearTimer(AimHandle);
+	if (ARPGEnemyFlipbookActor* Enemy = Cast<ARPGEnemyFlipbookActor>(OtherActor))
+	{
+		bIsAttacking = true;
+		bIsAiming = false;
+		GetWorld()->GetTimerManager().ClearTimer(AimHandle);
+		int32 Strength = Cast<AMightyHeroPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0))->GetStrength();
+		float Damage = Strength * 10;
+		Enemy->GetHit(Damage);
+	}
 }
 
 void ARPGPawn::OnThreatColliderOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	bIsAiming = true;
-	GetWorld()->GetTimerManager().SetTimer(AimHandle, [this]() mutable
-		{
-			bIsAiming = false;
-			GetWorld()->GetTimerManager().ClearTimer(AimHandle);
-		}, 2.0f, false);
+	if (ARPGEnemyFlipbookActor* Enemy = Cast<ARPGEnemyFlipbookActor>(OtherActor))
+	{
+		bIsAiming = true;
+		GetWorld()->GetTimerManager().SetTimer(AimHandle, [this]() mutable
+			{
+				bIsAiming = false;
+				GetWorld()->GetTimerManager().ClearTimer(AimHandle);
+			}, 2.0f, false);
+	}
 }

@@ -25,6 +25,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category=Characteristics)
 	int32 GetVitality();
+	int32 GetStrength();
 
 	UFUNCTION(BlueprintCallable, Category=Characteristics)
 	void LoadCharacteristics();
@@ -35,4 +36,5 @@ public:
 private:
 	int32 Energy;
 	int32 Vitality;
+	int32 Strength;
 };

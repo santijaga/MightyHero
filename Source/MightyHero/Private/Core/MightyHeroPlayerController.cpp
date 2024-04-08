@@ -24,11 +24,17 @@ int32 AMightyHeroPlayerController::GetVitality()
 	return Vitality;
 }
 
+int32 AMightyHeroPlayerController::GetStrength()
+{
+	return Strength;
+}
+
 void AMightyHeroPlayerController::LoadCharacteristics()
 {
 	if (UGameDataController* DC = NewObject<UGameDataController>(this, UGameDataController::StaticClass()))
 	{
 		Energy = DC->LoadEnergy();
 		Vitality = DC->LoadVitality();
+		Strength = DC->LoadStrength();
 	}
 }

@@ -8,7 +8,6 @@
 
 class ABackgroundController;
 class ARPGEnemyController;
-class AMissionsController;
 class ARPGUIController;
 class ATrackCameraActorBase;
 
@@ -54,9 +53,6 @@ public:
 	TSubclassOf<ARPGEnemyController> EnemyControllerClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
-	TSubclassOf<AMissionsController> MissionsControllerClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
 	TSubclassOf<ATrackCameraActorBase> TrackCameraClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Spawn)
@@ -67,7 +63,6 @@ public:
 	*/
 private:
 	ABackgroundController* BackgroundController;
-	AMissionsController* MissionsController;
 	ATrackCameraActorBase* TrackCamera;
 	ARPGEnemyController* EnemyController;
 	ARPGUIController* UIController;
@@ -80,9 +75,6 @@ public:
 	ABackgroundController* GetBackgroundController();
 
 	ARPGEnemyController* GetEnemyController();
-
-	UFUNCTION(BlueprintCallable, Category = Accessors)
-	AMissionsController* GetMissionsController();
 
 	UFUNCTION(BlueprintCallable, Category=Accessors)
 	ATrackCameraActorBase* GetTrackCamera();

@@ -24,8 +24,18 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-private:
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Settings")
 	double BackgroundSegmentLength = 3200.0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings")
+	float DistanceFromCamera = 1000.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings")
+	FRotator AdditionalRotation = FRotator(0, 0, 0);
+
+
+private:
 	double Threshold = 0;
 	double DistanceLimit = 0;
 

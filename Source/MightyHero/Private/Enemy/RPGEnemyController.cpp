@@ -20,6 +20,7 @@ void ARPGEnemyController::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	SpawnMinorMaw();
 }
 
 // Called every frame
