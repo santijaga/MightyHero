@@ -15,6 +15,13 @@ void AMightyHeroRPGGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//show mouse cursor
+	APlayerController* PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	if (PlayerController)
+	{
+		PlayerController->bShowMouseCursor = true;
+	}
+
 	SpawnAndAssignActor(BackgroundController, BackgroundControllerClass);
 	SpawnAndAssignActor(EnemyController, EnemyControllerClass);
 	SpawnAndAssignActor(TrackCamera, TrackCameraClass);

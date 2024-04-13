@@ -7,6 +7,8 @@
 #include "InputActionValue.h"
 #include "RPGPawn.generated.h"
 
+class AParticleFlipbookActor;
+class AProjectileFlipbookActor;
 class UInputMappingContext;
 class UInputAction;
 class UPaperFlipbook;
@@ -25,7 +27,10 @@ enum class ERPGCharacterAnimationStates : uint8 {
 	SE_Anim_Fall = 1 UMETA(DisplayName = "Animation Fall"),
 	SE_Anim_Aim = 2 UMETA(DisplayName = "Animation Aim"),
 	SE_Anim_Idle = 3 UMETA(DisplayName = "Animation Idle"),
-	SE_Anim_Attack = 4 UMETA(DisplayName = "Animation Attack")
+	SE_Anim_Attack = 4 UMETA(DisplayName = "Animation Attack"),
+	SE_Anim_Shot = 5 UMETA(DisplayName = "Animation Shot"),
+	SE_Anim_GunAim = 6 UMETA(DisplayName = "Animation Gun Aim"),
+	SE_Anim_GunAimEnd = 7 UMETA(DisplayName = "Animation Gun Aim End"),
 };
 
 /**
@@ -52,10 +57,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "User input")
 	UInputAction* JumpAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "User input")
+	UInputAction* ShotAction;
+
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 private:
 	void JumpActionTriggered(const FInputActionValue& Value);
+	void ShotActionTriggered(const FInputActionValue& Value);
 	void TouchPressed(ETouchIndex::Type FingerIndex, FVector Location);
 
 	/*
@@ -90,19 +99,33 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
 	TObjectPtr<UPaperFlipbook> RiseFlipbook;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
+	TObjectPtr<UPaperFlipbook> ShotFlipbook;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
+	TObjectPtr<UPaperFlipbook> GunAimEndFlipbook;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Flipbooks, meta = (DisplayThumbnail = "true"))
+	TObjectPtr<UPaperFlipbook> GunAimFlipbook;
+
 	/*
 	* Properties
 	*/
 private:
-	ERPGCharacterAnimationStates PawnAnimState;
-	ERPGCharacterGameStates PawnGameplayState;
-	float StartPoint;
 	bool bIsAiming = false;
 	bool bIsAttacking = false;
+	bool bIsGunAiming = false;
+	bool bIsGunAimEnd = false;
 	bool bIsFalling = false;
 	bool bIsJumping = false;
 	bool bIsIdle = false;
 	bool bIsRising = false;
+	bool bIsShooting = false;
+	bool bIsShootingAlowed = true;
+	float DefaultGunCooldown = 1.f;
+	ERPGCharacterAnimationStates PawnAnimState;
+	ERPGCharacterGameStates PawnGameplayState;
+	float StartPoint;
 
 	/*
 	* Interface
@@ -128,11 +151,31 @@ private:
 	void Stay();
 
 	/*
+	* Actions
+	*/
+private:
+	void Attack(AActor* OtherActor);
+	void Shot();
+
+	/*
 	* Animation
 	*/
 private:
 	void CalculateAnimationState();
 	void SelectFlipbook();
+
+	/*
+	* SFX
+	*/
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="SFX", meta = (DisplayThumbnail = "true"))
+	TSubclassOf<AParticleFlipbookActor> AttackParticles;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Projectile", meta = (DisplayThumbnail = "true"))
+	TSubclassOf<AProjectileFlipbookActor> Projectile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SFX", meta = (DisplayThumbnail = "true"))
+	TSubclassOf<AParticleFlipbookActor> ShotParticles;
 
 	/*
 	* Utils
@@ -153,20 +196,37 @@ public:
 	UBoxComponent* ThreatCollider;
 
 	/*
+	* Points
+	*/
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Points")
+	USceneComponent* FirePoint;
+
+	/*
 	* Timer Handles
 	*/
 private:
 	FTimerHandle AimHandle;
+	FTimerHandle GunCooldownHandle;
 
 	/*
 	* EventHandlers
 	*/
 public:
 	UFUNCTION()
+	void OnAimEnded();
+
+	UFUNCTION()
 	void OnAttackEnded();
 
 	UFUNCTION()
+	void OnGunDisapear();
+
+	UFUNCTION()
 	void OnMeeleHitBoxOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION()
+	void OnShotEnded();
 
 	UFUNCTION(BlueprintCallable, Category = "Event Handler")
 	void OnThreatColliderOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

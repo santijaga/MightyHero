@@ -54,6 +54,10 @@ void AMinorMawActor::OnDeath()
 		if (Flipbook->GetFlipbook() != DeathFlipbook)
 		{
 			SetFlipbook(Flipbook, DeathFlipbook, false);
+			// delete MeeleHitBox Component
+			MeeleHitBox->DestroyComponent();
+			// set collision to no collision
+			SetActorEnableCollision(false);
 		}
 	}
 }

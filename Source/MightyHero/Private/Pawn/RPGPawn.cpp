@@ -3,16 +3,19 @@
 
 #include "Pawn/RPGPawn.h"
 
-#include "GameFramework/CharacterMovementComponent.h"
 #include "Core/MightyHeroRPGGameModeBase.h"
 #include "Core/MightyHeroPlayerController.h"
 #include "Core/MightyHeroPlayerState.h"
 #include "Components/BoxComponent.h"
+#include "Components/SceneComponent.h"
 #include "Enemy/RPGEnemyFlipbookActor.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "PaperFlipbookComponent.h"
+#include "Particles/ParticleFlipbookActor.h"
+#include "Projectile/ProjectileFlipbookActor.h"
 
 ARPGPawn::ARPGPawn()
 {
@@ -21,6 +24,9 @@ ARPGPawn::ARPGPawn()
 
 	MeeleHitBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Meele Hit Box"));
 	MeeleHitBox->SetupAttachment(RootComponent);
+
+	FirePoint = CreateDefaultSubobject<USceneComponent>(TEXT("Fire Point"));
+	FirePoint->SetupAttachment(RootComponent);
 }
 
 void ARPGPawn::BeginPlay()
@@ -81,6 +87,7 @@ void ARPGPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	if (UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		EIC->BindAction(JumpAction, ETriggerEvent::Started, this, &ARPGPawn::Jump);
+		EIC->BindAction(ShotAction, ETriggerEvent::Started, this, &ARPGPawn::Shot);
 	}
 }
 
@@ -89,6 +96,14 @@ void ARPGPawn::JumpActionTriggered(const FInputActionValue& Value)
 	if (Value.Get<bool>())
 	{
 		Jump();
+	}
+}
+
+void ARPGPawn::ShotActionTriggered(const FInputActionValue& Value)
+{
+	if (Value.Get<bool>())
+	{
+		Shot();
 	}
 }
 
@@ -183,6 +198,54 @@ void ARPGPawn::Stay()
 }
 
 /*
+* Actions
+*/
+void ARPGPawn::Attack(AActor* OtherActor)
+{
+	if (ARPGEnemyFlipbookActor* Enemy = Cast<ARPGEnemyFlipbookActor>(OtherActor))
+	{
+		bIsAttacking = true;
+		bIsAiming = false;
+		GetWorld()->GetTimerManager().ClearTimer(AimHandle);
+		int32 Strength = Cast<AMightyHeroPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0))->GetStrength();
+		float Damage = Strength * 10;
+		Enemy->GetHit(Damage);
+		GetWorld()->SpawnActor<AParticleFlipbookActor>(AttackParticles, OtherActor->GetActorLocation(), OtherActor->GetActorRotation());
+	}
+}
+
+void ARPGPawn::Shot()
+{
+	if (bIsShootingAlowed)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s shot!"), *this->GetName());
+		bIsShooting = true;
+		bIsShootingAlowed = false;
+		float GunCooldown = DefaultGunCooldown;
+		if (UWorld* W = GetWorld())
+		{
+			W->GetTimerManager().SetTimer(GunCooldownHandle, [this]()
+				{
+					bIsShootingAlowed = true;
+				}, GunCooldown, false);
+
+			if (FirePoint)
+			{
+				W->SpawnActor<AParticleFlipbookActor>(ShotParticles, FirePoint->GetComponentLocation(), FirePoint->GetComponentRotation());
+				
+				// spawn projectile passing damage to constructor AProjectileFlipbookActor(float Damage);
+				float Damage = 10.0f;
+				AProjectileFlipbookActor* Projectile = W->SpawnActor<AProjectileFlipbookActor>(FirePoint->GetComponentLocation(), FirePoint->GetComponentRotation(), FActorSpawnParameters());
+				if (Projectile)
+				{
+					Projectile->SetDamage(Damage);
+				}
+			}
+		}
+	}
+}
+
+/*
 * Animation
 */
 void ARPGPawn::CalculateAnimationState()
@@ -205,14 +268,35 @@ void ARPGPawn::CalculateAnimationState()
 			}
 			else
 			{
-				if (bIsRising)
+				if (bIsShooting)
 				{
-					PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Rise;
+					PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Shot;
 				}
-
-				if (bIsFalling)
+				else
 				{
-					PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Fall;
+					if (bIsGunAiming)
+					{
+						PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_GunAim;
+					}
+					else
+					{
+						if (bIsGunAimEnd)
+						{
+							PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_GunAimEnd;
+						}
+						else
+						{
+							if (bIsRising)
+							{
+								PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Rise;
+							}
+
+							if (bIsFalling)
+							{
+								PawnAnimState = ERPGCharacterAnimationStates::SE_Anim_Fall;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -263,6 +347,33 @@ void ARPGPawn::SelectFlipbook()
 				SetFlipbook(Flipbook, RiseFlipbook, true);
 			}
 		}
+
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_Shot)
+		{
+			if (Flipbook->GetFlipbook() != ShotFlipbook)
+			{
+				SetFlipbook(Flipbook, ShotFlipbook, false);
+				Flipbook->OnFinishedPlaying.AddDynamic(this, &ARPGPawn::OnShotEnded);
+			}
+		}
+
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_GunAim)
+		{
+			if (Flipbook->GetFlipbook() != GunAimFlipbook)
+			{
+				SetFlipbook(Flipbook, GunAimFlipbook, false);
+				Flipbook->OnFinishedPlaying.AddDynamic(this, &ARPGPawn::OnAimEnded);
+			}
+		}
+
+		if (PawnAnimState == ERPGCharacterAnimationStates::SE_Anim_GunAimEnd)
+		{
+			if (Flipbook->GetFlipbook() != GunAimEndFlipbook)
+			{
+				SetFlipbook(Flipbook, GunAimEndFlipbook, false);
+				Flipbook->OnFinishedPlaying.AddDynamic(this, &ARPGPawn::OnGunDisapear);
+			}
+		}
 	}
 }
 
@@ -303,6 +414,17 @@ void ARPGPawn::SetFlipbook(UPaperFlipbookComponent* FlipbookComponent, TObjectPt
 /*
 * EventHandlers
 */
+void ARPGPawn::OnAimEnded()
+{
+	bIsGunAiming = false;
+	bIsGunAimEnd = true;
+
+	if (UPaperFlipbookComponent* Flipbook = GetSprite())
+	{
+		Flipbook->OnFinishedPlaying.RemoveAll(this);
+	}
+}
+
 void ARPGPawn::OnAttackEnded()
 {
 	bIsAttacking = false;
@@ -313,16 +435,29 @@ void ARPGPawn::OnAttackEnded()
 	}
 }
 
+void ARPGPawn::OnGunDisapear()
+{
+	bIsGunAimEnd = false;
+
+	if (UPaperFlipbookComponent* Flipbook = GetSprite())
+	{
+		Flipbook->OnFinishedPlaying.RemoveAll(this);
+	}
+}
+
 void ARPGPawn::OnMeeleHitBoxOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (ARPGEnemyFlipbookActor* Enemy = Cast<ARPGEnemyFlipbookActor>(OtherActor))
+	Attack(OtherActor);
+}
+
+void ARPGPawn::OnShotEnded()
+{
+	bIsShooting = false;
+	bIsGunAiming = true;
+
+	if (UPaperFlipbookComponent* Flipbook = GetSprite())
 	{
-		bIsAttacking = true;
-		bIsAiming = false;
-		GetWorld()->GetTimerManager().ClearTimer(AimHandle);
-		int32 Strength = Cast<AMightyHeroPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0))->GetStrength();
-		float Damage = Strength * 10;
-		Enemy->GetHit(Damage);
+		Flipbook->OnFinishedPlaying.RemoveAll(this);
 	}
 }
 
