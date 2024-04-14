@@ -56,6 +56,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "User input")
 	UInputAction* JumpAction;
+	UInputAction* RiseUpAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "User input")
 	UInputAction* ShotAction;
@@ -63,7 +64,7 @@ public:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 private:
-	void JumpActionTriggered(const FInputActionValue& Value);
+	void RiseUpActionTriggered(const FInputActionValue& Value);
 	void ShotActionTriggered(const FInputActionValue& Value);
 	void TouchPressed(ETouchIndex::Type FingerIndex, FVector Location);
 
@@ -78,7 +79,7 @@ public:
 	float BaseFlySpeed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Settings)
-	float BaseJumpVelocity;
+	float BaseRiseUpVelocity;
 
 	/*
 	* Flipbooks
@@ -118,6 +119,7 @@ private:
 	bool bIsGunAimEnd = false;
 	bool bIsFalling = false;
 	bool bIsJumping = false;
+	bool bIsRisingUp = false;
 	bool bIsIdle = false;
 	bool bIsRising = false;
 	bool bIsShooting = false;
@@ -147,7 +149,7 @@ public:
 	*/
 private:
 	void Fly();
-	void Jump();
+	void RiseUp();
 	void Stay();
 
 	/*

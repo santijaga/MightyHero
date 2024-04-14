@@ -34,19 +34,6 @@ void AProjectileFlipbookActor::Tick(float DeltaTime)
 }
 
 /*
-* Accessors
-*/
-float AProjectileFlipbookActor::GetDamage() const
-{
-	return Damage;
-}
-
-void AProjectileFlipbookActor::SetDamage(float NewDamage)
-{
-	Damage = NewDamage;
-}
-
-/*
 * Event
 */
 // On Component Begin Overlap Signature

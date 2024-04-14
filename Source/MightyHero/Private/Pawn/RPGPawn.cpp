@@ -87,15 +87,16 @@ void ARPGPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	if (UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		EIC->BindAction(JumpAction, ETriggerEvent::Started, this, &ARPGPawn::Jump);
+		EIC->BindAction(RiseUpAction, ETriggerEvent::Triggered, this, &ARPGPawn::RiseUp);
 		EIC->BindAction(ShotAction, ETriggerEvent::Started, this, &ARPGPawn::Shot);
 	}
 }
 
-void ARPGPawn::JumpActionTriggered(const FInputActionValue& Value)
+void ARPGPawn::RiseUpActionTriggered(const FInputActionValue& Value)
 {
 	if (Value.Get<bool>())
 	{
-		Jump();
+		RiseUp();
 	}
 }
 
@@ -109,7 +110,7 @@ void ARPGPawn::ShotActionTriggered(const FInputActionValue& Value)
 
 void ARPGPawn::TouchPressed(ETouchIndex::Type FingerIndex, FVector Location)
 {
-	Jump();
+	RiseUp();
 }
 
 /*
@@ -150,10 +151,10 @@ void ARPGPawn::Fly()
 		FVector CurrentVelocity = MC->Velocity;
 		FVector ForwardDirection = GetActorForwardVector();
 		FVector NewVelocity = ForwardDirection * BaseFlySpeed;
-		if (bIsJumping)
+		if (bIsRisingUp)
 		{
-			NewVelocity.Z = BaseJumpVelocity;
-			bIsJumping = false;
+			NewVelocity.Z = BaseRiseUpVelocity;
+			bIsRisingUp = false;
 		}
 		else
 		{
@@ -180,11 +181,11 @@ void ARPGPawn::Fly()
 	}
 }
 
-void ARPGPawn::Jump()
+void ARPGPawn::RiseUp()
 {
 	if (PawnGameplayState == ERPGCharacterGameStates::SE_Playing)
 	{
-		bIsJumping = true;
+		bIsRisingUp = true;
 	}
 }
 
@@ -235,10 +236,10 @@ void ARPGPawn::Shot()
 				
 				// spawn projectile passing damage to constructor AProjectileFlipbookActor(float Damage);
 				float Damage = 10.0f;
-				AProjectileFlipbookActor* Projectile = W->SpawnActor<AProjectileFlipbookActor>(FirePoint->GetComponentLocation(), FirePoint->GetComponentRotation(), FActorSpawnParameters());
-				if (Projectile)
+				AProjectileFlipbookActor* SpawnedProjectile = W->SpawnActor<AProjectileFlipbookActor>(FirePoint->GetComponentLocation(), FirePoint->GetComponentRotation(), FActorSpawnParameters());
+				if (SpawnedProjectile)
 				{
-					Projectile->SetDamage(Damage);
+					SpawnedProjectile->SetDamage(Damage);
 				}
 			}
 		}
